@@ -1,13 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  font-family: "DM Sans", sans-serif;
+  color: white;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 3.5rem auto;
+}
+
+/* HEADER */
+
+.image {
+  width: 240px;
+  height: 240px;
+}
+
+.title {
+  /* text-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 0.2); */
+  font-size: 5rem;
+  font-weight: 700;
+  /* letter-spacing: -0.275rem; */
+  margin-top: 0;
+  max-height: fit-content;
+}
+
+/* CARD */
+
+.card {
+  width: 544px;
+  height: 544px;
+  backdrop-filter: blur(2px);
+}
+
+.card-title {
+  font-size: 2.5rem;
+  letter-spacing: -0.08rem;
+}
+
+.card-display {
+  width: 496px;
+  background-color: gray;
+}
+
+.move-up-1 {
+  position: relative;
+  bottom: 18.5%;
+}
+
+.move-up-2 {
+  position: relative;
+  bottom: 50%;
+}
+
+.bg-gradient {
+  border-radius: 24.375rem;
+  background: linear-gradient(180deg, #f9cb29 0%, rgba(157, 249, 41, 0) 100%);
+  filter: blur(250px);
+}
+
+.border-gradient {
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+  background: linear-gradient(to right, red, purple);
+  position: relative;
+  height: max-content;
+  width: max-content;
+}
+
+/* CLONE */
+
+.clone-card {
+  height: 360px;
+  max-width: 1152px;
 }
