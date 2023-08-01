@@ -22,7 +22,7 @@ const CardsContainer = () => {
   ];
   return (
     <div>
-      <div className="mt-8 grid grid-cols-2 text-right gap-x-12 mr-1">
+      <div className="mt-16 grid grid-cols-2 text-right gap-x-12 mr-1">
         <p className="text-3xl font-medium">
           I love to design and <br /> develop beatiful softwares
         </p>

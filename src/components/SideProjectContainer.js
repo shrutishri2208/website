@@ -1,23 +1,23 @@
 import React from "react";
-import Card from "./Card";
+import SideProjectCard from "./SideProjectCard";
 
 const SideProjectContainer = () => {
   const cardArray = [
     {
       id: 1,
-      title: "Murk",
+      title: "Title 1",
     },
     {
       id: 2,
-      title: "Pageplay",
+      title: "Title 2",
     },
     {
       id: 3,
-      title: "Keyboard",
+      title: "Title 3",
     },
     {
       id: 4,
-      title: "WordWise",
+      title: "Title 4",
     },
   ];
   return (
@@ -28,9 +28,9 @@ const SideProjectContainer = () => {
         </p>
         <p></p>
       </div>
-      <div className="grid grid-cols-2 gap-16 mt-8">
+      <div className="grid grid-cols-2 gap-16 mt-16">
         {cardArray.map((item) => {
-          return <Card {...item} key={item.id} />;
+          return <SideProjectCard {...item} key={item.id} />;
         })}
       </div>
     </div>
