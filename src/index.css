@@ -17,7 +17,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: #151515;
   font-family: "DM Sans", sans-serif;
   color: white;
 }
@@ -40,7 +40,7 @@ code {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: 700;
   margin-top: 0;
   max-height: fit-content;
@@ -130,7 +130,7 @@ code {
 
 .move-up-1 {
   position: relative;
-  bottom: 50%;
+  top: 20%;
 }
 
 .move-up-2 {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import CardDisplay from "./CardDisplay";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Card = ({ id, title }) => {
   const [hover, setHover] = useState(false);
@@ -67,9 +68,15 @@ const Card = ({ id, title }) => {
               <button className="scale-110">
                 <GitHubIcon className="scale-110" />
               </button>
-              <button className="bg-white bg-opacity-10 font-medium tracking-tight text-lg text-white px-3 py-2 rounded-md">
+              {/* <button className="bg-white bg-opacity-10 font-medium tracking-tight text-lg text-white px-4 py-2 rounded-md items-center flex gap-x-4 pr-2 w-36">
                 Download
-              </button>
+                <ArrowForwardIcon className="relative " />
+              </button> */}
+              <div className="bg-white bg-opacity-10 rounded-md">
+                <p className="bg-red-300 bg-opacity-10 relative left-4 font-medium tracking-tight text-lg text-white px-4 py-2 items-center flex gap-x-4 pr-2 w-36">
+                  Download <ArrowForwardIcon className="relative " />
+                </p>
+              </div>
             </div>
           </div>
         </div>
