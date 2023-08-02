@@ -1,10 +1,28 @@
 import React from "react";
 import profile from "../assets/profile.png";
+import { useDispatch, useSelector } from "react-redux";
+import { setTheme } from "../redux/theme/themeActions";
+import { light } from "@mui/material/styles/createPalette";
 
 const LandingPage = () => {
+  const theme = useSelector((state) => state.theme.theme);
+  const dispatch = useDispatch();
+
   return (
     <div className="">
-      <div className="flex justify-end">
+      <div className="flex justify-between items-start">
+        <button
+          className="uppercase"
+          onClick={() => {
+            if (theme === "light") {
+              dispatch(setTheme("dark"));
+            } else {
+              dispatch(setTheme("light"));
+            }
+          }}
+        >
+          {theme}
+        </button>
         <img
           src={profile}
           width={"280px"}

@@ -18,7 +18,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ff;
+  background-color: #000;
   font-family: "DM Sans", sans-serif;
   color: black;
 }
