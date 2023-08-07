@@ -25,8 +25,8 @@ const CardsContainer = () => {
     },
   ];
   return (
-    <div className="pb-40">
-      <div className="grid grid-cols-2 gap-16 mt-8">
+    <div className="pb-40 ">
+      <div className="grid grid-cols-2 gap-16">
         {cardArray.map((item) => {
           return <Card {...item} key={item.id} />;
         })}

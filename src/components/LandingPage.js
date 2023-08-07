@@ -9,20 +9,27 @@ const LandingPage = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="">
+    <div className="relative">
       <div className="flex justify-between items-start">
-        <button
-          className="uppercase"
-          onClick={() => {
-            if (theme === "light") {
-              dispatch(setTheme("dark"));
-            } else {
-              dispatch(setTheme("light"));
-            }
-          }}
-        >
-          {theme}
-        </button>
+        <div className="theme-toggle-container">
+          <div
+            className={`theme-toggle-bg ${
+              theme === "light" ? "bg-open-white" : "bg-open-black"
+            }`}
+          ></div>
+          <button
+            className="uppercase text-black bg-yellow-400 rounded-full px-3 py-1"
+            onClick={() => {
+              if (theme === "light") {
+                dispatch(setTheme("dark"));
+              } else {
+                dispatch(setTheme("light"));
+              }
+            }}
+          >
+            {theme.split("")[0]}
+          </button>
+        </div>
         <img
           src={profile}
           width={"280px"}
@@ -30,18 +37,54 @@ const LandingPage = () => {
           className="rounded-lg"
         ></img>
       </div>
-      <div className="flex justify-between items-end">
+      <div className="flex justify-between ">
         <div className="">
-          <p className="heading relative bottom-20">
-            Hi! I am <span className="heading-dark">Shruti</span>, <br />a
-            developer who <br />
-            <span className="heading-dark">loves to</span> design and <br />
-            <span className="heading-dark">build</span> simple and <br />
-            beautiful <span className="heading-dark">software</span>.
+          <p
+            className={`heading ${
+              theme === "light" ? "heading-light" : "heading-dark"
+            }  relative bottom-20`}
+          >
+            Hi! I am{" "}
+            <span
+              className={`${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              Shruti
+            </span>
+            , <br />
+            a developer who <br />
+            <span
+              className={`${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              loves to
+            </span>{" "}
+            design and <br />
+            <span
+              className={`${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              build
+            </span>{" "}
+            simple and <br />
+            beautiful{" "}
+            <span
+              className={`${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              software
+            </span>
+            .
           </p>
         </div>
         <div
-          className="work-button cursor-pointer relative"
+          className={`${
+            theme === "light" ? "work-button-light" : "work-button-dark"
+          } cursor-pointer flex items-center fixed right-0 z-50 `}
           style={{ bottom: "5.5rem" }}
         >
           <svg

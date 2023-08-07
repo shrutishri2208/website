@@ -37,11 +37,11 @@ const Card = ({ id, title, tag }) => {
         <div className="flex justify-between items-center">
           <p>Tag 1, Tag 2, Tag 3</p>
           <div className="flex items-center gap-4">
-            <div className="github-button">
+            <div className="github-button scale-150 mb-1">
               <GitHubIcon />
             </div>
             <div className="download-button">
-              <div className="flex items-center justify-center gap-1 ">
+              <div className="flex items-center justify-center gap-1 cursor-pointer">
                 {/* <KeyboardArrowLeftIcon /> */}
                 <span>Download</span>
                 {/* <KeyboardArrowRightIcon className="" /> */}

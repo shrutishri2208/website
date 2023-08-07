@@ -1,73 +1,37 @@
 import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import CardDisplay from "./CardDisplay";
-import trial from "../assets/trial.png";
 
 const SideProjectCard = ({ id, title }) => {
   const [hover, setHover] = useState(false);
 
   return (
     <div
-      onMouseEnter={() => setHover(true)}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className={`${
-        id === 1
-          ? "border-gradient-1"
-          : id === 2
-          ? "border-gradient-2"
-          : id === 3
-          ? "border-gradient-3"
-          : "border-gradient-4"
-      } border-gradient ${id % 2 === 0 ? "move-up-3" : ""} ${
-        hover === true ? "scale-up" : "scale-down"
+      className={`side-card flex justify-between items-center gap-6 ${
+        id % 2 === 1 ? "relative top-1/2" : ""
       }`}
     >
-      <div
-        className={`side-card relative bg-black grid grid-flow-col gap-x-8 p-6 items-center justify-between m-auto rounded-lg`}
-      >
-        {/* <div
-          className={`${
-            id === 1
-              ? "bg-gradient-1"
-              : id === 2
-              ? "bg-gradient-2"
-              : id === 3
-              ? "bg-gradient-3"
-              : "bg-gradient-4"
-          } bg-gradient h-full w-full absolute z-0 bottom-10 right-4 `}
-        ></div> */}
-        <div className="">
-          <img src="https://placehold.co/100" />
+      <div className="side-card-display " style={{ flex: "1" }}></div>
+      <div className="flex flex-col gap-1 " style={{ flex: "2" }}>
+        <div className="side-card-header">
+          <h1>{title}</h1>
         </div>
-
-        <div className="h-full flex flex-col relative z-10 -mt-6 ">
-          <p
-            className={`card-title font-medium ${
-              id === 1
-                ? "text-colorblue"
-                : id === 2
-                ? "text-coloryellow"
-                : id === 3
-                ? "text-colororange"
-                : "text-colorviolet"
-            }`}
-          >
-            {title}
-          </p>
-          <p className="text-white text-md font-normal mb-6">
-            Lorem ipsum dolor sit amet, consectetur dipiscing elit. Nulla
-            elementum ac libero .
-          </p>
-          <div className="flex justify-between items-center mb-4">
-            <p className="text-white text-md opacity-30">Tag1, Tag2, Tag3</p>
-            <div className="flex items-center gap-5">
-              <button className="scale-110">
-                <GitHubIcon className="scale-110" />
-              </button>
-              <button className="bg-white bg-opacity-10 font-medium tracking-tight text-lg text-white px-3 py-2 rounded-md">
-                Download
-              </button>
+        <div className="side-card-body">
+          <h2 className="mb-1">
+            Lorem ipsum dolor sit amet, consecte adipiscing elit.
+          </h2>
+          <div className="flex justify-between items-center">
+            <p>Tag 1, Tag 2, Tag 3</p>
+            <div className="flex items-center gap-4">
+              <div className="github-button scale-125 relative bottom-1">
+                <GitHubIcon />
+              </div>
+              <div className="download-button-2 relative bottom-1">
+                <div className="flex items-center justify-center gap-1 cursor-pointer">
+                  {/* <KeyboardArrowLeftIcon /> */}
+                  <span>Download</span>
+                  {/* <KeyboardArrowRightIcon className="" /> */}
+                </div>
+              </div>
             </div>
           </div>
         </div>
