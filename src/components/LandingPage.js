@@ -7,6 +7,7 @@ import { light } from "@mui/material/styles/createPalette";
 const LandingPage = () => {
   const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
+  console.log(theme);
 
   return (
     <div className="relative">
@@ -14,7 +15,7 @@ const LandingPage = () => {
         <div className="theme-toggle-container">
           <div
             className={`theme-toggle-bg ${
-              theme === "light" ? "bg-open-white" : "bg-open-black"
+              theme === "light" ? "bg-open-light" : "bg-open-dark"
             }`}
           ></div>
           <button
@@ -27,7 +28,7 @@ const LandingPage = () => {
               }
             }}
           >
-            {theme.split("")[0]}
+            {theme === "light" ? "D" : "L"}
           </button>
         </div>
         <img

@@ -20,12 +20,12 @@ const Container = () => {
     // >
     <div
       className={`screen h-full w-full ${
-        theme === "light" ? "bg-black black-white" : "bg-white white-black"
+        theme === "light" ? " black-white" : " white-black"
       }`}
     >
       <div className={`container p-16 my-0 mx-auto`}>
         <LandingPage />
-        {/* <TextContainer index={1} text="projects" /> */}
+        <TextContainer index={1} text="projects" />
         <CardsContainer />
         <TextContainer index={2} text="clones" />
         <ClonesContainer />
