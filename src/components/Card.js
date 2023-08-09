@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useSelector } from "react-redux";
-import CardDisplay from "./CardDisplay";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import Keyboard from "./Keyboard";
+import Murk from "./Murk";
+import Pageplay from "./Pageplay";
+import Wordwise from "./Wordwise";
 
 const Card = ({ id, title, tag }) => {
   const theme = useSelector((state) => state.theme.theme);
@@ -38,7 +37,12 @@ const Card = ({ id, title, tag }) => {
           <p>{tag}</p>
         </div>
       </div>
-      <div className="card-display flex-1"></div>
+      <div className="card-display flex-1">
+        {title === "Pageplay" && <Pageplay />}
+        {title === "Murk" && <Murk />}
+        {title === "Keyboard" && <Keyboard />}
+        {title === "Wordwise" && <Wordwise />}
+      </div>
       <div
         className={`card-body ${
           theme === "light" ? "card-body-light" : "card-body-dark"
@@ -59,7 +63,13 @@ const Card = ({ id, title, tag }) => {
             >
               <GitHubIcon />
             </div>
-            <div className="download-button">
+            <div
+              className={`${
+                theme === "light"
+                  ? "download-button-light"
+                  : "download-button-dark"
+              } download-button`}
+            >
               <div className="flex items-center justify-center gap-1 cursor-pointer">
                 {/* <KeyboardArrowLeftIcon /> */}
                 <span>Download</span>

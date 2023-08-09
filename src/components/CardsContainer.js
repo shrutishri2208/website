@@ -20,7 +20,7 @@ const CardsContainer = () => {
     },
     {
       id: 4,
-      title: "WordWise",
+      title: "Wordwise",
       tag: "Chrome Extension",
     },
   ];

@@ -83,7 +83,7 @@ const LandingPage = () => {
           </p>
         </div>
         <div
-          className={`${
+          className={`work-button ${
             theme === "light" ? "work-button-light" : "work-button-dark"
           } cursor-pointer flex items-center fixed right-0 z-50 `}
           style={{ bottom: "5.5rem" }}
