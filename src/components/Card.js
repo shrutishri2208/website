@@ -6,7 +6,16 @@ import Murk from "./Murk";
 import Pageplay from "./Pageplay";
 import Wordwise from "./Wordwise";
 
-const Card = ({ id, title, tag }) => {
+const Card = ({
+  id,
+  title,
+  tag,
+  desc,
+  tech,
+  githubLink,
+  viewLink,
+  viewText,
+}) => {
   const theme = useSelector((state) => state.theme.theme);
 
   const [hover, setHover] = useState(false);
@@ -31,6 +40,7 @@ const Card = ({ id, title, tag }) => {
             height="16"
             viewBox="0 0 16 16"
             fill="none"
+            className="2xl:scale-100 xl:scale-100 scale-75"
           >
             <circle cx="8" cy="8" r="8" fill="#0075FF" />
           </svg>
@@ -48,20 +58,18 @@ const Card = ({ id, title, tag }) => {
           theme === "light" ? "card-body-light" : "card-body-dark"
         }`}
       >
-        <h2 className="mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          elementum ac libero sit amet efficitur. Nulla tristique, ex eget
-          facilisis auctor, nisl dui.
-        </h2>
+        <h2 className="mb-4">{desc}</h2>
         <div className="flex justify-between items-center">
-          <p>Tag 1, Tag 2, Tag 3</p>
+          <p>{tech}</p>
           <div className="flex items-center 2xl:gap-4 xl:gap-4 gap-2">
             <div
               className={`github-button ${
                 theme === "light" ? "github-button-light" : "github-button-dark"
               }`}
             >
-              <GitHubIcon />
+              <a href={githubLink}>
+                <GitHubIcon />
+              </a>
             </div>
             <div
               className={`${
@@ -70,11 +78,11 @@ const Card = ({ id, title, tag }) => {
                   : "download-button-dark"
               } download-button`}
             >
-              <div className="flex items-center justify-center gap-1 cursor-pointer">
-                {/* <KeyboardArrowLeftIcon /> */}
-                <span>Download</span>
-                {/* <KeyboardArrowRightIcon className="" /> */}
-              </div>
+              <a href={viewLink}>
+                <div className="flex items-center justify-center gap-1 cursor-pointer">
+                  <span>{viewText}</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

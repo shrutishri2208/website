@@ -1,29 +1,11 @@
 import React from "react";
 import SideProjectCard from "./SideProjectCard";
+import { sides } from "../projects";
 const SideProjectContainer = () => {
-  const cardArray = [
-    {
-      id: 1,
-      title: "Project-1",
-    },
-    {
-      id: 2,
-      title: "Project-2",
-    },
-    {
-      id: 3,
-      title: "Project-3",
-    },
-    {
-      id: 4,
-      title: "Project-4",
-    },
-  ];
-
   return (
     <div className="2xl:mt-16 xl:mt-16 sides-container">
       <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">
-        {cardArray.map((item) => {
+        {sides.map((item) => {
           return <SideProjectCard {...item} key={item.id} />;
         })}
       </div>

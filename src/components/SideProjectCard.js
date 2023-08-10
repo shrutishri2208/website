@@ -2,7 +2,16 @@ import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useSelector } from "react-redux";
 
-const SideProjectCard = ({ id, title }) => {
+const SideProjectCard = ({
+  id,
+  title,
+  desc,
+  tag,
+  tech,
+  githubLink,
+  viewLink,
+  viewText,
+}) => {
   const [hover, setHover] = useState(false);
 
   const theme = useSelector((state) => state.theme.theme);
@@ -22,19 +31,29 @@ const SideProjectCard = ({ id, title }) => {
             theme === "light"
               ? "side-card-header-light"
               : "side-card-header-dark"
-          }`}
+          } flex justify-between items-center w-full`}
         >
           <h1>{title}</h1>
+          <div className="flex items-center 2xl:gap-2 xl:gap-2 gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              className="2xl:scale-100 xl:scale-100 scale-75"
+            >
+              <circle cx="8" cy="8" r="8" fill="#0075FF" />
+            </svg>
+            <p>{tag}</p>
+          </div>
         </div>
         <div
           className={`side-card-body ${
             theme === "light" ? "side-card-body-light" : "side-card-body-dark"
           }`}
         >
-          <h2 className="mb-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            elementum ac libero sit amet efficitur.
-          </h2>
+          <h2 className="mb-2">{desc}</h2>
           <div className="flex justify-between items-center">
             <p>Tag 1, Tag 2, Tag 3</p>
             <div className="flex items-center 2xl:gap-4 xl:gap-4 gap-2">
@@ -43,9 +62,11 @@ const SideProjectCard = ({ id, title }) => {
                   theme === "light"
                     ? "github-button-light"
                     : "github-button-dark"
-                } scale-125 relative bottom-1`}
+                } scale-125 relative 2xl:bottom-1 xl:bottom-1 bottom-0`}
               >
-                <GitHubIcon />
+                <a href={githubLink}>
+                  <GitHubIcon />
+                </a>
               </div>
               <div
                 className={`download-button-2 bottom-1 ${
@@ -54,9 +75,11 @@ const SideProjectCard = ({ id, title }) => {
                     : "download-button-2-dark"
                 }`}
               >
-                <div className="flex items-center justify-center gap-1 cursor-pointer">
-                  <span>Download</span>
-                </div>
+                <a href={viewLink}>
+                  <div className="flex items-center justify-center gap-1 cursor-pointer">
+                    <span>{viewText}</span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>

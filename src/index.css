@@ -492,7 +492,8 @@ div {
   }
 
   /* CARD-HEADER */
-  .card-header {
+  .card-header,
+  .side-card-header {
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.5rem; /* 133.333% */
@@ -721,7 +722,8 @@ div {
   }
 
   /* CARD-HEADER */
-  .card-header {
+  .card-header,
+  .side-card-header {
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 1.5rem; /* 133.333% */
