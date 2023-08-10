@@ -10,9 +10,9 @@ const LandingPage = () => {
   console.log(theme);
 
   return (
-    <div className="relative">
-      <div className="2xl:flex xl:flex justify-between items-start">
-        {/* <div className="theme-toggle-container">
+    <div className="relative 2xl:p-0 xl:p-0 p-4">
+      <div className="flex justify-between items-start">
+        <div className="theme-toggle-container">
           <div
             className={`theme-toggle-bg ${
               theme === "light" ? "bg-open-light" : "bg-open-dark"
@@ -30,8 +30,7 @@ const LandingPage = () => {
           >
             {theme === "light" ? "D" : "L"}
           </button>
-        </div> */}
-        <div></div>
+        </div>
         <img
           src={profile}
           // width={"280px"}

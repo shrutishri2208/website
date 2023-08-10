@@ -11,12 +11,12 @@ const SideProjectCard = ({ id, title }) => {
     <div
       className={`side-card ${
         theme === "light" ? "card-light" : "card-dark"
-      } flex justify-between items-center gap-6 ${
-        id % 2 === 1 ? "relative top-1/2" : ""
+      } flex justify-between items-center 2xl:gap-6 xl:gap-6 gap-4 ${
+        id % 2 === 1 ? "2xl:relative 2xl:top-1/2 xl:relative xl:top-1/2" : ""
       }`}
     >
-      <div className="side-card-display " style={{ flex: "1" }}></div>
-      <div className="flex flex-col gap-1 " style={{ flex: "2" }}>
+      <div className="side-card-display"></div>
+      <div className="flex flex-col gap-1 flex-1">
         <div
           className={`side-card-header ${
             theme === "light"
@@ -31,12 +31,13 @@ const SideProjectCard = ({ id, title }) => {
             theme === "light" ? "side-card-body-light" : "side-card-body-dark"
           }`}
         >
-          <h2 className="mb-1">
-            Lorem ipsum dolor sit amet, consecte adipiscing elit.
+          <h2 className="mb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            elementum ac libero sit amet efficitur.
           </h2>
           <div className="flex justify-between items-center">
             <p>Tag 1, Tag 2, Tag 3</p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center 2xl:gap-4 xl:gap-4 gap-2">
               <div
                 className={`github-button ${
                   theme === "light"
@@ -54,9 +55,7 @@ const SideProjectCard = ({ id, title }) => {
                 }`}
               >
                 <div className="flex items-center justify-center gap-1 cursor-pointer">
-                  {/* <KeyboardArrowLeftIcon /> */}
                   <span>Download</span>
-                  {/* <KeyboardArrowRightIcon className="" /> */}
                 </div>
               </div>
             </div>

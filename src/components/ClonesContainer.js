@@ -14,15 +14,8 @@ const ClonesContainer = () => {
   ];
 
   return (
-    <div className="mt-28">
-      {/* <div className="grid grid-cols-2 text-right gap-x-16 mr-1 -mb-2">
-        <p></p>
-        <p className="move-up-2 text-3xl font-medium text-left ">
-          I sometimes make clones of apps.
-          <br />I like to practice my skills.
-        </p>
-      </div> */}
-      <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:gap-16 xl:gap-16 gap-8 flex flex-col">
+    <div className="2xl:mt-20 xl:mt-20 clones-container mb-4">
+      <div className="2xl:flex 2xl:flex-row xl:flex xl:flex-row 2xl:gap-16 xl:gap-16 flex flex-col gap-8 ">
         {cardArray.map((item) => {
           return <CloneCard {...item} key={item.id} />;
         })}

@@ -71,10 +71,6 @@ div {
   }
 }
 
-.bg-open-dark {
-  animation: bg-open-dark 0.75s linear 0s forwards;
-}
-
 @keyframes bg-open-dark {
   from {
     background-color: var(--dark);
@@ -87,10 +83,6 @@ div {
     width: 1000vh;
   }
 }
-.bg-open-light {
-  animation: bg-open-light 0.75s linear 0s forwards;
-}
-
 @keyframes bg-open-light {
   from {
     background-color: var(--light);
@@ -192,7 +184,6 @@ div {
 .clone-card-light,
 .side-card-light {
   /* background-color: white; */
-  cursor: pointer;
   border: 2px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 6px 80px 0px rgba(0, 0, 0, 0.04);
 }
@@ -396,13 +387,31 @@ div {
   width: 2.5rem;
 }
 
+/****************************************************************************/
+
 /* LAPTOPS AND BIG SCREENS */
 
 @media screen and (min-width: 1280px) {
+  .bg-open-dark {
+    animation: bg-open-dark 0.75s linear 0s forwards;
+  }
+  .bg-open-light {
+    animation: bg-open-light 0.75s linear 0s forwards;
+  }
+
   .container {
-    background-color: red;
+    /* background-color: red; */
     max-width: 1280px;
     height: max-content;
+  }
+
+  /* TEXT-CONTAINER */
+  .text-heading h1 {
+    opacity: 5%;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 5rem;
+    letter-spacing: -0.1rem;
   }
 
   /* LANDING-PAGE */
@@ -460,10 +469,11 @@ div {
   }
 
   .clone-card {
-    max-width: 1152px;
+    height: 960px;
     padding: 3rem;
     border-radius: 1rem;
     transition: all 0.5s;
+    gap: 1.75rem;
   }
 
   .side-card {
@@ -475,7 +485,7 @@ div {
 
   /* CARD-DISPLAY */
   .side-card-display {
-    max-width: 120px;
+    width: 120px;
     height: 120px;
     background: rgb(124, 124, 124);
     border-radius: 0.8rem;
@@ -576,28 +586,59 @@ div {
   /* KEYBOARD */
   iframe {
     transform-origin: top left;
-    transform: scale(0.45);
+    transform: scale(0.43);
     position: absolute;
     top: -36px;
-    left: -25px;
+    left: -15px;
   }
 }
+
+/*******************************************************************************/
 
 /* MOBILES */
 
 @media screen and (max-width: 767px) {
+  .bg-open-dark {
+    animation: bg-open-dark 2s linear 0s forwards;
+  }
+  .bg-open-light {
+    animation: bg-open-light 2s linear 0s forwards;
+  }
+
   .container {
     /* background-color: rgb(123, 239, 123); */
-    max-width: 380px;
+    max-width: 100vh;
+    /* padding: 1rem; */
+    /* width: 100vh; */
     height: max-content;
     padding-top: 2rem;
+    overflow-x: hidden;
   }
 
   .cards-container {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  .clones-container {
+    margin-top: 1rem;
+  }
+
+  .sides-container {
+    margin-top: 1rem;
+  }
+
+  /* TEXT-CONTAINER */
+  .text-heading h1 {
+    text-align: center;
+    opacity: 5%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    letter-spacing: -0.1rem;
   }
 
   /* LANDING-PAGE */
+
   .profile-image {
     /* position: relative; */
     /* margin: auto; */
@@ -607,7 +648,7 @@ div {
 
   .heading {
     margin-top: 2rem;
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 2.75rem;
     letter-spacing: -0.1rem;
@@ -631,7 +672,7 @@ div {
   }
 
   .work-button-dark p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 2rem; /* 133.333% */
     letter-spacing: -0.075rem;
@@ -640,6 +681,7 @@ div {
   /* CARDS */
   .card {
     max-width: 380px;
+    margin: auto;
     width: 380px;
     height: 424px;
     padding: 1rem;
@@ -652,13 +694,19 @@ div {
 
   .clone-card {
     max-width: 380px;
+    width: 380px;
+    height: 646px;
+    margin: auto;
     padding: 1rem;
     border-radius: 1rem;
     transition: all 0.5s;
+    gap: 1.75rem;
   }
 
   .side-card {
     max-width: 380px;
+    width: 380px;
+    margin: auto;
     padding: 1rem;
     border-radius: 1rem;
     transition: all 0.5s;
@@ -666,7 +714,7 @@ div {
 
   /* CARD-DISPLAY */
   .side-card-display {
-    max-width: 80px;
+    width: 80px;
     height: 80px;
     background: rgb(124, 124, 124);
     border-radius: 0.8rem;

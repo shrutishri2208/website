@@ -21,7 +21,7 @@ const SideProjectContainer = () => {
   ];
 
   return (
-    <div className="my-24">
+    <div className="2xl:mt-16 xl:mt-16 sides-container">
       <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">
         {cardArray.map((item) => {
           return <SideProjectCard {...item} key={item.id} />;
