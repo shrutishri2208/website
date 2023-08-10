@@ -25,8 +25,8 @@ const CardsContainer = () => {
     },
   ];
   return (
-    <div className="pb-40 ">
-      <div className="grid grid-cols-2 gap-16">
+    <div className="cards-container pb-40">
+      <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">
         {cardArray.map((item) => {
           return <Card {...item} key={item.id} />;
         })}

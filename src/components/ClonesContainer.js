@@ -22,7 +22,7 @@ const ClonesContainer = () => {
           <br />I like to practice my skills.
         </p>
       </div> */}
-      <div className="flex flex-col gap-16">
+      <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 2xl:gap-16 xl:gap-16 gap-8 flex flex-col">
         {cardArray.map((item) => {
           return <CloneCard {...item} key={item.id} />;
         })}

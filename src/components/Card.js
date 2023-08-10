@@ -14,7 +14,7 @@ const Card = ({ id, title, tag }) => {
   return (
     <div
       className={`card ${theme === "light" ? "card-light" : "card-dark"} flex ${
-        id % 2 === 1 ? "relative top-44" : ""
+        id % 2 === 1 ? "2xl:relative 2xl:top-44 xl:relative xl:top-44" : ""
       }`}
     >
       <div
@@ -55,11 +55,11 @@ const Card = ({ id, title, tag }) => {
         </h2>
         <div className="flex justify-between items-center">
           <p>Tag 1, Tag 2, Tag 3</p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center 2xl:gap-4 xl:gap-4 gap-2">
             <div
               className={`github-button ${
                 theme === "light" ? "github-button-light" : "github-button-dark"
-              } scale-150 mb-1`}
+              }`}
             >
               <GitHubIcon />
             </div>

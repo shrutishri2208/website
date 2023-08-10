@@ -45,7 +45,13 @@ const CloneCard = ({ id, title }) => {
               >
                 <GitHubIcon />
               </div>
-              <div className="download-button">
+              <div
+                className={`${
+                  theme === "light"
+                    ? "download-button-light"
+                    : "download-button-dark"
+                } download-button`}
+              >
                 <div className="flex items-center justify-center gap-2 cursor-pointer">
                   {/* <KeyboardArrowLeftIcon /> */}
                   <span>Download</span>

@@ -11,8 +11,8 @@ const LandingPage = () => {
 
   return (
     <div className="relative">
-      <div className="flex justify-between items-start">
-        <div className="theme-toggle-container">
+      <div className="2xl:flex xl:flex justify-between items-start">
+        {/* <div className="theme-toggle-container">
           <div
             className={`theme-toggle-bg ${
               theme === "light" ? "bg-open-light" : "bg-open-dark"
@@ -30,20 +30,21 @@ const LandingPage = () => {
           >
             {theme === "light" ? "D" : "L"}
           </button>
-        </div>
+        </div> */}
+        <div></div>
         <img
           src={profile}
-          width={"280px"}
-          height={"280px"}
-          className="rounded-lg"
+          // width={"280px"}
+          // height={"280px"}
+          className="profile-image rounded-lg"
         ></img>
       </div>
-      <div className="flex justify-between ">
+      <div className="2xl:flex xl:flex justify-between ">
         <div className="">
           <p
             className={`heading ${
               theme === "light" ? "heading-light" : "heading-dark"
-            }  relative bottom-20`}
+            }`}
           >
             Hi! I am{" "}
             <span
@@ -85,8 +86,7 @@ const LandingPage = () => {
         <div
           className={`work-button ${
             theme === "light" ? "work-button-light" : "work-button-dark"
-          } cursor-pointer flex items-center fixed right-0 z-50 `}
-          style={{ bottom: "5.5rem" }}
+          } cursor-pointer flex items-center`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

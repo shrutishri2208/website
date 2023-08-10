@@ -8,7 +8,7 @@ const TextContainer = ({ index, text }) => {
     <div className="">
       <div className="grid grid-cols-2 gap-16 relative">
         <h1
-          className={`text-8xl font-extrabold absolute ${
+          className={`font-extrabold absolute ${
             theme === "light"
               ? "text-black opacity-10"
               : "text-white opacity-10"

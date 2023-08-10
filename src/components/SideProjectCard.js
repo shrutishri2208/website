@@ -46,7 +46,13 @@ const SideProjectCard = ({ id, title }) => {
               >
                 <GitHubIcon />
               </div>
-              <div className="download-button-2 relative bottom-1">
+              <div
+                className={`download-button-2 bottom-1 ${
+                  theme === "light"
+                    ? "download-button-2-light"
+                    : "download-button-2-dark"
+                }`}
+              >
                 <div className="flex items-center justify-center gap-1 cursor-pointer">
                   {/* <KeyboardArrowLeftIcon /> */}
                   <span>Download</span>

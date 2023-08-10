@@ -22,19 +22,18 @@ const Keyboard = () => {
       <div className="iframe-container">
         <iframe
           src={`https://keyboard-chi.vercel.app/#${theme}`}
+          // src="https://linear.app/"
           height="960"
-          width="1024"
+          width="1100"
           className="absolute"
         ></iframe>
       </div>
-      <div className="flex gap-8 items-end mb-8 absolute bottom-0 z-50 ">
-        {/* <div className={`rounded-full ${theme === "writer" ? "button-1" : ""}`}> */}
+      <div className="flex 2xl:gap-16 xl:gap-16 gap-8 items-end mb-8 absolute bottom-0 z-50 ">
         <button
-          className={`bg-black  h-10 w-10 rounded-full flex justify-center items-center ${
+          className={`button-1 bg-black rounded-full flex justify-center items-center ${
             theme === "writer" ? "button-1-border" : ""
           }`}
           onClick={() => {
-            // setBack(true);
             setTimeout(() => {
               setBack(false);
             }, 0);
@@ -43,19 +42,11 @@ const Keyboard = () => {
         >
           <img src={scroll} className="h-6 w-5" />
         </button>
-        {/* </div> */}
-        {/* <p className="text-white relative bottom-2">or</p> */}
-        {/* <div
-          className={`rounded-full p-0.5 ${
-            theme === "modern" ? "button-2" : ""
-          }`}
-        > */}
         <button
-          className={` bg-black h-10 w-10 rounded-full flex justify-center items-center ${
+          className={`button-2 bg-black rounded-full flex justify-center items-center ${
             theme === "modern" ? "button-2-border" : ""
           }`}
           onClick={() => {
-            // setBack(true);
             setTimeout(() => {
               setBack(false);
             }, 0);
@@ -64,7 +55,6 @@ const Keyboard = () => {
         >
           <img src={alien} className="h-6 w-6" />
         </button>
-        {/* </div> */}
       </div>
 
       <div
