@@ -49,6 +49,13 @@ export const clones = [
     tech: "Tag1, Tag2, Tag3",
     githubLink: "",
   },
+  {
+    id: 2,
+    title: "Netflux",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+  },
 ];
 
 export const sides = [

@@ -7,7 +7,6 @@ import { light } from "@mui/material/styles/createPalette";
 const LandingPage = () => {
   const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
-  console.log(theme);
 
   return (
     <div className="relative 2xl:p-0 xl:p-0 p-4">
@@ -94,8 +93,18 @@ const LandingPage = () => {
             viewBox="0 0 16 16"
             fill="none"
           >
-            <circle opacity="0.3" cx="8" cy="8" r="8" fill="#22E765" />
-            <circle cx="8" cy="8" r="3" fill="#22E765" />
+            <circle
+              cx="8"
+              cy="8"
+              r="8"
+              fill={`${theme === "light" ? "#22E76533" : "#00000033"}`}
+            />
+            <circle
+              cx="8"
+              cy="8"
+              r="3"
+              fill={`${theme === "light" ? "#22E765" : "#000"}`}
+            />
           </svg>
           <p>Open for work</p>
         </div>
