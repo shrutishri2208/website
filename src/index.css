@@ -14,7 +14,7 @@
   --border-opacity: 0.3;
   /* --transition-time: 0.8s; */
   --dark: #1b1b1b;
-  --light: #ffffff;
+  --light: #fff;
 }
 
 body {
@@ -212,7 +212,7 @@ code {
 .card {
   cursor: pointer;
   max-width: 544px;
-  height: 560px;
+  height: 640px;
   padding: 3rem;
   border-radius: 1rem;
   flex-direction: column;
@@ -457,26 +457,57 @@ code {
 
 /* KEYBOARD */
 
-.keyboard {
+.keyboard-writer {
+  animation: keyboard-writer 0s linear 0.25s forwards;
+  background: radial-gradient(100% 100% at 50% 0%, #2e4515 0%, #181915 100%);
+}
+
+@keyframes keyboard-writer {
+  to {
+    background: radial-gradient(100% 100% at 50% 0%, #403530 0%, #201a17 100%);
+  }
+}
+.keyboard-modern {
+  animation: keyboard-modern 0s linear 0.25s forwards;
   background: radial-gradient(100% 100% at 50% 0%, #403530 0%, #201a17 100%);
-  /* background-color: wheat; */
+}
+@keyframes keyboard-modern {
+  to {
+    background: radial-gradient(100% 100% at 50% 0%, #2e4515 0%, #181915 100%);
+  }
+}
+.iframe-container {
+  width: 100%;
 }
 
 iframe {
   transform-origin: top left;
-  transform: scale(0.4);
+  transform: scale(0.435);
   position: absolute;
-  top: -32px;
-  left: -5px;
+  top: -36px;
 }
 
 .iframe-container-border {
-  background-color: #ffffff;
   width: 90%;
   height: 70%;
   position: absolute;
   bottom: -15px;
   border-radius: 1rem;
   overflow: hidden;
+  transition: all 1s;
+}
+
+.iframe-container-border-writer {
   border: 1.5px solid #977462;
+}
+.iframe-container-border-modern {
+  border: 1.5px solid rgb(158, 255, 0, 0.5);
+}
+
+.button-1-border {
+  border: 2px solid #ee864b55;
+}
+
+.button-2-border {
+  border: 2px solid #9eff5055;
 }
