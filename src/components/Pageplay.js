@@ -28,11 +28,11 @@ const Pageplay = () => {
   return (
     <div
       ref={divRef}
-      className="relative h-full w-full overflow-hidden rounded-2xl "
+      className="relative h-full w-full rounded-2xl overflow-hidden"
     >
       <img src={article} className="absolute w-full h-full " />
       <div
-        className="h-full w-full parent absolute overflow-hidden"
+        className="h-full w-full parent absolute overflow-hidden "
         style={{ width: `${lever}%` }}
       >
         <img src={youtube} className="youtube-image" />
@@ -40,7 +40,7 @@ const Pageplay = () => {
       <div
         onMouseMove={handleDrag}
         onTouchMove={handleTouch}
-        className=" h-full w-full z-50 overflow-hidden"
+        className=" h-full w-full z-50 cursor-grab"
       >
         <div
           className="lever"
