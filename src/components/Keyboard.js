@@ -28,7 +28,7 @@ const Keyboard = () => {
           className="absolute"
         ></iframe>
       </div>
-      <div className="flex 2xl:gap-16 xl:gap-16 gap-8 items-end mb-8 absolute bottom-0 z-50 ">
+      <div className="flex 2xl:gap-16 xl:gap-16 gap-8 items-end mb-8 absolute -bottom-3 z-50 ">
         <button
           className={`button-1 bg-black rounded-full flex justify-center items-center ${
             theme === "writer" ? "button-1-border" : ""
