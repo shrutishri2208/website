@@ -1,15 +1,16 @@
 import React from "react";
 import Container from "./components/Container";
-// import { useSelector } from "react-redux";
+import ToggleButton from "./components/ToggleButton";
+import { useSelector, useDispatch } from "react-redux";
+
+import { setTheme } from "./redux/theme/themeActions";
 
 function App() {
-  // const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.theme.theme);
+  const dispatch = useDispatch();
+
   return (
-    // <div className={`App ${theme === "light" ? "dark-light" : "light-dark"}`}>
-    //   <h1 className="text-black z-50 fixed top-0">HELLO</h1>
-    //
-    // </div>
-    <div className="app">
+    <div className={`App ${theme === "light" ? "dark-light" : "light-dark"}`}>
       <Container />
     </div>
   );

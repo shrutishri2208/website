@@ -13,7 +13,7 @@
   --colorred: #ff7171;
   --border-opacity: 0.3;
   /* --transition-time: 0.8s; */
-  --dark: #1b1b1b;
+  --dark: #000000;
   --light: #fff;
 }
 
@@ -23,7 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "DM Sans", sans-serif;
   color: var(--dark);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 code {
@@ -76,23 +76,30 @@ div {
     background-color: var(--dark);
     height: 0vh;
     width: 0vh;
+    border-radius: 100%;
   }
   to {
     background-color: var(--dark);
-    height: 900vh;
+    height: 1000vh;
     width: 1000vh;
+    border-radius: 0%;
   }
 }
 @keyframes bg-open-light {
   from {
-    background-color: var(--light);
+    /* background-color: var(--light); */
+    background-color: white;
     height: 0vh;
     width: 0vh;
+    border-radius: 100%;
   }
   to {
-    background-color: var(--light);
-    height: 900vh;
+    /* background-color: var(--light); */
+    background-color: white;
+
+    height: 1000vh;
     width: 1000vh;
+    border-radius: 0%;
   }
 }
 
@@ -115,10 +122,11 @@ div {
 
 .theme-toggle-bg {
   position: absolute;
+  z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 100%;
+  /* border-radius: 100%; */
   scale: 2;
   height: 0vh;
   width: 0vh;
@@ -142,7 +150,6 @@ div {
 .heading-words-dark {
   color: rgba(255, 255, 255, 1);
 }
-
 /* WORK-BUTTON */
 
 .work-button-light {
@@ -154,7 +161,7 @@ div {
 
 .work-button-dark {
   /* background-color: #10d251; */
-  background: linear-gradient(180deg, #25fc6d 0%, #10d251 100%);
+  background: linear-gradient(180deg, rgb(8, 238, 84) 0%, #06ae3e 100%);
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05),
     0px 5px 8px 0px rgba(0, 0, 0, 0.07), 0px 11px 16px 0px rgba(0, 0, 0, 0.09),
     0px 22px 34px 0px rgba(0, 0, 0, 0.11), 0px 60px 92px 0px rgba(0, 0, 0, 0.16);
@@ -208,22 +215,29 @@ div {
 .card-dark,
 .clone-card-dark,
 .side-card-dark {
-  /* background-color: var(--dark); */
-  border: 2px solid rgba(0, 0, 0, 0.05);
-  /* box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.1); */
+  background-color: rgb(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.02);
+  /* box-shadow: 0px 6px 80px 0px rgba(0, 0, 0, 0.5); */
 }
 
 .card-light:hover,
 .clone-card-light:hover,
 .side-card-light:hover {
-  scale: 1.005;
   box-shadow: 0px 8px 80px 0px rgba(0, 0, 0, 0.15);
 }
-/* :not(.card:hover),
-:not(.clone-card:hover),
-:not(.side-card:hover) {
-  scale: 1;
-} */
+.card-dark:hover,
+.clone-card-dark:hover,
+.side-card-dark:hover {
+  /* box-shadow: 0px 8px 80px 0px rgba(16, 0, 61, 0.4); */
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 2px solid rgba(255, 255, 255, 0.04);
+
+  /* background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  ); */
+}
 
 /* CARD-DISPLAY */
 
@@ -335,17 +349,6 @@ div {
   transition: all 0.2s;
 }
 
-.github-button:hover {
-  color: #4fc54d;
-}
-
-.github-button-light {
-  color: #000;
-}
-.github-button-dark {
-  color: #fff;
-}
-
 /* KEYBOARD */
 
 .keyboard-writer {
@@ -410,16 +413,22 @@ div {
 
 @media screen and (min-width: 1280px) {
   .bg-open-dark {
-    animation: bg-open-dark 0.75s linear 0s forwards;
+    animation: bg-open-dark 0.5s linear 0s forwards;
   }
   .bg-open-light {
-    animation: bg-open-light 0.75s linear 0s forwards;
+    animation: bg-open-light 0.5s linear 0s forwards;
   }
 
   .container {
     /* background-color: red; */
+    padding: 0rem 4rem;
     max-width: 1280px;
-    height: max-content;
+    margin: auto;
+    /* height: max-content; */
+  }
+
+  .landing-container {
+    min-height: 100vh;
   }
 
   /* TEXT-CONTAINER */
@@ -440,75 +449,86 @@ div {
     color: transparent;
   }
 
+  .theme-toggle-container {
+    top: 2rem;
+    left: 5rem;
+  }
+
   /* LANDING-PAGE */
 
   .profile-image {
     height: 280px;
     width: 280px;
+    position: relative;
+    z-index: 50;
   }
 
   .heading {
-    position: relative;
-    bottom: 5rem;
-    font-size: 5rem;
+    /* font-size: 6rem; */
+    font-size: 12vh;
     font-weight: 700;
-    line-height: 5rem;
+    /* line-height: 5.5rem; */
+    line-height: 12vh;
     letter-spacing: -0.1rem;
   }
 
   /* WORK-BUTTON */
   .work-button {
     position: fixed;
-    width: max-content;
-    float: right;
-    bottom: 3.5rem;
-    right: 11.5rem;
+    right: 2rem;
+    top: 2rem;
     z-index: 100;
     padding: 0.5rem 1rem;
     border-radius: 3rem;
     gap: 0.5rem;
-    transition: box-shadow 0.5s;
+    transition: box-shadow 0.25s;
   }
 
   .work-button-light p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 2rem; /* 133.333% */
-    letter-spacing: -0.075rem;
+    letter-spacing: -0.07rem;
   }
 
   .work-button-dark p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 2rem; /* 133.333% */
-    letter-spacing: -0.075rem;
+    letter-spacing: -0.07rem;
   }
 
   /* CARDS */
   .card {
     max-width: 544px;
-    height: 640px;
+    height: 656px;
     padding: 3rem;
     border-radius: 1rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.75rem;
-    transition: all 0.5s;
+    transition: all 0.25s;
+    position: relative;
+    z-index: 10;
   }
 
   .clone-card {
     height: 720px;
     padding: 3rem;
     border-radius: 1rem;
-    transition: all 0.5s;
+    transition: all 0.25s;
     gap: 1.75rem;
+    position: relative;
+    z-index: 10;
   }
 
   .side-card {
     max-width: 544px;
     padding: 2rem;
     border-radius: 1rem;
-    transition: all 0.5s;
+    transition: all 0.25s;
+    position: relative;
+    z-index: 10;
   }
 
   /* CARD-DISPLAY */
@@ -542,13 +562,28 @@ div {
     line-height: 2.5rem;
     letter-spacing: -0.1rem;
   }
+  /* 
+  .visit-arrow-bg {
+    opacity: 6%;
+  }
+  .visit-arrow-bg:hover {
+    opacity: 10%;
+  } */
+
+  .visit-arrow svg rect {
+    opacity: 6%;
+  }
+
+  .visit-arrow:hover > svg > rect {
+    opacity: 10%;
+  }
 
   /* CARD-BODY */
 
   .card-body,
   .clone-card-body h2 {
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: -0.03375rem;
   }
@@ -557,20 +592,20 @@ div {
   .clone-card-body p {
     opacity: 0.3;
     font-size: 1.125rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: -0.03375rem;
   }
   .side-card-body h2 {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: -0.03375rem;
   }
   .side-card-body p {
     opacity: 0.3;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: -0.03375rem;
   }
@@ -608,8 +643,29 @@ div {
 
   /* GITHUB-BUTTON */
 
-  .github-button {
+  /* .github-button {
     transform: scale(1.5);
+  }
+ */
+
+  .github-button {
+    background-color: rgb(35, 41, 99, 0.06);
+    padding: 8px 10px 8px 8px;
+    border-radius: 3rem;
+  }
+
+  .github-button:hover {
+    background-color: rgb(35, 41, 99, 0.12);
+  }
+
+  .github-button span {
+    position: relative;
+    top: 1px;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 133.333% */
+    letter-spacing: -0.03375rem;
   }
 
   /* KEYBOARD */
@@ -704,6 +760,8 @@ div {
     /* margin: auto; */
     height: 150px;
     width: 150px;
+    position: relative;
+    z-index: 50;
   }
 
   .heading {
@@ -854,9 +912,9 @@ div {
   }
 
   /* GITHUB-BUTTON */
-  .github-button {
+  /* .github-button {
     transform: scale(1);
-  }
+  } */
 
   /* KEYBOARD */
   iframe {

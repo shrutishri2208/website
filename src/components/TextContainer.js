@@ -14,8 +14,8 @@ const TextContainer = ({ index, text }) => {
             index === 1
               ? "left-24 top-10"
               : index === 2
-              ? "left-32 -bottom-2"
-              : "top-12 left-8"
+              ? "left-32 top-14"
+              : "top-14 left-8"
           }`}
         >
           {text}

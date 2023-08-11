@@ -39,7 +39,9 @@ const Pageplay = () => {
       </div>
       <div
         onMouseMove={handleDrag}
+        onMouseEnd={() => setLever(70)}
         onTouchMove={handleTouch}
+        onTouchEnd={() => setLever(70)}
         className=" h-full w-full z-50 cursor-grab opacity-90"
       >
         <div

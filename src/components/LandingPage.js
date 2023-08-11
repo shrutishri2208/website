@@ -2,109 +2,85 @@ import React from "react";
 import profile from "../assets/profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../redux/theme/themeActions";
-import { light } from "@mui/material/styles/createPalette";
 
 const LandingPage = () => {
   const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
 
   return (
-    <div className="relative 2xl:p-0 xl:p-0 p-4">
-      <div className="flex justify-between items-start">
-        <div className="theme-toggle-container">
-          {/* <div
-            className={`theme-toggle-bg ${
-              theme === "light" ? "bg-open-light" : "bg-open-dark"
-            }`}
-          ></div> */}
-          <button
-            className="uppercase text-black bg-yellow-400 rounded-full px-3 py-1"
-            onClick={() => {
-              if (theme === "light") {
-                dispatch(setTheme("dark"));
-              } else {
-                dispatch(setTheme("light"));
-              }
-            }}
-          >
-            {theme === "light" ? "D" : "L"}
-          </button>
-        </div>
-        <img src={profile} className="profile-image rounded-lg"></img>
-      </div>
-      <div className="2xl:flex xl:flex justify-between ">
-        <div className="">
-          <p
-            className={`heading ${
-              theme === "light" ? "heading-light" : "heading-dark"
-            }`}
-          >
-            Hi! I am{" "}
-            <span
-              className={`${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              Shruti
-            </span>
-            , <br />
-            a developer who <br />
-            <span
-              className={`${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              loves to
-            </span>{" "}
-            design and <br />
-            <span
-              className={`${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              build
-            </span>{" "}
-            simple and <br />
-            beautiful{" "}
-            <span
-              className={`${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              software
-            </span>
-            .
-          </p>
-        </div>
-        <div
-          className={`work-button  ${
-            theme === "light" ? "work-button-light" : "work-button-dark"
-          } cursor-pointer flex items-center`}
+    <div className="landing-container flex justify-center items-center relative z-50">
+      <div className="text-center m-auto">
+        <p
+          className={`heading ${
+            theme === "light" ? "heading-light" : "heading-dark"
+          }`}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
+          Hi! I am{" "}
+          <span
+            className={`${
+              theme === "light" ? "heading-words-light" : "heading-words-dark"
+            }`}
           >
-            <circle
-              cx="8"
-              cy="8"
-              r="8"
-              fill={`${theme === "light" ? "#22E76533" : "#00000033"}`}
-            />
-            <circle
-              cx="8"
-              cy="8"
-              r="3"
-              fill={`${theme === "light" ? "#22E765" : "#000"}`}
-            />
-          </svg>
-          <p>Open for work</p>
-        </div>
+            Shruti
+          </span>
+          , <br />
+          a developer who <br />
+          <span
+            className={`${
+              theme === "light" ? "heading-words-light" : "heading-words-dark"
+            }`}
+          >
+            loves to
+          </span>{" "}
+          design and <br />
+          <span
+            className={`${
+              theme === "light" ? "heading-words-light" : "heading-words-dark"
+            }`}
+          >
+            build
+          </span>{" "}
+          simple and <br />
+          beautiful{" "}
+          <span
+            className={`${
+              theme === "light" ? "heading-words-light" : "heading-words-dark"
+            }`}
+          >
+            software
+          </span>
+          .
+        </p>
       </div>
     </div>
+    // <div className="landing-container">
+    //   <div className="flex justify-between items-start">
+    //     <div className="theme-toggle-container h-full w-full bg-ye">
+    //       {/* <div
+    //         className={`theme-toggle-bg ${
+    //           theme === "light" ? "bg-open-light" : "bg-open-dark"
+    //         }`}
+    //       ></div> */}
+    //       <button
+    //         className="uppercase text-black bg-yellow-400 rounded-full px-3 py-1"
+    //         onClick={() => {
+    //           if (theme === "light") {
+    //             dispatch(setTheme("dark"));
+    //           } else {
+    //             dispatch(setTheme("light"));
+    //           }
+    //         }}
+    //       >
+    //         {theme === "light" ? "D" : "L"}
+    //       </button>
+    //     </div>
+    //     {/* <img src={profile} className="profile-image rounded-lg"></img> */}
+    //   </div>
+    //   <div className="2xl:flex xl:flex justify-between ">
+    //
+    //
+    //   </div>
+    // </div>
   );
 };
 
