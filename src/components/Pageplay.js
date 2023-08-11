@@ -8,37 +8,27 @@ const Pageplay = () => {
 
   const divRef = useRef(null);
 
-  const handleLeverDrag = (e) => {
-    const containerWidth = e.target.parentNode.offsetWidth;
-    const position = e.clientX - divRef.current.getBoundingClientRect().left;
-    const newPosition = (position / containerWidth) * 100;
-    setLever(newPosition);
-    console.log("NEW POSITION: ", newPosition);
-  };
-  console.log("LEVER: ", lever);
-  const trial = 10;
-
-  const handleDragStart = () => {
-    setIsDragging(true);
-  };
-
   const handleDrag = (e) => {
     if (!isDragging) return;
     const containerWidth = e.target.parentNode.offsetWidth;
     const position = e.clientX - divRef.current.getBoundingClientRect().left;
     const newPosition = (position / containerWidth) * 100;
     setLever(newPosition);
-    console.log("POSITION:", newPosition);
   };
 
-  const handleDragEnd = () => {
-    setIsDragging(false);
+  const handleTouch = (e) => {
+    if (!isDragging) return;
+    const containerWidth = e.target.parentNode.offsetWidth;
+    const position =
+      e.touches[0].clientX - divRef.current.getBoundingClientRect().left;
+    const newPosition = (position / containerWidth) * 100;
+    setLever(newPosition);
   };
 
   return (
     <div
       ref={divRef}
-      className="relative h-full w-full overflow-hidden rounded-2xl"
+      className="relative h-full w-full overflow-hidden rounded-2xl "
     >
       <img src={article} className="absolute w-full h-full " />
       <div
@@ -49,7 +39,7 @@ const Pageplay = () => {
       </div>
       <div
         onMouseMove={handleDrag}
-        onMouseUp={handleDragEnd}
+        onTouchMove={handleTouch}
         className=" h-full w-full z-50 overflow-hidden"
       >
         <div
