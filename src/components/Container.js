@@ -20,7 +20,7 @@ const Container = () => {
     >
       <div className={`container 2xl:p-16 xl:p-16 p-0 my-0 mx-auto`}>
         <LandingPage />
-        <TextContainer index={1} text="projects" />
+        {/* <TextContainer index={1} text="projects" /> */}
         <CardsContainer />
         <TextContainer index={2} text="clones" />
         <ClonesContainer />

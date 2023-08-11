@@ -23,7 +23,7 @@ const Card = ({
   return (
     <div
       className={`card ${theme === "light" ? "card-light" : "card-dark"} flex ${
-        id % 2 === 1 ? "2xl:relative 2xl:top-44 xl:relative xl:top-44" : ""
+        id === 1 ? "2xl:relative 2xl:top-1/2 xl:relative xl:top-44" : ""
       }`}
     >
       <div
@@ -48,7 +48,7 @@ const Card = ({
         </div>
       </div>
       <div className="card-display flex-1">
-        {title === "Pageplay" && <Pageplay />}
+        {title === "Textplay" && <Pageplay />}
         {title === "Murk" && <Murk />}
         {title === "Keyboard" && <Keyboard />}
         {title === "Wordwise" && <Wordwise />}

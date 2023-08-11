@@ -5,17 +5,17 @@ const TextContainer = ({ index, text }) => {
   const theme = useSelector((state) => state.theme.theme);
 
   return (
-    <div className="">
+    <div className="2xl:mt-0 xl:mt-0 mt-4 relative">
       <div className="text-heading">
         <h1
-          className={`font-extrabold 2xl:absolute xl:absolute ${
-            theme === "light" ? "text-black" : "text-white "
+          className={`2xl:absolute xl:absolute ${
+            theme === "light" ? "black-stroke" : "white-stroke "
           } ${
             index === 1
               ? "left-24 top-10"
               : index === 2
-              ? " right-36 -bottom-2"
-              : "top-8 left-8"
+              ? "left-32 -bottom-2"
+              : "top-12 left-8"
           }`}
         >
           {text}

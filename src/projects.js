@@ -1,26 +1,6 @@
 export const projects = [
   {
     id: 1,
-    title: "Murk",
-    tag: "Mobile Game",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
-    tech: "Tag1, Tag2, Tag3",
-    githubLink: "",
-    viewLink: "",
-    viewText: "Download",
-  },
-  {
-    id: 2,
-    title: "Pageplay",
-    tag: "Chrome Extension",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
-    tech: "Tag1, Tag2, Tag3",
-    githubLink: "",
-    viewLink: "",
-    viewText: "Download",
-  },
-  {
-    id: 3,
     title: "Keyboard",
     tag: "Web App",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
@@ -30,8 +10,8 @@ export const projects = [
     viewText: "View",
   },
   {
-    id: 4,
-    title: "Word Wise",
+    id: 2,
+    title: "Textplay",
     tag: "Chrome Extension",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
     tech: "Tag1, Tag2, Tag3",
@@ -39,6 +19,26 @@ export const projects = [
     viewLink: "",
     viewText: "Download",
   },
+  {
+    id: 3,
+    title: "Murk",
+    tag: "Mobile Game",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+    viewLink: "",
+    viewText: "Download",
+  },
+  // {
+  //   id: 4,
+  //   title: "Word Wise",
+  //   tag: "Chrome Extension",
+  //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+  //   tech: "Tag1, Tag2, Tag3",
+  //   githubLink: "",
+  //   viewLink: "",
+  //   viewText: "Download",
+  // },
 ];
 
 export const clones = [

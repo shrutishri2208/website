@@ -12,11 +12,11 @@ const LandingPage = () => {
     <div className="relative 2xl:p-0 xl:p-0 p-4">
       <div className="flex justify-between items-start">
         <div className="theme-toggle-container">
-          <div
+          {/* <div
             className={`theme-toggle-bg ${
               theme === "light" ? "bg-open-light" : "bg-open-dark"
             }`}
-          ></div>
+          ></div> */}
           <button
             className="uppercase text-black bg-yellow-400 rounded-full px-3 py-1"
             onClick={() => {
@@ -30,12 +30,7 @@ const LandingPage = () => {
             {theme === "light" ? "D" : "L"}
           </button>
         </div>
-        <img
-          src={profile}
-          // width={"280px"}
-          // height={"280px"}
-          className="profile-image rounded-lg"
-        ></img>
+        <img src={profile} className="profile-image rounded-lg"></img>
       </div>
       <div className="2xl:flex xl:flex justify-between ">
         <div className="">
@@ -82,7 +77,7 @@ const LandingPage = () => {
           </p>
         </div>
         <div
-          className={`work-button ${
+          className={`work-button  ${
             theme === "light" ? "work-button-light" : "work-button-dark"
           } cursor-pointer flex items-center`}
         >

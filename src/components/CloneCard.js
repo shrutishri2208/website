@@ -9,7 +9,7 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
   return (
     <div
       className={`clone-card ${
-        theme === "light" ? "clone-card-light" : "clone-card-dark bg-red-500"
+        theme === "light" ? "clone-card-light" : "clone-card-dark "
       } flex flex-col`}
     >
       <div
