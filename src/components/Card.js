@@ -21,6 +21,7 @@ const Card = ({
   const theme = useSelector((state) => state.theme.theme);
 
   const [githubHover, setGithubHover] = useState(false);
+  const [headingHover, setHeadingHover] = useState(false);
 
   return (
     <div
@@ -38,28 +39,50 @@ const Card = ({
           style={{ gap: "6px" }}
         >
           <h1 className="">{title}</h1>
-          <a className="h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-            >
-              <rect
+          <a
+            className="h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow  "
+            onMouseEnter={() => setHeadingHover(true)}
+            onMouseLeave={() => setHeadingHover(false)}
+            onMouseOver={() => setHeadingHover(true)}
+          >
+            <div className="absolute overflow-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="40"
                 height="40"
-                rx="6"
-                fill="#141837"
-                className="visit-arrow-bg"
-              />
-              <path
-                d="M14 15C18.6863 15 21.3137 15 26 15V27"
-                stroke="black"
-                stroke-width="3"
-              />
-              <path d="M26 15L14 27" stroke="black" stroke-width="3" />
-            </svg>
+                viewBox="0 0 40 40"
+                fill="none"
+                className={`${
+                  headingHover === true ? "arrow-1-move" : "arrow-1-back"
+                } relative -bottom-7 -left-7`}
+              >
+                <path
+                  d="M14 15C18.6863 15 21.3137 15 26 15V27"
+                  stroke="black"
+                  stroke-width="3"
+                />
+                <path d="M26 15L14 27" stroke="black" stroke-width="3" />
+              </svg>
+            </div>
+            <div className="overflow-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                className={`${
+                  headingHover === true ? "arrow-2-move" : "arrow-2-back"
+                } relative `}
+              >
+                <path
+                  d="M14 15C18.6863 15 21.3137 15 26 15V27"
+                  stroke="black"
+                  stroke-width="3"
+                />
+                <path d="M26 15L14 27" stroke="black" stroke-width="3" />
+              </svg>
+            </div>
           </a>
         </div>
 

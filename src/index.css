@@ -563,20 +563,67 @@ div {
     line-height: 2.5rem;
     letter-spacing: -0.1rem;
   }
-  /* 
-  .visit-arrow-bg {
-    opacity: 6%;
-  }
-  .visit-arrow-bg:hover {
-    opacity: 10%;
-  } */
 
-  .visit-arrow svg rect {
-    opacity: 6%;
+  .visit-arrow {
+    background-color: rgb(20, 24, 55, 0.06);
+    border-radius: 6px;
+    transition: all 0.25s;
+  }
+  .visit-arrow:hover {
+    background-color: rgb(20, 24, 55, 0.1);
   }
 
-  .visit-arrow:hover > svg > rect {
-    opacity: 10%;
+  .arrow-1-move {
+    animation: arrow-1-move var(--github-time) ease-out 0s forwards;
+  }
+  @keyframes arrow-1-move {
+    from {
+      bottom: -28px;
+      left: -28px;
+    }
+    to {
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+  .arrow-1-back {
+    animation: arrow-1-back var(--github-time) ease-out 0s forwards;
+  }
+  @keyframes arrow-1-back {
+    to {
+      bottom: -28px;
+      left: -28px;
+    }
+    from {
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+  .arrow-2-move {
+    animation: arrow-2-move var(--github-time) ease-out 0s forwards;
+  }
+  @keyframes arrow-2-move {
+    from {
+      bottom: 0px;
+      left: 0px;
+    }
+    to {
+      bottom: 28px;
+      left: 28px;
+    }
+  }
+  .arrow-2-back {
+    animation: arrow-2-back var(--github-time) ease-out 0s forwards;
+  }
+  @keyframes arrow-2-back {
+    to {
+      bottom: 0px;
+      left: 0px;
+    }
+    from {
+      bottom: 28px;
+      left: 28px;
+    }
   }
 
   /* CARD-BODY */
