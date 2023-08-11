@@ -15,6 +15,7 @@
   /* --transition-time: 0.8s; */
   --dark: #000000;
   --light: #fff;
+  --github-time: 0.3s;
 }
 
 body {
@@ -650,12 +651,13 @@ div {
 
   .github-button {
     background-color: rgb(35, 41, 99, 0.06);
-    padding: 8px 10px 8px 8px;
+    padding: 8px 14px 8px 12px;
     border-radius: 3rem;
+    transition: all 0.25s;
   }
 
   .github-button:hover {
-    background-color: rgb(35, 41, 99, 0.12);
+    /* background-color: rgb(35, 41, 99, 0.12); */
   }
 
   .github-button span {
@@ -666,6 +668,78 @@ div {
     font-weight: 500;
     line-height: 1.5rem; /* 133.333% */
     letter-spacing: -0.03375rem;
+  }
+
+  .github-button-move > img {
+    animation: image-move var(--github-time) ease-in 0s forwards;
+  }
+
+  @keyframes image-move {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translate(-33px);
+    }
+  }
+  .github-button-move > span {
+    animation: span-move var(--github-time) ease-in 0s forwards;
+  }
+
+  @keyframes span-move {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translate(-25px);
+    }
+  }
+  .github-button-move > svg {
+    animation: svg-move var(--github-time) ease-in 0s forwards;
+  }
+
+  @keyframes svg-move {
+    from {
+      transform: translate(0px);
+    }
+    to {
+      transform: translate(-32px);
+    }
+  }
+
+  .github-button-back > img {
+    animation: image-move-back var(--github-time) ease-out 0s forwards;
+  }
+  @keyframes image-move-back {
+    to {
+      transform: translate(0px);
+    }
+    from {
+      transform: translate(-33px);
+    }
+  }
+  .github-button-back > span {
+    animation: span-move-back var(--github-time) ease-out 0s forwards;
+  }
+  @keyframes span-move-back {
+    to {
+      transform: translate(0px);
+    }
+    from {
+      transform: translate(-25px);
+    }
+  }
+  .github-button-back > svg {
+    animation: svg-move-back var(--github-time) ease-out 0s forwards;
+  }
+
+  @keyframes svg-move-back {
+    to {
+      transform: translate(0px);
+    }
+    from {
+      transform: translate(-32px);
+    }
   }
 
   /* KEYBOARD */
