@@ -2,85 +2,80 @@ import React from "react";
 import profile from "../assets/profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../redux/theme/themeActions";
+import girl from "../assets/girl.png";
+import build from "../assets/build.png";
 
 const LandingPage = () => {
   const theme = useSelector((state) => state.theme.theme);
-  const dispatch = useDispatch();
 
   return (
-    <div className="landing-container flex justify-center items-center relative z-50">
-      <div className="text-center m-auto">
-        <p
-          className={`heading ${
-            theme === "light" ? "heading-light" : "heading-dark"
-          }`}
+    <div className="landing-container flex flex-col justify-center items-center relative">
+      <div className="flex flex-col justify-center items-center gap-8 relative 2xl:bottom-0 xl:bottom-0 bottom-8">
+        <img src={profile} className="profile-image" />
+        <div className="text-center mx-auto">
+          <p
+            className={`heading ${
+              theme === "light" ? "heading-light" : "heading-dark"
+            }`}
+          >
+            Hi! I am{" "}
+            <span
+              className={`relative ${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              Shruti
+            </span>
+            , <br />
+            a developer who <br />
+            <span
+              className={`loves ${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              loves to
+            </span>{" "}
+            design and <br />
+            <div
+              className={`relative build inline ${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              build
+              <img src={build} className="build-emoji" />
+            </div>{" "}
+            simple and <br />
+            beautiful{" "}
+            <span
+              className={`software ${
+                theme === "light" ? "heading-words-light" : "heading-words-dark"
+              }`}
+            >
+              software
+            </span>
+            .
+          </p>
+        </div>
+      </div>
+      <div className="absolute bottom-8 down-arrow">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="39"
+          height="23"
+          viewBox="0 0 39 23"
+          fill="none"
         >
-          Hi! I am{" "}
-          <span
-            className={`${
-              theme === "light" ? "heading-words-light" : "heading-words-dark"
-            }`}
-          >
-            Shruti
-          </span>
-          , <br />
-          a developer who <br />
-          <span
-            className={`${
-              theme === "light" ? "heading-words-light" : "heading-words-dark"
-            }`}
-          >
-            loves to
-          </span>{" "}
-          design and <br />
-          <span
-            className={`${
-              theme === "light" ? "heading-words-light" : "heading-words-dark"
-            }`}
-          >
-            build
-          </span>{" "}
-          simple and <br />
-          beautiful{" "}
-          <span
-            className={`${
-              theme === "light" ? "heading-words-light" : "heading-words-dark"
-            }`}
-          >
-            software
-          </span>
-          .
-        </p>
+          <path
+            d="M36.9102 2.45703C30.2827 9.08445 26.567 12.8002 19.9396 19.4276L2.96903 2.45703"
+            stroke="black"
+            // stroke-opacity="0.1"
+            strokeOpacity={0.1}
+            strokeWidth={4}
+            strokeLinecap="round"
+          />
+        </svg>
       </div>
     </div>
-    // <div className="landing-container">
-    //   <div className="flex justify-between items-start">
-    //     <div className="theme-toggle-container h-full w-full bg-ye">
-    //       {/* <div
-    //         className={`theme-toggle-bg ${
-    //           theme === "light" ? "bg-open-light" : "bg-open-dark"
-    //         }`}
-    //       ></div> */}
-    //       <button
-    //         className="uppercase text-black bg-yellow-400 rounded-full px-3 py-1"
-    //         onClick={() => {
-    //           if (theme === "light") {
-    //             dispatch(setTheme("dark"));
-    //           } else {
-    //             dispatch(setTheme("light"));
-    //           }
-    //         }}
-    //       >
-    //         {theme === "light" ? "D" : "L"}
-    //       </button>
-    //     </div>
-    //     {/* <img src={profile} className="profile-image rounded-lg"></img> */}
-    //   </div>
-    //   <div className="2xl:flex xl:flex justify-between ">
-    //
-    //
-    //   </div>
-    // </div>
   );
 };
 

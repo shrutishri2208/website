@@ -4,7 +4,7 @@ import { clones } from "../projects";
 
 const ClonesContainer = () => {
   return (
-    <div className="2xl:mt-64 xl:mt-96 clones-container ">
+    <div className="clone-card-container 2xl:pt-64 xl:pt-64 clones-container">
       <div className="2xl:flex 2xl:flex-row xl:flex xl:flex-row 2xl:gap-16 xl:gap-16 flex flex-col gap-8 ">
         {clones.map((item) => {
           return <CloneCard {...item} key={item.id} />;

@@ -32,14 +32,14 @@ const Pageplay = () => {
     >
       <img src={article} className="absolute w-full h-full" />
       <div
-        className="h-full w-full parent absolute overflow-hidden"
+        className="h-full w-full absolute overflow-hidden "
         style={{ width: `${lever}%` }}
       >
         <img src={youtube} className="youtube-image" />
       </div>
       <div
         onMouseMove={handleDrag}
-        onMouseEnd={() => setLever(70)}
+        onMouseLeave={() => setLever(70)}
         onTouchMove={handleTouch}
         onTouchEnd={() => setLever(70)}
         className=" h-full w-full z-50 cursor-grab opacity-90"

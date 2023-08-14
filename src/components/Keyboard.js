@@ -1,31 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import alien from "../assets/alien 1.png";
 import scroll from "../assets/scroll.png";
 
 const Keyboard = () => {
   const [theme, setTheme] = useState("writer");
   const [back, setBack] = useState(false);
+  const [iframeWidth, setIframeWidth] = useState(0.435);
+
+  const iframe = useRef(null);
+
+  const getWidth = (e) => {
+    let w = iframe.current.clientWidth;
+    let width = w / 1100 + 0.03;
+    console.log(width);
+    setIframeWidth(width);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", getWidth);
+
+    return () => {
+      window.removeEventListener("resize", getWidth);
+    };
+  }, []);
 
   return (
     <div
       className={`${
         theme === "writer" ? "keyboard-writer" : "keyboard-modern"
-      } h-full w-full rounded-xl relative flex flex-col items-center overflow-hidden`}
+      } h-full w-full rounded-xl relative flex flex-col items-center overflow-hidden `}
     >
-      {/* <div
-        className={`${
-          theme === "writer"
-            ? "iframe-container-border-writer"
-            : "iframe-container-border-modern"
-        } iframe-container-border`}
-      > */}
-      <div className="iframe-container">
+      <div className="iframe-container" ref={iframe}>
         <iframe
           src={`https://keyboard-chi.vercel.app/#${theme}`}
-          // src="https://linear.app/"
           height="960"
           width="1100"
           className="absolute"
+          style={{ transform: `scale(${iframeWidth})` }}
         ></iframe>
       </div>
       <div className="flex 2xl:gap-16 xl:gap-16 gap-8 items-end mb-8 absolute -bottom-3 z-50 ">

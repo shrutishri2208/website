@@ -4,7 +4,7 @@ import { projects } from "../projects";
 
 const CardsContainer = () => {
   return (
-    <div className="cards-container mt-4 pb-32">
+    <div className="cards-container pb-32 ">
       <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">
         {/* {projects.map((item) => {
           return <Card {...item} key={item.id} />;
