@@ -12,7 +12,6 @@ const Keyboard = () => {
   const getWidth = (e) => {
     let w = iframe.current.clientWidth;
     let width = w / 1100 + 0.03;
-    console.log(width);
     setIframeWidth(width);
   };
 

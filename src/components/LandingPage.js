@@ -7,13 +7,14 @@ import build from "../assets/build.png";
 
 const LandingPage = () => {
   const theme = useSelector((state) => state.theme.theme);
+  console.log(window.innerWidth);
 
   return (
     <div className="landing-container flex flex-col justify-center items-center relative">
       <div className="flex flex-col justify-center items-center gap-8 relative 2xl:bottom-0 xl:bottom-0 bottom-8">
         <img src={profile} className="profile-image" />
         <div className="text-center mx-auto">
-          <p
+          <div
             className={`heading ${
               theme === "light" ? "heading-light" : "heading-dark"
             }`}
@@ -42,7 +43,9 @@ const LandingPage = () => {
               }`}
             >
               build
-              <img src={build} className="build-emoji" />
+              {/* {window.innerWidth >= 1280 && (
+                <img src={build} className="build-emoji" />
+              )} */}
             </div>{" "}
             simple and <br />
             beautiful{" "}
@@ -54,7 +57,7 @@ const LandingPage = () => {
               software
             </span>
             .
-          </p>
+          </div>
         </div>
       </div>
       <div className="absolute bottom-8 down-arrow">

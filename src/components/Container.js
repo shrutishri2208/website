@@ -5,6 +5,8 @@ import LandingPage from "./LandingPage";
 import { setTheme } from "../redux/theme/themeActions";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "./Footer";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 const Container = () => {
   const theme = useSelector((state) => state.theme.theme);
@@ -18,17 +20,13 @@ const Container = () => {
     >
       <div className={`container mx-auto relative z-50`}>
         <LandingPage />
-        {/* <TextContainer index={1} text="projects" /> */}
         <CardsContainer />
-        {/* <TextContainer index={2} text="clones" /> */}
         <ClonesContainer />
-        {/* <TextContainer index={3} text="on the side" /> */}
-        {/* <SideProjectContainer /> */}
       </div>
-      <Footer />
+      {/* <Footer /> */}
 
       <div
-        className={`work-button  ${
+        className={`work-button ${
           theme === "light" ? "work-button-light" : "work-button-dark"
         } cursor-pointer flex items-center`}
       >
@@ -54,25 +52,23 @@ const Container = () => {
         </svg>
         <p>Open to work</p>
       </div>
-      <div className="theme-toggle-container">
-        <button
-          className="uppercase text-black  rounded-full px-3 py-1"
-          onClick={() => {
-            if (theme === "light") {
-              dispatch(setTheme("dark"));
-            } else {
-              dispatch(setTheme("light"));
-            }
-          }}
-        >
-          {theme === "light" ? "D" : "L"}
-        </button>
-        <div
-          className={`theme-toggle-bg ${
-            theme === "light" ? "bg-open-light" : "bg-open-dark"
-          }`}
-        ></div>
-      </div>
+      <button
+        className="theme-toggle-button rounded-full px-3 py-1 flex justify-center items-center"
+        onClick={() => {
+          if (theme === "light") {
+            dispatch(setTheme("dark"));
+          } else {
+            dispatch(setTheme("light"));
+          }
+        }}
+      >
+        {theme === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+      </button>
+      <div
+        className={`theme-bg ${
+          theme === "light" ? "bg-open-light" : "bg-open-dark"
+        }`}
+      ></div>
     </div>
   );
 };

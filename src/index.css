@@ -80,64 +80,60 @@ div {
 @keyframes bg-open-dark {
   from {
     background-color: var(--dark);
-    height: 0vh;
+    /* height: 0vh;
     width: 0vh;
-    border-radius: 100%;
+    border-radius: 100%; */
+    scale: 0;
   }
   to {
     background-color: var(--dark);
-    height: 1000vh;
-    width: 1000vh;
-    border-radius: 0%;
+    /* height: 1000vh;
+    width: 100vw;
+    border-radius: 0%; */
+    scale: 100;
   }
 }
 @keyframes bg-open-light {
   from {
     /* background-color: var(--light); */
-    background-color: white;
-    height: 0vh;
+    background-color: rgb(255, 255, 255);
+    /* height: 0vh;
     width: 0vh;
-    border-radius: 100%;
+    border-radius: 100%; */
+    scale: 0;
   }
   to {
     /* background-color: var(--light); */
-    background-color: white;
-
-    height: 1000vh;
-    width: 1000vh;
-    border-radius: 0%;
+    background-color: rgb(255, 255, 255);
+    /* height: 1000vh;
+    width: 100vw;
+    border-radius: 0%; */
+    scale: 100;
   }
 }
 
 /* TOGGLE-BUTTON */
 
-.theme-toggle-container {
+.theme-toggle-button {
   height: 40px;
   width: 40px;
-  background-color: #00000011;
+  background-color: yellow;
   position: fixed;
-  border-radius: 100%;
   top: 2rem;
   left: 2rem;
-}
-
-.theme-toggle-container button {
-  position: relative;
   z-index: 50;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.theme-toggle-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* border-radius: 100%; */
-  scale: 2;
-  height: 0vh;
-  width: 0vh;
+.theme-bg {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  border-radius: 100%;
+  transform-origin: center;
+  /* transform: translate(-50%, -50%); */
+  background-color: green;
 }
 
 /* LANDING-PAGE */
@@ -618,6 +614,7 @@ div {
   /* WORK-BUTTON */
   .work-button {
     position: fixed;
+    z-index: 50;
     top: 2rem;
     right: 2rem;
     z-index: 50;
@@ -845,10 +842,10 @@ div {
 
 @media screen and (max-width: 767px) {
   .bg-open-dark {
-    animation: bg-open-dark 2s linear 0s forwards;
+    animation: bg-open-dark 1s linear 0s forwards;
   }
   .bg-open-light {
-    animation: bg-open-light 2s linear 0s forwards;
+    animation: bg-open-light 1s linear 0s forwards;
   }
 
   .container {
@@ -902,9 +899,12 @@ div {
 
   /* WORK-BUTTON */
   .work-button {
-    /* position: absolute; */
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    z-index: 50;
     width: max-content;
-    padding: 0.1rem 0.8rem;
+    padding: 0.6rem;
     border-radius: 3rem;
     gap: 0.5rem;
     transition: box-shadow 0.5s;
