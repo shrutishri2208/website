@@ -117,7 +117,6 @@ div {
 .theme-toggle-button {
   height: 40px;
   width: 40px;
-  background-color: yellow;
   position: fixed;
   top: 2rem;
   left: 2rem;
@@ -414,12 +413,26 @@ div {
   }
 }
 .visit-arrow {
-  background-color: rgb(20, 24, 55, 0.06);
   border-radius: 6px;
   transition: all var(--animation-time);
 }
-.visit-arrow:hover {
+
+.visit-arrow-light {
+  background-color: rgb(20, 24, 55, 0.06);
+}
+
+.visit-arrow-light:hover {
   background-color: rgb(20, 24, 55, 0.1);
+}
+.visit-arrow-dark {
+  background-color: rgb(255, 255, 255, 0.06);
+}
+
+.visit-arrow-dark:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.visit-arrow:hover {
 }
 
 .arrow-1-move {
@@ -481,13 +494,13 @@ div {
 
 @keyframes down-arrow {
   0% {
-    bottom: 2rem;
+    transform: translate(0, 0);
   }
   50% {
-    bottom: 2.3rem;
+    transform: translate(0, 0.4rem);
   }
   100% {
-    bottom: 2rem;
+    transform: translate(0, 0);
   }
 }
 
@@ -754,14 +767,9 @@ div {
  */
 
   .github-button {
-    background-color: rgb(35, 41, 99, 0.06);
     padding: 8px 14px 8px 12px;
     border-radius: 3rem;
     transition: all var(--animation-time);
-  }
-
-  .github-button:hover {
-    /* background-color: rgb(35, 41, 99, 0.12); */
   }
 
   .github-button span {
@@ -772,6 +780,21 @@ div {
     font-weight: 500;
     line-height: 1.5rem; /* 133.333% */
     letter-spacing: -0.03375rem;
+  }
+  .github-light {
+    background-color: rgb(35, 41, 99, 0.06);
+    color: black;
+  }
+  .github-light:hover {
+    background-color: rgb(35, 41, 99, 0.1);
+  }
+
+  .github-dark {
+    background-color: rgb(255, 255, 255, 0.06);
+    color: white;
+  }
+  .github-dark:hover {
+    background-color: rgb(255, 255, 255, 0.1);
   }
 
   /* KEYBOARD */
@@ -856,7 +879,7 @@ div {
 
   .landing-container {
     position: relative;
-    min-height: 100vh;
+    min-height: 94vh;
   }
 
   /* TEXT-CONTAINER */
@@ -1000,15 +1023,6 @@ div {
     letter-spacing: -0.1rem;
   }
 
-  .visit-arrow {
-    background-color: rgb(20, 24, 55, 0.06);
-    border-radius: 6px;
-    transition: all 0.25s;
-  }
-  .visit-arrow:hover {
-    background-color: rgb(20, 24, 55, 0.1);
-  }
-
   /* CARD-BODY */
 
   .card-body,
@@ -1043,6 +1057,7 @@ div {
   }
 
   /* GITHUB-BUTTON */
+
   .github-button {
     background-color: rgb(35, 41, 99, 0.06);
     padding: 6px 14px 6px 11px;

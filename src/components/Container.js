@@ -62,7 +62,11 @@ const Container = () => {
           }
         }}
       >
-        {theme === "light" ? <DarkModeIcon /> : <LightModeIcon />}
+        {theme === "light" ? (
+          <DarkModeIcon className="text-yellow-400" />
+        ) : (
+          <LightModeIcon className="text-yellow-400" />
+        )}
       </button>
       <div
         className={`theme-bg ${

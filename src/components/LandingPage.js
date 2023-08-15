@@ -10,7 +10,7 @@ const LandingPage = () => {
   console.log(window.innerWidth);
 
   return (
-    <div className="landing-container flex flex-col justify-center items-center relative">
+    <div className="landing-container flex flex-col justify-center items-center relative ">
       <div className="flex flex-col justify-center items-center gap-8 relative 2xl:bottom-0 xl:bottom-0 bottom-8">
         <img src={profile} className="profile-image" />
         <div className="text-center mx-auto">

@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Keyboard from "./Keyboard";
 import Pageplay from "./Pageplay";
-import github from "../assets/github.png";
-import arrow from "../assets/arrow.png";
+import githubBlack from "../assets/github-black.png";
+import githubWhite from "../assets/github-white.png";
 
 const Card = ({
   id,
@@ -35,11 +35,13 @@ const Card = ({
       >
         <div
           className="flex justify-center items-center"
-          style={{ gap: "6px" }}
+          style={{ gap: "8px" }}
         >
           <h1 className="">{title}</h1>
           <a
-            className="h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow "
+            className={`h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow ${
+              theme === "light" ? "visit-arrow-light" : "visit-arrow-dark"
+            }`}
             onMouseEnter={() => setHeadingHover(true)}
             onMouseLeave={() => setHeadingHover(false)}
             onMouseOver={() => setHeadingHover(true)}
@@ -57,10 +59,14 @@ const Card = ({
               >
                 <path
                   d="M14 15C18.6863 15 21.3137 15 26 15V27"
-                  stroke="black"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
                   strokeWidth={3}
                 />
-                <path d="M26 15L14 27" stroke="black" strokeWidth={3} />
+                <path
+                  d="M26 15L14 27"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
+                  strokeWidth={3}
+                />
               </svg>
             </div>
             <div className="overflow-hidden">
@@ -76,10 +82,14 @@ const Card = ({
               >
                 <path
                   d="M14 15C18.6863 15 21.3137 15 26 15V27"
-                  stroke="black"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
                   strokeWidth={3}
                 />
-                <path d="M26 15L14 27" stroke="black" strokeWidth={3} />
+                <path
+                  d="M26 15L14 27"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
+                  strokeWidth={3}
+                />
               </svg>
             </div>
           </a>
@@ -102,17 +112,19 @@ const Card = ({
         <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
         <div className="flex justify-between items-center">
           <p>{tech}</p>
-
           {window.innerWidth < 767 ? (
             <div>
-              <img
-                src={github}
-                className=" h-8 w-8 relative bottom-0.5 right-1"
-              />
+              {theme === "light" ? (
+                <img src={githubBlack} className="h-6 w-6 relative right-1" />
+              ) : (
+                <img src={githubWhite} className="h-6 w-6 relative right-1" />
+              )}
             </div>
           ) : (
             <div
-              className="github-button relative overflow-hidden"
+              className={`github-button relative overflow-hidden ${
+                theme === "light" ? "github-light" : "github-dark"
+              }`}
               onMouseEnter={() => setGithubHover(true)}
               onMouseLeave={() => setGithubHover(false)}
               onMouseOver={() => setGithubHover(true)}
@@ -124,7 +136,18 @@ const Card = ({
                     : "github-button-back"
                 }`}
               >
-                <img src={github} className="h-6 w-6 absolute -left-8" />
+                {theme === "light" ? (
+                  <img
+                    src={githubBlack}
+                    className="h-6 w-6 absolute -left-8 "
+                  />
+                ) : (
+                  <img
+                    src={githubWhite}
+                    className="h-6 w-6 absolute -left-8 "
+                  />
+                )}
+
                 <span className="">GitHub</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +159,7 @@ const Card = ({
                 >
                   <path
                     d="M1 1C3.20914 3.20914 4.44771 4.44771 6.65685 6.65685L1 12.3137"
-                    stroke="black"
+                    stroke={`${theme === "light" ? "black" : "white"}`}
                     strokeWidth={2}
                   />
                 </svg>
