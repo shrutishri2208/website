@@ -43,9 +43,6 @@ const LandingPage = () => {
               }`}
             >
               build
-              {/* {window.innerWidth >= 1280 && (
-                <img src={build} className="build-emoji" />
-              )} */}
             </div>{" "}
             simple and <br />
             beautiful{" "}
@@ -70,7 +67,7 @@ const LandingPage = () => {
         >
           <path
             d="M36.9102 2.45703C30.2827 9.08445 26.567 12.8002 19.9396 19.4276L2.96903 2.45703"
-            stroke="black"
+            stroke={`${theme === "light" ? "black" : "white"}`}
             // stroke-opacity="0.1"
             strokeOpacity={0.1}
             strokeWidth={4}

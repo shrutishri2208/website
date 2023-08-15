@@ -6,12 +6,8 @@ module.exports = {
       fontSize: {},
       colors: {
         "bg-grey": "#151515",
-        coloryellow: "#faeb6a",
-        colorblue: "#6afae0",
-        colororange: "#f96e42",
-        colorviolet: "#6a70fa",
-        colororg2: "#ff9a24",
-        colorred: "#ff7171",
+        "footer-light": "#D6D6D6",
+        "footer-dark": "#1D1D1D",
       },
       borderRadius: {
         button: "4px",

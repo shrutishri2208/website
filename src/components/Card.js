@@ -95,9 +95,12 @@ const Card = ({
           </a>
         </div>
 
-        <div className="flex items-center gap-2">
-          <img src={tagIcon} className="h-4 w-4" />
-          <p>{tag}</p>
+        <div className="flex items-center gap-1">
+          <img
+            src={tagIcon}
+            className="2xl:h-5 2xl:w-5 xl:h-5 xl:w-5 h-4 w-4"
+          />
+          <p style={{ position: "relative", top: "1.2px" }}>{tag}</p>
         </div>
       </div>
       <div className="card-display">

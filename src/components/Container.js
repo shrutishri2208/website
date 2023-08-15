@@ -23,7 +23,7 @@ const Container = () => {
         <CardsContainer />
         <ClonesContainer />
       </div>
-      {/* <Footer /> */}
+      <Footer />
 
       <div
         className={`work-button ${

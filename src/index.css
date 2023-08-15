@@ -214,6 +214,11 @@ div {
 .clone-card-light:hover,
 .side-card-light:hover {
   box-shadow: 0px 8px 80px 0px rgba(0, 0, 0, 0.15);
+  background: radial-gradient(
+    100% 100% at 50% 50%,
+    rgba(125, 255, 214, 0.1),
+    rgb(0, 0, 0, 0)
+  );
 }
 .card-dark:hover,
 .clone-card-dark:hover,
@@ -520,6 +525,54 @@ div {
   background: radial-gradient(100% 100% at 50% 0%, #f08c57 0%, #d8733d 100%);
 }
 
+/* .footer-item-bg {
+  opacity: 0;
+  transition: all var(--animation-time);
+}
+
+.footer-item:hover > .footer-item-bg {
+  opacity: 1;
+} */
+
+.footer-item-bg {
+  height: 0%;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  transform-origin: center;
+  transition: all var(--animation-time);
+}
+
+.footer-item:hover > .footer-item-bg {
+  height: 100%;
+}
+.footer-item:hover .moving-footer-items {
+  opacity: 1;
+}
+
+.footer-item:hover {
+  color: black;
+}
+
+.moving-footer {
+  animation: translateX 40s linear 0s infinite forwards;
+}
+
+@keyframes translateX {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100%, 0);
+  }
+}
+
+.moving-footer-items {
+  opacity: 0;
+}
+
 /****************************************************************************/
 
 /* LAPTOPS AND BIG SCREENS */
@@ -572,7 +625,12 @@ div {
 
   .container {
     padding: 0rem 4rem;
-    padding-bottom: 4rem;
+    max-width: 1280px;
+    margin: auto;
+  }
+  .footer-container {
+    padding: 0rem 4rem;
+
     max-width: 1280px;
     margin: auto;
   }
@@ -882,6 +940,15 @@ div {
     min-height: 94vh;
   }
 
+  .theme-toggle-button {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    z-index: 50;
+  }
+
   /* TEXT-CONTAINER */
   .text-heading h1 {
     text-align: center;
@@ -990,7 +1057,7 @@ div {
   .clone-card-display {
     margin: auto;
     width: 82vw;
-    height: 82vw;
+    height: 100vw;
   }
 
   .side-card-display {
@@ -1145,10 +1212,10 @@ div {
   .netflix img {
     min-width: 1030px;
     position: absolute;
-    top: -2.25rem;
+    top: 0rem;
     height: 98vw;
     left: -20rem;
-    scale: 0.75;
+    scale: 0.92;
     transform: rotate(-5deg);
   }
 }
