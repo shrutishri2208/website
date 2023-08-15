@@ -42,7 +42,8 @@ const Footer = () => {
               : "text-white opacity-10"
           }  text-center pt-6`}
         >
-          made by shruti shrivastava
+          <span style={{ position: "relative", top: "1.5px" }}>©</span> shruti
+          shrivastava, 2023
         </p>
       </div>
     </div>

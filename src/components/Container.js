@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TextContainer from "./TextContainer";
 import CardsContainer from "./CardsContainer";
 import ClonesContainer from "./ClonesContainer";
 import LandingPage from "./LandingPage";
@@ -21,7 +22,9 @@ const Container = () => {
       <div className={`container mx-auto relative z-50`}>
         <LandingPage />
         <CardsContainer />
+        <TextContainer text={"clones"} index={2} />
         <ClonesContainer />
+        <TextContainer text={"on the side"} index={3} />
       </div>
       <Footer />
 

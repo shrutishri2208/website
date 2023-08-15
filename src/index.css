@@ -164,7 +164,7 @@ div {
 
 .work-button-dark {
   /* background-color: #10d251; */
-  background: linear-gradient(180deg, rgb(8, 238, 84) 0%, #06ae3e 100%);
+  background: linear-gradient(180deg, #00ff55 0%, #06ae3e 100%);
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05),
     0px 5px 8px 0px rgba(0, 0, 0, 0.07), 0px 11px 16px 0px rgba(0, 0, 0, 0.09),
     0px 22px 34px 0px rgba(0, 0, 0, 0.11), 0px 60px 92px 0px rgba(0, 0, 0, 0.16);
@@ -177,16 +177,10 @@ div {
     0px 22px 34px 0px rgba(0, 0, 0, 0.15), 0px 60px 92px 0px rgba(0, 0, 0, 0.15);
 }
 
-.work-button-light span,
-.work-button-dark span {
-  background-color: #22e765;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 100%;
-}
-
 .work-button-light p {
-  color: #10d251;
+  color: transparent;
+  background: radial-gradient(100% 100% at 50% 0%, #00ff55 0%, #008d2f 100%);
+  -webkit-background-clip: text;
 }
 .work-button-dark p {
   color: #000;
@@ -214,11 +208,7 @@ div {
 .clone-card-light:hover,
 .side-card-light:hover {
   box-shadow: 0px 8px 80px 0px rgba(0, 0, 0, 0.15);
-  background: radial-gradient(
-    100% 100% at 50% 50%,
-    rgba(125, 255, 214, 0.1),
-    rgb(0, 0, 0, 0)
-  );
+  /* background: radial-gradient(100% 100% at 50% 50%, #00ff5533, rgb(0, 0, 0, 0)); */
 }
 .card-dark:hover,
 .clone-card-dark:hover,
@@ -513,9 +503,12 @@ div {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   letter-spacing: -0.455rem;
-  color: #06ae3e;
+  /* color: #06ae3e; */
   line-height: 1.2rem;
   font-weight: 700;
+  color: transparent;
+  background: radial-gradient(100% 100% at 50% 0%, #00ff55 0%, #008d2f 100%);
+  -webkit-background-clip: text;
 }
 
 .netflix {
@@ -571,6 +564,33 @@ div {
 
 .moving-footer-items {
   opacity: 0;
+}
+
+.loves:hover > .heart1,
+.loves:hover > .heart2 {
+  scale: 1;
+}
+
+.heart1 {
+  transform: rotate(-20deg);
+  scale: 0;
+  transition: all var(--animation-time);
+}
+.heart2 {
+  transform: rotate(30deg);
+  scale: 0;
+  transition: all var(--animation-time);
+}
+
+.name:hover > span {
+  scale: 1;
+  transform: rotateY(180deg);
+}
+
+.name > span {
+  scale: 0;
+  transition: all var(--animation-time);
+  transform: rotateY(180deg);
 }
 
 /****************************************************************************/
@@ -695,13 +715,7 @@ div {
     transition: box-shadow 0.25s;
   }
 
-  .work-button-light p {
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 2rem; /* 133.333% */
-    letter-spacing: -0.07rem;
-  }
-
+  .work-button-light p,
   .work-button-dark p {
     font-size: 1.2rem;
     font-weight: 700;

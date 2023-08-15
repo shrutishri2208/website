@@ -21,20 +21,27 @@ const LandingPage = () => {
           >
             Hi! I am{" "}
             <span
-              className={`relative ${
+              className={`relative name ${
                 theme === "light" ? "heading-words-light" : "heading-words-dark"
               }`}
             >
+              <span className="absolute text-6xl left-20 -top-4 -rotate-6 -z-1">
+                👋
+              </span>
               Shruti
             </span>
             , <br />
             a developer who <br />
             <span
-              className={`loves ${
+              className={`loves relative ${
                 theme === "light" ? "heading-words-light" : "heading-words-dark"
               }`}
             >
               loves to
+              <span className="heart1 absolute text-5xl -left-8 top-2">❤️</span>
+              <span className="heart2 absolute text-3xl -right-2 bottom-6">
+                ❤️
+              </span>
             </span>{" "}
             design and <br />
             <div
@@ -46,14 +53,18 @@ const LandingPage = () => {
             </div>{" "}
             simple and <br />
             beautiful{" "}
-            <span
-              className={`software ${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              software
-            </span>
-            .
+            <div className="software-background inline relative">
+              <div
+                className={`software inline ${
+                  theme === "light"
+                    ? "heading-words-light"
+                    : "heading-words-dark"
+                }`}
+              >
+                software
+              </div>
+              .
+            </div>
           </div>
         </div>
       </div>
