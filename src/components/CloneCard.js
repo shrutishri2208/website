@@ -1,55 +1,95 @@
 import React, { useState } from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { useSelector } from "react-redux";
+import Swiggy from "./Swiggy";
+import Netflix from "./Netflix";
+import githubBlack from "../assets/github-black.png";
+import githubWhite from "../assets/github-white.png";
 
-const CloneCard = ({ id, title }) => {
-  const [hover, setHover] = useState(false);
+const CloneCard = ({ id, title, desc, tech, githubLink }) => {
+  const [githubHover, setGithubHover] = useState(false);
+  const theme = useSelector((state) => state.theme.theme);
 
   return (
     <div
-      onMouseEnter={() => setHover(true)}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className={`${
-        id === 1 ? "border-gradient-5" : id === 2 ? "border-gradient-6" : ""
-      } border-gradient ${hover === true ? "scale-up" : "scale-down"}`}
+      className={`clone-card ${
+        theme === "light" ? "clone-card-light" : "clone-card-dark "
+      } flex flex-col`}
     >
       <div
-        className={`clone-card bg-black p-6 items-center gap-x-16 m-auto grid grid-cols-2 rounded-lg`}
+        className={`clone-card-header  ${
+          theme === "light"
+            ? "clone-card-header-light"
+            : "clone-card-header-dark"
+        }`}
       >
-        <div
-          className={`${
-            id === 1 ? "bg-gradient-5" : id === 2 ? "bg-gradient-6" : ""
-          } bg-gradient h-full w-full absolute z-0 bottom-5 right-4 ${
-            hover === true ? "opacity-40" : "opacity-0"
-          }`}
-        ></div>
+        <h1>{title}</h1>
+      </div>
+      <div className="clone-card-display">
+        {title === "Netflux" && <Netflix />}
+        {title === "Zwiggy" && <Swiggy />}
+      </div>
 
-        <div className="flex-1 bg-white bg-opacity-10 h-full"></div>
-        <div>
-          <p
-            className={`card-title font-medium ${
-              id === 1 ? "text-colororg2" : id === 2 ? "text-colorred" : ""
-            }`}
-          >
-            {title}
-          </p>
-          <div className="card-display flex-1 mb-4"></div>
-          <p className="text-white text-md mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            elementum ac libero sit amet efficitur. Nulla tristique, ex eget
-            facilisis auctor, nisl dui.
-          </p>
-          <div className="card-header flex justify-between items-center mb-4 flex-1">
-            <p className="text-white text-md opacity-30">Tag1, Tag2, Tag3</p>
-            <div className="flex items-center gap-5">
-              <button className="scale-110">
-                <GitHubIcon className="scale-110" />
-              </button>
-              <button className="bg-white bg-opacity-10 font-medium tracking-tight text-lg text-white px-3 py-2 rounded-md">
-                Download
-              </button>
+      <div
+        className={`clone-card-body ${
+          theme === "light" ? "clone-card-body-light" : "clone-card-body-dark"
+        }`}
+      >
+        <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
+        <div className="flex justify-between items-center">
+          <p>{tech}</p>
+          {window.innerWidth < 767 ? (
+            <div>
+              {theme === "light" ? (
+                <img src={githubBlack} className="h-6 w-6 absolute -left-8 " />
+              ) : (
+                <img src={githubWhite} className="h-6 w-6 absolute -left-8 " />
+              )}{" "}
             </div>
-          </div>
+          ) : (
+            <div
+              className={`github-button relative overflow-hidden ${
+                theme === "light" ? "github-light" : "github-dark"
+              }`}
+              onMouseEnter={() => setGithubHover(true)}
+              onMouseLeave={() => setGithubHover(false)}
+              onMouseOver={() => setGithubHover(true)}
+            >
+              <div
+                className={`flex gap-3 items-center justify-center relative left-7 ${
+                  githubHover === true
+                    ? "github-button-move"
+                    : "github-button-back"
+                }`}
+              >
+                {theme === "light" ? (
+                  <img
+                    src={githubBlack}
+                    className="h-6 w-6 absolute -left-8 "
+                  />
+                ) : (
+                  <img
+                    src={githubWhite}
+                    className="h-6 w-6 absolute -left-8 "
+                  />
+                )}{" "}
+                <span className="">GitHub</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="14"
+                  viewBox="0 0 9 14"
+                  fill="none"
+                  style={{ position: "relative", top: "1px", left: "5px" }}
+                >
+                  <path
+                    d="M1 1C3.20914 3.20914 4.44771 4.44771 6.65685 6.65685L1 12.3137"
+                    stroke={`${theme === "light" ? "black" : "white"}`}
+                    strokeWidth={2}
+                  />
+                </svg>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

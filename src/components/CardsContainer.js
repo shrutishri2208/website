@@ -1,37 +1,18 @@
 import React from "react";
 import Card from "./Card";
+import { projects } from "../projects";
 
 const CardsContainer = () => {
-  const cardArray = [
-    {
-      id: 1,
-      title: "Murk",
-    },
-    {
-      id: 2,
-      title: "Pageplay",
-    },
-    {
-      id: 3,
-      title: "Keyboard",
-    },
-    {
-      id: 4,
-      title: "WordWise",
-    },
-  ];
   return (
-    <div>
-      <div className="mt-16 grid grid-cols-2 text-right gap-x-12 mr-1">
-        <p className="text-3xl font-medium">
-          I love to design and <br /> develop beatiful softwares
-        </p>
-        <p></p>
-      </div>
-      <div className="grid grid-cols-2 gap-16 mt-8">
-        {cardArray.map((item) => {
+    <div className="cards-container pb-32 ">
+      <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">
+        {/* {projects.map((item) => {
           return <Card {...item} key={item.id} />;
-        })}
+        })} */}
+        <Card {...projects[0]} />
+        <Card {...projects[1]} />
+        {/* <div></div>
+        <Card {...projects[2]} /> */}
       </div>
     </div>
   );

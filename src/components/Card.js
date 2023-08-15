@@ -1,77 +1,171 @@
 import React, { useState } from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import CardDisplay from "./CardDisplay";
+// import GitHubIcon from "@mui/icons-material/GitHub";
+import { useSelector } from "react-redux";
+import Keyboard from "./Keyboard";
+import Pageplay from "./Pageplay";
+import githubBlack from "../assets/github-black.png";
+import githubWhite from "../assets/github-white.png";
 
-const Card = ({ id, title }) => {
-  const [hover, setHover] = useState(false);
+const Card = ({
+  id,
+  title,
+  tag,
+  tagIcon,
+  desc,
+  tech,
+  githubLink,
+  viewLink,
+  viewText,
+}) => {
+  const theme = useSelector((state) => state.theme.theme);
+
+  const [githubHover, setGithubHover] = useState(false);
+  const [headingHover, setHeadingHover] = useState(false);
 
   return (
     <div
-      onMouseEnter={() => setHover(true)}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className={`${
-        id === 1
-          ? "border-gradient-1"
-          : id === 2
-          ? "border-gradient-2"
-          : id === 3
-          ? "border-gradient-3"
-          : "border-gradient-4"
-      } border-gradient ${id % 2 === 0 ? "move-up-1" : ""} ${
-        hover === true ? "scale-up" : "scale-down"
+      className={`card ${theme === "light" ? "card-light" : "card-dark"} flex ${
+        id === 2 ? "2xl:relative 2xl:top-32 xl:relative xl:top-44" : ""
       }`}
     >
       <div
-        className={`card relative bg-black p-6 justify-center m-auto rounded-lg`}
+        className={`card-header ${
+          theme === "light" ? "card-header-light" : "card-header-dark"
+        } flex justify-between items-center w-full`}
       >
         <div
-          className={`${
-            id === 1
-              ? "bg-gradient-1"
-              : id === 2
-              ? "bg-gradient-2"
-              : id === 3
-              ? "bg-gradient-3"
-              : "bg-gradient-4"
-          } bg-gradient h-full w-full absolute z-0 bottom-10 right-4 ${
-            hover === true ? "opacity-50" : "opacity-0"
-          }`}
-        ></div>
-
-        <div className="h-full flex flex-col relative z-10">
-          <p
-            className={`card-title font-medium ${
-              id === 1
-                ? "text-colorblue"
-                : id === 2
-                ? "text-coloryellow"
-                : id === 3
-                ? "text-colororange"
-                : "text-colorviolet"
+          className="flex justify-center items-center"
+          style={{ gap: "8px" }}
+        >
+          <h1 className="">{title}</h1>
+          <a
+            className={`h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow ${
+              theme === "light" ? "visit-arrow-light" : "visit-arrow-dark"
             }`}
+            onMouseEnter={() => setHeadingHover(true)}
+            onMouseLeave={() => setHeadingHover(false)}
+            onMouseOver={() => setHeadingHover(true)}
           >
-            {title}
-          </p>
-          <div className="flex-1 mb-4 bg-opacity-10 bg-white w-full">
-            <CardDisplay />
-          </div>
-          <p className="text-white text-md mb-4 font-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            elementum ac libero sit amet efficitur. Nulla tristique, ex eget
-            facilisis auctor, nisl dui.
-          </p>
-          <div className="flex justify-between items-center mb-4">
-            <p className="text-white text-md opacity-30">Tag1, Tag2, Tag3</p>
-            <div className="flex items-center gap-5">
-              <button className="scale-110">
-                <GitHubIcon className="scale-110" />
-              </button>
-              <button className="bg-white bg-opacity-10 font-medium tracking-tight text-lg text-white px-3 py-2 rounded-md">
-                Download
-              </button>
+            <div className="absolute overflow-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                className={`${
+                  headingHover === true ? "arrow-1-move" : "arrow-1-back"
+                } relative -bottom-7 -left-7`}
+              >
+                <path
+                  d="M14 15C18.6863 15 21.3137 15 26 15V27"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
+                  strokeWidth={3}
+                />
+                <path
+                  d="M26 15L14 27"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
+                  strokeWidth={3}
+                />
+              </svg>
             </div>
-          </div>
+            <div className="overflow-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                className={`${
+                  headingHover === true ? "arrow-2-move" : "arrow-2-back"
+                } relative `}
+              >
+                <path
+                  d="M14 15C18.6863 15 21.3137 15 26 15V27"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
+                  strokeWidth={3}
+                />
+                <path
+                  d="M26 15L14 27"
+                  stroke={`${theme === "light" ? "black" : "white"}`}
+                  strokeWidth={3}
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <img src={tagIcon} className="h-4 w-4" />
+          <p>{tag}</p>
+        </div>
+      </div>
+      <div className="card-display">
+        {title === "Textplay" && <Pageplay />}
+        {title === "Keyboard" && <Keyboard />}
+      </div>
+      <div
+        className={`card-body ${
+          theme === "light" ? "card-body-light" : "card-body-dark"
+        }`}
+      >
+        <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
+        <div className="flex justify-between items-center">
+          <p>{tech}</p>
+          {window.innerWidth < 767 ? (
+            <div>
+              {theme === "light" ? (
+                <img src={githubBlack} className="h-6 w-6 relative right-1" />
+              ) : (
+                <img src={githubWhite} className="h-6 w-6 relative right-1" />
+              )}
+            </div>
+          ) : (
+            <div
+              className={`github-button relative overflow-hidden ${
+                theme === "light" ? "github-light" : "github-dark"
+              }`}
+              onMouseEnter={() => setGithubHover(true)}
+              onMouseLeave={() => setGithubHover(false)}
+              onMouseOver={() => setGithubHover(true)}
+            >
+              <div
+                className={`flex gap-3 items-center justify-center relative left-7 ${
+                  githubHover === true
+                    ? "github-button-move"
+                    : "github-button-back"
+                }`}
+              >
+                {theme === "light" ? (
+                  <img
+                    src={githubBlack}
+                    className="h-6 w-6 absolute -left-8 "
+                  />
+                ) : (
+                  <img
+                    src={githubWhite}
+                    className="h-6 w-6 absolute -left-8 "
+                  />
+                )}
+
+                <span className="">GitHub</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="14"
+                  viewBox="0 0 9 14"
+                  fill="none"
+                  style={{ position: "relative", top: "1px", left: "5px" }}
+                >
+                  <path
+                    d="M1 1C3.20914 3.20914 4.44771 4.44771 6.65685 6.65685L1 12.3137"
+                    stroke={`${theme === "light" ? "black" : "white"}`}
+                    strokeWidth={2}
+                  />
+                </svg>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

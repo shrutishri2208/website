@@ -1,73 +1,65 @@
 import React, { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import CardDisplay from "./CardDisplay";
-import trial from "../assets/trial.png";
+import { useSelector } from "react-redux";
+import github from "../assets/github.png";
 
-const SideProjectCard = ({ id, title }) => {
+const SideProjectCard = ({
+  id,
+  title,
+  desc,
+  tag,
+  tech,
+  githubLink,
+  viewLink,
+  viewText,
+}) => {
   const [hover, setHover] = useState(false);
+
+  const theme = useSelector((state) => state.theme.theme);
 
   return (
     <div
-      onMouseEnter={() => setHover(true)}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className={`${
-        id === 1
-          ? "border-gradient-1"
-          : id === 2
-          ? "border-gradient-2"
-          : id === 3
-          ? "border-gradient-3"
-          : "border-gradient-4"
-      } border-gradient ${id % 2 === 0 ? "move-up-3" : ""} ${
-        hover === true ? "scale-up" : "scale-down"
+      className={`side-card ${
+        theme === "light" ? "card-light" : "card-dark"
+      } flex justify-between items-center 2xl:gap-6 xl:gap-6 gap-4 ${
+        id % 2 === 1 ? "2xl:relative 2xl:top-1/2 xl:relative xl:top-1/2" : ""
       }`}
     >
-      <div
-        className={`side-card relative bg-black grid grid-flow-col gap-x-8 p-6 items-center justify-between m-auto rounded-lg`}
-      >
-        {/* <div
-          className={`${
-            id === 1
-              ? "bg-gradient-1"
-              : id === 2
-              ? "bg-gradient-2"
-              : id === 3
-              ? "bg-gradient-3"
-              : "bg-gradient-4"
-          } bg-gradient h-full w-full absolute z-0 bottom-10 right-4 `}
-        ></div> */}
-        <div className="">
-          <img src="https://placehold.co/100" />
+      <div className="side-card-display"></div>
+      <div className="flex flex-col gap-1 flex-1">
+        <div
+          className={`side-card-header ${
+            theme === "light"
+              ? "side-card-header-light"
+              : "side-card-header-dark"
+          } flex justify-between items-center w-full`}
+        >
+          <h1>{title}</h1>
+          <div className="flex items-center 2xl:gap-2 xl:gap-2 gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              className="2xl:scale-100 xl:scale-100 scale-75"
+            >
+              <circle cx="8" cy="8" r="8" fill="#0075FF" />
+            </svg>
+            <p>{tag}</p>
+          </div>
         </div>
-
-        <div className="h-full flex flex-col relative z-10 -mt-6 ">
-          <p
-            className={`card-title font-medium ${
-              id === 1
-                ? "text-colorblue"
-                : id === 2
-                ? "text-coloryellow"
-                : id === 3
-                ? "text-colororange"
-                : "text-colorviolet"
-            }`}
-          >
-            {title}
-          </p>
-          <p className="text-white text-md font-normal mb-6">
-            Lorem ipsum dolor sit amet, consectetur dipiscing elit. Nulla
-            elementum ac libero .
-          </p>
-          <div className="flex justify-between items-center mb-4">
-            <p className="text-white text-md opacity-30">Tag1, Tag2, Tag3</p>
-            <div className="flex items-center gap-5">
-              <button className="scale-110">
-                <GitHubIcon className="scale-110" />
-              </button>
-              <button className="bg-white bg-opacity-10 font-medium tracking-tight text-lg text-white px-3 py-2 rounded-md">
-                Download
-              </button>
+        <div
+          className={`side-card-body ${
+            theme === "light" ? "side-card-body-light" : "side-card-body-dark"
+          }`}
+        >
+          <h2 className="mb-2">{desc}</h2>
+          <div className="flex justify-between items-center">
+            <p>{tech}</p>
+            <div className="github-button flex gap-2 items-center justify-center">
+              <img src={github} className="h-6 w-6" />
+              <span className="">GitHub</span>
             </div>
           </div>
         </div>

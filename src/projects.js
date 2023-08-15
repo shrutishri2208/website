@@ -1,0 +1,106 @@
+import chrome from "./assets/chrome.png";
+import web from "./assets/web.png";
+export const projects = [
+  {
+    id: 1,
+    title: "Keyboard",
+    tag: "Web App",
+    tagIcon: web,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "React, Redux, Tailwind CSS",
+    githubLink: "",
+    viewLink: "",
+    viewText: "View",
+  },
+  {
+    id: 2,
+    title: "Textplay",
+    tag: "Extension",
+    tagIcon: chrome,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "HTML, CSS, JavaScript",
+    githubLink: "",
+    viewLink: "",
+    viewText: "Download",
+  },
+  // {
+  //   id: 3,
+  //   title: "Murk",
+  //   tag: "Mobile Game",
+  //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+  //   tech: "Tag1, Tag2, Tag3",
+  //   githubLink: "",
+  //   viewLink: "",
+  //   viewText: "Download",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Word Wise",
+  //   tag: "Chrome Extension",
+  //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+  //   tech: "Tag1, Tag2, Tag3",
+  //   githubLink: "",
+  //   viewLink: "",
+  //   viewText: "Download",
+  // },
+];
+
+export const clones = [
+  {
+    id: 1,
+    title: "Netflux",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+  },
+  {
+    id: 2,
+    title: "Zwiggy",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+  },
+];
+
+export const sides = [
+  {
+    id: 1,
+    title: "Murk",
+    tag: "Game",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+    viewLink: "",
+    viewText: "Download",
+  },
+  {
+    id: 2,
+    title: "Pageplay",
+    tag: "Chrome Extension",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+    viewLink: "",
+    viewText: "Download",
+  },
+  {
+    id: 3,
+    title: "Keyboard",
+    tag: "Web App",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+    viewLink: "",
+    viewText: "View",
+  },
+  {
+    id: 4,
+    title: "Word Wise",
+    tag: "Chrome Extension",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "Tag1, Tag2, Tag3",
+    githubLink: "",
+    viewLink: "",
+    viewText: "Download",
+  },
+];
