@@ -19,51 +19,65 @@ const LandingPage = () => {
               theme === "light" ? "heading-light" : "heading-dark"
             }`}
           >
-            Hi! I am{" "}
-            <span
-              className={`relative name ${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              <span className="absolute text-6xl left-20 -top-4 -rotate-6 -z-1">
-                👋
-              </span>
-              Shruti
-            </span>
-            , <br />
-            a developer who <br />
-            <span
-              className={`loves relative ${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              loves to
-              <span className="heart1 absolute text-5xl -left-8 top-2">❤️</span>
-              <span className="heart2 absolute text-3xl -right-2 bottom-6">
-                ❤️
-              </span>
-            </span>{" "}
-            design and <br />
-            <div
-              className={`relative build inline ${
-                theme === "light" ? "heading-words-light" : "heading-words-dark"
-              }`}
-            >
-              build
-            </div>{" "}
-            simple and <br />
-            beautiful{" "}
-            <div className="software-background inline relative">
-              <div
-                className={`software inline ${
+            <div className="line-1">
+              Hi! I am{" "}
+              <span
+                className={`relative name ${
                   theme === "light"
                     ? "heading-words-light"
                     : "heading-words-dark"
                 }`}
               >
-                software
+                {/* <span className="absolute text-6xl left-20 -top-4 -rotate-6 -z-1">
+                👋
+              </span> */}
+                Shruti
+              </span>
+              ,
+            </div>
+            <div className="line-2">a developer who</div>
+            <div className="line-3">
+              <span
+                className={`loves relative ${
+                  theme === "light"
+                    ? "heading-words-light"
+                    : "heading-words-dark"
+                }`}
+              >
+                loves to
+                {/* <span className="heart1 absolute text-5xl -left-8 top-2">❤️</span>
+              <span className="heart2 absolute text-3xl -right-2 bottom-6">
+                ❤️
+              </span> */}
+              </span>{" "}
+              design and
+            </div>
+            <div className="line-4">
+              <div
+                className={`relative build inline ${
+                  theme === "light"
+                    ? "heading-words-light"
+                    : "heading-words-dark"
+                }`}
+              >
+                build
+              </div>{" "}
+              simple and
+            </div>
+            <div className="line-5">
+              beautiful{" "}
+              <div className="software-background inline relative">
+                <div
+                  className={`software inline ${
+                    theme === "light"
+                      ? "heading-words-light"
+                      : "heading-words-dark"
+                  }`}
+                >
+                  software
+                </div>
+                .
               </div>
-              .
             </div>
           </div>
         </div>

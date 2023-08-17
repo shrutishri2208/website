@@ -146,12 +146,28 @@ div {
 .heading-dark {
   color: rgba(255, 255, 255, 0.1);
 }
-
 .heading-words-light {
-  color: rgba(0, 0, 0, 1);
+  animation: heading-words-light 0.1s linear 2.5s forwards;
 }
+@keyframes heading-words-light {
+  from {
+    color: rgba(0, 0, 0, 0.1);
+  }
+  to {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
 .heading-words-dark {
-  color: rgba(255, 255, 255, 1);
+  animation: heading-words-dark 0.1s linear 2.5s forwards;
+}
+@keyframes heading-words-dark {
+  from {
+    color: rgba(255, 255, 255, 0.1);
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
 }
 /* WORK-BUTTON */
 
@@ -507,7 +523,7 @@ div {
   line-height: 1.2rem;
   font-weight: 700;
   color: transparent;
-  background: radial-gradient(100% 100% at 50% 0%, #00ff55 0%, #008d2f 100%);
+  background: radial-gradient(100% 100% at 50% 0%, #00ff55 0%, #00a437 100%);
   -webkit-background-clip: text;
 }
 
@@ -591,6 +607,41 @@ div {
   scale: 0;
   transition: all var(--animation-time);
   transform: rotateY(180deg);
+}
+
+.line-1,
+.line-2,
+.line-3,
+.line-4,
+.line-5 {
+  opacity: 0;
+}
+
+.line-1 {
+  animation: line-up 0.2s linear 1s forwards;
+}
+.line-2 {
+  animation: line-up 0.2s linear 1.2s forwards;
+}
+.line-3 {
+  animation: line-up 0.2s linear 1.4s forwards;
+}
+.line-4 {
+  animation: line-up 0.2s linear 1.6s forwards;
+}
+.line-5 {
+  animation: line-up 0.2s linear 1.8s forwards;
+}
+
+@keyframes line-up {
+  from {
+    transform: translate(0px, 15px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 /****************************************************************************/
@@ -919,6 +970,7 @@ div {
     align-items: center;
     box-shadow: 0px 0px 12px 2px rgb(0, 0, 0, 0.4);
   }
+  /* NETFLIX */
 
   .netflix img {
     min-width: 1030px;
@@ -928,6 +980,28 @@ div {
     left: -20rem;
     scale: 1.05;
     transform: rotate(-5deg);
+  }
+
+  /* SWIGGY */
+  .swiggy-container {
+    height: 90%;
+    width: 52%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 25px 3px rgb(0, 0, 0, 1);
+  }
+
+  .mockup {
+    height: 93.5%;
+    width: 58%;
+  }
+
+  .video-container {
+    height: 99%;
+    border-radius: 1.9rem;
+  }
+  .video-container video {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -1223,6 +1297,8 @@ div {
     align-items: center;
     box-shadow: 0px 0px 12px 2px rgb(0, 0, 0, 0.4);
   }
+
+  /* NETFLIX */
   .netflix img {
     min-width: 1030px;
     position: absolute;
@@ -1231,5 +1307,30 @@ div {
     left: -20rem;
     scale: 0.92;
     transform: rotate(-5deg);
+  }
+
+  /* SWIGGY */
+  .swiggy-container {
+    height: 91%;
+    width: 52%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 25px 3px rgb(0, 0, 0, 0.6);
+  }
+
+  .mockup {
+    height: 93%;
+    width: 59%;
+  }
+
+  .video-container {
+    position: relative;
+    top: -2px;
+    height: 97%;
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+  .video-container video {
+    height: 100%;
+    width: 100%;
   }
 }
