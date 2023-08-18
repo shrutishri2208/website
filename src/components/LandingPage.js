@@ -1,18 +1,16 @@
 import React from "react";
-import profile from "../assets/profile.png";
+import profile from "../assets/profile.webp";
+
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../redux/theme/themeActions";
-import girl from "../assets/girl.png";
-import build from "../assets/build.png";
 
 const LandingPage = () => {
   const theme = useSelector((state) => state.theme.theme);
-  console.log(window.innerWidth);
 
   return (
-    <div className="landing-container flex flex-col justify-center items-center relative ">
-      <div className="flex flex-col justify-center items-center gap-8 relative 2xl:bottom-0 xl:bottom-0 bottom-8">
-        <img src={profile} className="profile-image" />
+    <div className="landing-container flex flex-col justify-center items-center  relative ">
+      <div className="flex flex-col justify-center items-center relative 2xl:bottom-0 xl:bottom-0 top-4">
+        <img src={profile} className="profile-image mb-8" />
         <div className="text-center mx-auto">
           <div
             className={`heading ${
@@ -81,24 +79,24 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="absolute bottom-8 down-arrow">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="39"
-          height="23"
-          viewBox="0 0 39 23"
-          fill="none"
-        >
-          <path
-            d="M36.9102 2.45703C30.2827 9.08445 26.567 12.8002 19.9396 19.4276L2.96903 2.45703"
-            stroke={`${theme === "light" ? "black" : "white"}`}
-            // stroke-opacity="0.1"
-            strokeOpacity={0.1}
-            strokeWidth={4}
-            strokeLinecap="round"
-          />
-        </svg>
+        <div className="down-arrow mt-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="39"
+            height="23"
+            viewBox="0 0 39 23"
+            fill="none"
+          >
+            <path
+              d="M36.9102 2.45703C30.2827 9.08445 26.567 12.8002 19.9396 19.4276L2.96903 2.45703"
+              stroke={`${theme === "light" ? "black" : "white"}`}
+              // stroke-opacity="0.1"
+              strokeOpacity={1}
+              strokeWidth={4}
+              strokeLinecap="round"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );

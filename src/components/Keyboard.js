@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import alien from "../assets/alien 1.png";
-import scroll from "../assets/scroll.png";
+import alien from "../assets/alien-1.webp";
+import scroll from "../assets/scroll.webp";
 
 const Keyboard = () => {
   const [theme, setTheme] = useState("writer");

@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Swiggy from "./Swiggy";
 import Netflix from "./Netflix";
-import githubBlack from "../assets/github-black.png";
-import githubWhite from "../assets/github-white.png";
+import githubBlack from "../assets/github-black.webp";
+import githubWhite from "../assets/github-white.webp";
 
 const CloneCard = ({ id, title, desc, tech, githubLink }) => {
   const [githubHover, setGithubHover] = useState(false);
+  const [headingHover, setHeadingHover] = useState(false);
+
   const theme = useSelector((state) => state.theme.theme);
 
   return (
@@ -20,9 +22,65 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
           theme === "light"
             ? "clone-card-header-light"
             : "clone-card-header-dark"
-        }`}
+        } flex items-center`}
+        style={{ gap: "8px" }}
       >
         <h1>{title}</h1>
+        <a
+          className={`h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow ${
+            theme === "light" ? "visit-arrow-light" : "visit-arrow-dark"
+          }`}
+          onMouseEnter={() => setHeadingHover(true)}
+          onMouseLeave={() => setHeadingHover(false)}
+          onMouseOver={() => setHeadingHover(true)}
+        >
+          <div className="absolute overflow-hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              className={`${
+                headingHover === true ? "arrow-1-move" : "arrow-1-back"
+              } relative -bottom-7 -left-7`}
+            >
+              <path
+                d="M14 15C18.6863 15 21.3137 15 26 15V27"
+                stroke={`${theme === "light" ? "black" : "white"}`}
+                strokeWidth={3}
+              />
+              <path
+                d="M26 15L14 27"
+                stroke={`${theme === "light" ? "black" : "white"}`}
+                strokeWidth={3}
+              />
+            </svg>
+          </div>
+          <div className="overflow-hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              className={`${
+                headingHover === true ? "arrow-2-move" : "arrow-2-back"
+              } relative `}
+            >
+              <path
+                d="M14 15C18.6863 15 21.3137 15 26 15V27"
+                stroke={`${theme === "light" ? "black" : "white"}`}
+                strokeWidth={3}
+              />
+              <path
+                d="M26 15L14 27"
+                stroke={`${theme === "light" ? "black" : "white"}`}
+                strokeWidth={3}
+              />
+            </svg>
+          </div>
+        </a>
       </div>
       <div className="clone-card-display">
         {title === "Netflux" && <Netflix />}
@@ -40,10 +98,10 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
           {window.innerWidth < 767 ? (
             <div>
               {theme === "light" ? (
-                <img src={githubBlack} className="h-6 w-6 absolute -left-8 " />
+                <img src={githubBlack} className="h-6 w-6 relative right-1" />
               ) : (
-                <img src={githubWhite} className="h-6 w-6 absolute -left-8 " />
-              )}{" "}
+                <img src={githubWhite} className="h-6 w-6 relative right-1" />
+              )}
             </div>
           ) : (
             <div
@@ -71,7 +129,8 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
                     src={githubWhite}
                     className="h-6 w-6 absolute -left-8 "
                   />
-                )}{" "}
+                )}
+
                 <span className="">GitHub</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

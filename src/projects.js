@@ -1,5 +1,5 @@
-import chrome from "./assets/chrome.png";
-import web from "./assets/web.png";
+import chrome from "./assets/chrome.webp";
+import web from "./assets/web.webp";
 export const projects = [
   {
     id: 1,

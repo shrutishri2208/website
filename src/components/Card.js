@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Keyboard from "./Keyboard";
 import Pageplay from "./Pageplay";
-import githubBlack from "../assets/github-black.png";
-import githubWhite from "../assets/github-white.png";
+import githubBlack from "../assets/github-black.webp";
+import githubWhite from "../assets/github-white.webp";
 
 const Card = ({
   id,

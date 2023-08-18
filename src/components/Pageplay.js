@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import youtube from "../assets/youtube.png";
-import article from "../assets/article.png";
+import youtube from "../assets/youtube.webp";
+import article from "../assets/article.webp";
 
 const Pageplay = () => {
   const [lever, setLever] = useState(70);
@@ -39,9 +39,7 @@ const Pageplay = () => {
       </div>
       <div
         onMouseMove={handleDrag}
-        onMouseLeave={() => setLever(70)}
         onTouchMove={handleTouch}
-        onTouchEnd={() => setLever(70)}
         className=" h-full w-full z-50 cursor-grab opacity-90"
       >
         <div

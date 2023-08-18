@@ -37,8 +37,8 @@ const FooterItem = ({ title, color }) => {
       </div>
       <div className="footer-item-bg " style={{ backgroundColor: `${color}` }}>
         <div className="flex gap-8 flex-nowrap h-full moving-footer">
-          {myArray.map((item) => {
-            return <MovingFooter title={title} />;
+          {myArray.map((item, index) => {
+            return <MovingFooter title={title} key={index} />;
           })}
         </div>
       </div>

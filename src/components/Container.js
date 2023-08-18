@@ -22,9 +22,9 @@ const Container = () => {
       <div className={`container mx-auto relative z-50`}>
         <LandingPage />
         <CardsContainer />
-        <TextContainer text={"clones"} index={2} />
+        {/* <TextContainer text={"clones"} index={2} /> */}
         <ClonesContainer />
-        <TextContainer text={"on the side"} index={3} />
+        {/* <TextContainer text={"on the side"} index={3} /> */}
       </div>
       <Footer />
 

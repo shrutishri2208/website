@@ -23,7 +23,7 @@ const Footer = () => {
     <div
       className={`${
         theme === "light" ? "" : ""
-      } h-max w-screen relative z-50 mt-96`}
+      } h-max w-screen relative z-50 mt-96 overflow-hidden`}
     >
       <div
         className={`relative z-50  w-screen pb-6 ${
@@ -32,8 +32,8 @@ const Footer = () => {
             : "bg-white bg-opacity-10 text-white"
         } `}
       >
-        {socials.map((item) => {
-          return <FooterItem {...item} />;
+        {socials.map((item, index) => {
+          return <FooterItem {...item} key={index} />;
         })}
         <p
           className={`${
