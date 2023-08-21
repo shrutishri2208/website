@@ -66,16 +66,6 @@ export const clones = [
 export const sides = [
   {
     id: 1,
-    title: "Murk",
-    tag: "Game",
-    tagIcon: android,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
-    tech: "C#, Unity",
-    githubLink: "https://github.com/shrutishri2208/murk",
-    viewLink: "https://play.google.com/store/apps/details?id=com.shrutz.murk",
-  },
-  {
-    id: 2,
     title: "UI Experiments",
     tag: "Web App",
     tagIcon: web,
@@ -83,6 +73,16 @@ export const sides = [
     tech: "React, Tailwind CSS, SVG animations",
     githubLink: "https://github.com/shrutishri2208/UI-components",
     viewLink: "https://ui-components-sandy.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Murk",
+    tag: "Game",
+    tagIcon: android,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "C#, Unity",
+    githubLink: "https://github.com/shrutishri2208/murk",
+    viewLink: "https://play.google.com/store/apps/details?id=com.shrutz.murk",
   },
   {
     id: 3,

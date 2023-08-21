@@ -20,12 +20,14 @@ const SideProjectCard = ({
   const [headingHover, setHeadingHover] = useState(false);
 
   const translationValue = `calc(100% + 64px)`;
+  const windowSize = window.innerWidth;
+  console.log(windowSize);
 
   return (
     <div
       // style={id === 3 ? { transform: "translate(100%, 0px)" } : {}}
       style={
-        id === 3 && window.innerWidth > 767
+        id === 3 && windowSize > 767
           ? { transform: `translate(${translationValue}, -64%)` }
           : {}
       }
