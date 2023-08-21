@@ -23,7 +23,10 @@ const LandingPage = ({ isLoading }) => {
   return (
     <div className="landing-container flex flex-col justify-center items-center  relative ">
       <div className="flex flex-col justify-center items-center relative 2xl:bottom-0 xl:bottom-0 top-4">
-        <img src={profile} className="profile-image mb-8" />
+        <img
+          src={profile}
+          className={`${isLoading === false ? "profile-image" : ""} mb-12`}
+        />
         <div className="text-center mx-auto">
           <div
             className={`heading ${

@@ -38,7 +38,9 @@ const Container = ({ isLoading }) => {
         href="mailto:shrutishri2208@gmail.com"
         className={`work-button ${
           theme === "light" ? "work-button-light" : "work-button-dark"
-        } cursor-pointer flex items-center`}
+        } ${
+          isLoading === false ? "work-button-animation" : ""
+        } cursor-pointer flex items-center opacity-0`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +65,9 @@ const Container = ({ isLoading }) => {
         <p>Open to work</p>
       </a>
       <button
-        className="theme-toggle-button rounded-full px-3 py-1 flex justify-center items-center"
+        className={`theme-toggle-button rounded-full px-3 py-1 flex justify-center items-center opacity-0 ${
+          isLoading === false ? "theme-button-animation" : ""
+        }`}
         onClick={() => {
           if (theme === "light") {
             dispatch(setTheme("dark"));

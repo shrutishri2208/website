@@ -122,6 +122,18 @@ div {
   left: 1.5rem;
   z-index: 50;
 }
+.theme-button-animation {
+  animation: theme-button-animation 0.2s linear 2s forwards;
+}
+
+@keyframes theme-button-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .theme-bg {
   height: 40px;
@@ -186,6 +198,19 @@ div {
 
 /* WORK-BUTTON */
 
+.work-button-animation {
+  animation: work-button-animation 0.2s linear 2s forwards;
+}
+
+@keyframes work-button-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .work-button-light {
   background: linear-gradient(180deg, #282828 0%, #000 100%);
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.05),
@@ -208,6 +233,11 @@ div {
 }
 .work-button-dark:hover {
   background-color: #00f351;
+  box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.2),
+    0px 5px 8px 0px rgba(65, 65, 65, 0.2),
+    0px 11px 16px 0px rgba(65, 65, 65, 0.2),
+    0px 22px 34px 0px rgba(65, 65, 65, 0.15),
+    0px 60px 92px 0px rgba(65, 65, 65, 0.15);
 }
 
 .work-button-light p {
@@ -998,7 +1028,7 @@ div {
 
 @media screen and (max-width: 767px) {
   .loader-animation > div {
-    animation: loader-animation 1s linear 2s forwards;
+    animation: loader-animation 1s linear 1s forwards;
   }
   @keyframes loader-animation {
     from {
@@ -1071,6 +1101,17 @@ div {
     max-height: 180px;
     position: relative;
     border-radius: 0.5rem;
+    opacity: 0;
+    animation: profile-image 0.2s linear 0s forwards;
+  }
+
+  @keyframes profile-image {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .heading {
