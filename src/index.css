@@ -895,6 +895,13 @@ div {
   }
  */
 
+  .github-mobile {
+    display: none;
+  }
+  .github-desktop {
+    display: block;
+  }
+
   .github-button {
     padding: 8px 14px 8px 12px;
     border-radius: 3rem;
@@ -1019,6 +1026,7 @@ div {
   .video-container video {
     height: 100%;
     width: 100%;
+    border-radius: 1.9rem;
   }
 }
 
@@ -1258,6 +1266,12 @@ div {
   }
 
   /* GITHUB-BUTTON */
+  .github-mobile {
+    display: block;
+  }
+  .github-desktop {
+    display: none;
+  }
 
   .github-button {
     background-color: rgb(35, 41, 99, 0.06);
@@ -1368,6 +1382,7 @@ div {
   .mockup {
     height: 93%;
     width: 59%;
+    border-radius: 1.5rem;
   }
 
   .video-container {
@@ -1380,5 +1395,6 @@ div {
   .video-container video {
     height: 100%;
     width: 100%;
+    border-radius: 1.5rem;
   }
 }
