@@ -92,7 +92,7 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
           theme === "light" ? "clone-card-body-light" : "clone-card-body-dark"
         }`}
       >
-        {/* <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2> */}
+        <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
         <div className="flex justify-between items-center">
           <p className="mr-12 ">{tech}</p>
           {window.innerWidth < 767 ? (

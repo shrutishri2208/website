@@ -116,7 +116,7 @@ const Card = ({
       >
         <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
         <div className="flex justify-between items-center">
-          <p className="mr-16 "> {tech}</p>
+          <p className="mr-36 "> {tech}</p>
           {window.innerWidth < 767 ? (
             <a href={githubLink} target="_blank" className="shrink-0">
               {theme === "light" ? (

@@ -6,15 +6,19 @@ import { setTheme } from "../redux/theme/themeActions";
 
 const LandingPage = ({ isLoading }) => {
   const theme = useSelector((state) => state.theme.theme);
-  const [isHeading, setIsHeading] = useState(false);
+  const [isHeading, setIsHeading] = useState(0);
 
-  // useEffect(() => {
-  // }, [isLoading]);
-  if (isLoading === false) {
-    setTimeout(() => {
-      setIsHeading(true);
-    }, 1000);
-  }
+  useEffect(() => {
+    setIsHeading(1);
+
+    const secondTimeout = setTimeout(() => {
+      setIsHeading(2);
+    }, 4000);
+
+    return () => {
+      clearTimeout(secondTimeout);
+    };
+  }, [isLoading]);
 
   return (
     <div className="landing-container flex flex-col justify-center items-center  relative ">
@@ -34,9 +38,13 @@ const LandingPage = ({ isLoading }) => {
                 className={`relative name ${
                   theme === "dark"
                     ? "heading-words-dark"
-                    : theme === "light" && isHeading === true
+                    : theme === "light" && isHeading === 0
+                    ? "heading-light"
+                    : theme === "light" && isHeading === 1
                     ? "word-1"
-                    : "heading-light"
+                    : theme === "light" && isHeading === 2
+                    ? "heading-words-light"
+                    : ""
                 }`}
               >
                 {/* <span className="absolute text-6xl left-20 -top-4 -rotate-6 -z-1">
@@ -52,9 +60,13 @@ const LandingPage = ({ isLoading }) => {
                 className={`loves relative  ${
                   theme === "dark"
                     ? "heading-words-dark"
-                    : theme === "light" && isHeading === true
+                    : theme === "light" && isHeading === 0
+                    ? "heading-light"
+                    : theme === "light" && isHeading === 1
                     ? "word-2"
-                    : "heading-light"
+                    : theme === "light" && isHeading === 2
+                    ? "heading-words-light"
+                    : ""
                 }`}
               >
                 loves to
@@ -70,9 +82,13 @@ const LandingPage = ({ isLoading }) => {
                 className={`relative build inline  ${
                   theme === "dark"
                     ? "heading-words-dark"
-                    : theme === "light" && isHeading === true
+                    : theme === "light" && isHeading === 0
+                    ? "heading-light"
+                    : theme === "light" && isHeading === 1
                     ? "word-2"
-                    : "heading-light"
+                    : theme === "light" && isHeading === 2
+                    ? "heading-words-light"
+                    : ""
                 }`}
               >
                 build
@@ -86,9 +102,13 @@ const LandingPage = ({ isLoading }) => {
                   className={`software inline  ${
                     theme === "dark"
                       ? "heading-words-dark"
-                      : theme === "light" && isHeading === true
+                      : theme === "light" && isHeading === 0
+                      ? "heading-light"
+                      : theme === "light" && isHeading === 1
                       ? "word-3"
-                      : "heading-light"
+                      : theme === "light" && isHeading === 2
+                      ? "heading-words-light"
+                      : ""
                   }`}
                 >
                   software
@@ -101,7 +121,7 @@ const LandingPage = ({ isLoading }) => {
         <div className="down-arrow mt-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="39"
+            width="30"
             height="23"
             viewBox="0 0 39 23"
             fill="none"

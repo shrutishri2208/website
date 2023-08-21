@@ -11,7 +11,7 @@ function App() {
     window.scrollTo(0, 0);
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   useEffect(() => {

@@ -26,7 +26,7 @@ const Footer = () => {
     <div
       className={`${
         theme === "light" ? "" : ""
-      } h-max w-screen relative z-50 mt-96 overflow-hidden`}
+      } h-max w-screen relative z-50 mt-20 overflow-hidden`}
     >
       <div
         className={`relative z-50  w-screen pb-6 ${

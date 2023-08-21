@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Footer from "./Footer";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import SideProjectContainer from "./SideProjectContainer";
 
 const Container = ({ isLoading }) => {
   const theme = useSelector((state) => state.theme.theme);
@@ -25,9 +26,10 @@ const Container = ({ isLoading }) => {
       <div className={`container mx-auto relative z-50`}>
         <LandingPage isLoading={isLoading} />
         <CardsContainer />
-        {/* <TextContainer text={"clones"} index={2} /> */}
+        <TextContainer text={"clones"} index={2} />
         <ClonesContainer />
-        {/* <TextContainer text={"on the side"} index={3} /> */}
+        <TextContainer text={"on the side"} index={3} />
+        <SideProjectContainer />
       </div>
       <Footer />
 

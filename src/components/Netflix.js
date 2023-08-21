@@ -1,6 +1,6 @@
 import React from "react";
 import netflix from "../assets/netflix.webp";
-import netflix2 from "../assets/netflix2.png";
+import netflix2 from "../assets/netflix2.webp";
 
 const Netflix = () => {
   return (
