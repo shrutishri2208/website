@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import MovingFooter from "./MovingFooter";
 
-const FooterItem = ({ title, color }) => {
+const FooterItem = ({ title, color, link }) => {
   const theme = useSelector((state) => state.theme.theme);
   const myArray = Array.from({ length: 100 }, (_, index) => index);
   return (
@@ -11,7 +11,7 @@ const FooterItem = ({ title, color }) => {
         <p className="py-10 text-2xl font-semibold border-b-white border-b-1">
           {title}
         </p>
-        <a>
+        <a href={link} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="60"
@@ -38,7 +38,7 @@ const FooterItem = ({ title, color }) => {
       <div className="footer-item-bg " style={{ backgroundColor: `${color}` }}>
         <div className="flex gap-8 flex-nowrap h-full moving-footer">
           {myArray.map((item, index) => {
-            return <MovingFooter title={title} key={index} />;
+            return <MovingFooter title={title} link={link} key={index} />;
           })}
         </div>
       </div>

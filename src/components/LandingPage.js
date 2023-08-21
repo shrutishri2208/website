@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import profile from "../assets/profile.webp";
 
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../redux/theme/themeActions";
 
-const LandingPage = () => {
+const LandingPage = ({ isLoading }) => {
   const theme = useSelector((state) => state.theme.theme);
+  const [isHeading, setIsHeading] = useState(false);
+
+  // useEffect(() => {
+  // }, [isLoading]);
+  if (isLoading === false) {
+    setTimeout(() => {
+      setIsHeading(true);
+    }, 1000);
+  }
 
   return (
     <div className="landing-container flex flex-col justify-center items-center  relative ">
@@ -14,16 +23,20 @@ const LandingPage = () => {
         <div className="text-center mx-auto">
           <div
             className={`heading ${
+              isLoading === false ? "heading-animation" : ""
+            } opacity-0 ${
               theme === "light" ? "heading-light" : "heading-dark"
             }`}
           >
-            <div className="line-1">
+            <div>
               Hi! I am{" "}
               <span
                 className={`relative name ${
-                  theme === "light"
-                    ? "heading-words-light"
-                    : "heading-words-dark"
+                  theme === "dark"
+                    ? "heading-words-dark"
+                    : theme === "light" && isHeading === true
+                    ? "word-1"
+                    : "heading-light"
                 }`}
               >
                 {/* <span className="absolute text-6xl left-20 -top-4 -rotate-6 -z-1">
@@ -33,13 +46,15 @@ const LandingPage = () => {
               </span>
               ,
             </div>
-            <div className="line-2">a developer who</div>
-            <div className="line-3">
+            <div>a developer who</div>
+            <div>
               <span
-                className={`loves relative ${
-                  theme === "light"
-                    ? "heading-words-light"
-                    : "heading-words-dark"
+                className={`loves relative  ${
+                  theme === "dark"
+                    ? "heading-words-dark"
+                    : theme === "light" && isHeading === true
+                    ? "word-2"
+                    : "heading-light"
                 }`}
               >
                 loves to
@@ -50,26 +65,30 @@ const LandingPage = () => {
               </span>{" "}
               design and
             </div>
-            <div className="line-4">
+            <div>
               <div
-                className={`relative build inline ${
-                  theme === "light"
-                    ? "heading-words-light"
-                    : "heading-words-dark"
+                className={`relative build inline  ${
+                  theme === "dark"
+                    ? "heading-words-dark"
+                    : theme === "light" && isHeading === true
+                    ? "word-2"
+                    : "heading-light"
                 }`}
               >
                 build
               </div>{" "}
               simple and
             </div>
-            <div className="line-5">
+            <div>
               beautiful{" "}
               <div className="software-background inline relative">
                 <div
-                  className={`software inline ${
-                    theme === "light"
-                      ? "heading-words-light"
-                      : "heading-words-dark"
+                  className={`software inline  ${
+                    theme === "dark"
+                      ? "heading-words-dark"
+                      : theme === "light" && isHeading === true
+                      ? "word-3"
+                      : "heading-light"
                   }`}
                 >
                   software

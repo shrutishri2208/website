@@ -8,14 +8,17 @@ const Footer = () => {
     {
       title: "linkedin",
       color: "#88D9FF",
+      link: "https://www.linkedin.com/in/shruti-shrivastava-676606228/",
     },
     {
       title: "github",
       color: "#88FF9F",
+      link: "https://github.com/shrutishri2208",
     },
     {
       title: "email",
       color: "#FF9685",
+      link: "mailto:shrutishri2208@gmail.com?body=Hello%20there%20profile%20viewer%20:)",
     },
   ];
 

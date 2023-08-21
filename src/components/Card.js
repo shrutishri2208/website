@@ -39,6 +39,8 @@ const Card = ({
         >
           <h1 className="">{title}</h1>
           <a
+            target="_blank"
+            href={viewLink}
             className={`h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow ${
               theme === "light" ? "visit-arrow-light" : "visit-arrow-dark"
             }`}
@@ -114,18 +116,20 @@ const Card = ({
       >
         <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
         <div className="flex justify-between items-center">
-          <p>{tech}</p>
+          <p className="mr-16 "> {tech}</p>
           {window.innerWidth < 767 ? (
-            <div>
+            <a href={githubLink} target="_blank" className="shrink-0">
               {theme === "light" ? (
                 <img src={githubBlack} className="h-6 w-6 relative right-1" />
               ) : (
                 <img src={githubWhite} className="h-6 w-6 relative right-1" />
               )}
-            </div>
+            </a>
           ) : (
-            <div
-              className={`github-button relative overflow-hidden ${
+            <a
+              href={githubLink}
+              target="_blank"
+              className={`github-button relative overflow-hidden shrink-0 ${
                 theme === "light" ? "github-light" : "github-dark"
               }`}
               onMouseEnter={() => setGithubHover(true)}
@@ -167,7 +171,7 @@ const Card = ({
                   />
                 </svg>
               </div>
-            </div>
+            </a>
           )}
         </div>
       </div>

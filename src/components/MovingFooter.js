@@ -1,11 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const MovingFooter = ({ title }) => {
+const MovingFooter = ({ title, link }) => {
   const theme = useSelector((state) => state.theme.theme);
 
   return (
-    <div className="moving-footer-items flex items-center gap-7 h-full w-full">
+    <a
+      className="moving-footer-items flex items-center gap-7 h-full w-full"
+      href={link}
+      target="_blank"
+    >
       <p className="text-2xl text-black relative font-semibold">{title}</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +25,7 @@ const MovingFooter = ({ title }) => {
         />
         <path d="M26 15L14 27" stroke="black" strokeWidth={2} />
       </svg>
-    </div>
+    </a>
   );
 };
 

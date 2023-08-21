@@ -6,6 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Corinthia&family=Cormorant&family=Odibee+Sans&family=Shadows+Into+Light&family=Sofia&family=Sonsie+One&family=Teko:wght@700&family=Texturina:ital,opsz,wght@1,12..72,300&family=Trochut&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@700&family=Cormorant:wght@400;700&family=Handjet:wght@700&family=Odibee+Sans&family=Pacifico&family=Shadows+Into+Light&family=Sonsie+One&family=Trochut:wght@400;700&display=swap");
 :root {
   --colorblue: #6afae0;
   --coloryellow: #faeb6a;
@@ -23,12 +24,11 @@
 }
 
 body {
-  margin: 0;
+  margin: 0rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "DM Sans", sans-serif;
   /* font-family: "IBM Plex Sans", sans-serif; */
-  color: var(--dark);
   overflow-x: hidden;
 }
 
@@ -138,41 +138,52 @@ div {
 /* LANDING-PAGE */
 
 /* HEADINGS */
+.heading-animation {
+  animation: heading-animation 0.2s linear 0s forwards;
+}
+
+@keyframes heading-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .heading-light {
   color: rgba(0, 0, 0, 0.1);
 }
 
 .heading-dark {
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.2);
 }
+
 .heading-words-light {
   color: rgba(0, 0, 0, 1);
-
-  animation: heading-words-light 0.1s linear 2.5s forwards;
 }
-/* @keyframes heading-words-light {
+.word-1 {
+  animation: heading-words-light 0.1s linear 0s forwards;
+}
+.word-2 {
+  animation: heading-words-light 0.1s linear 0.3s forwards;
+}
+.word-3 {
+  animation: heading-words-light 0.1s linear 0.6s forwards;
+}
+@keyframes heading-words-light {
   from {
     color: rgba(0, 0, 0, 0.1);
   }
   to {
     color: rgba(0, 0, 0, 1);
   }
-} */
+}
 
 .heading-words-dark {
   color: rgba(255, 255, 255, 1);
-
-  animation: heading-words-dark 0.1s linear 2.5s forwards;
 }
-/* @keyframes heading-words-dark {
-  from {
-    color: rgba(255, 255, 255, 0.1);
-  }
-  to {
-    color: rgba(255, 255, 255, 1);
-  }
-} */
+
 /* WORK-BUTTON */
 
 .work-button-light {
@@ -231,7 +242,7 @@ div {
 
 .card-display,
 .clone-card-display {
-  background: rgb(124, 124, 124);
+  background: rgb(0, 0, 0);
   width: 100%;
   border-radius: 1rem;
 }
@@ -573,47 +584,26 @@ div {
   transition: all var(--animation-time);
   transform: rotateY(180deg);
 }
-/* 
-.line-1,
-.line-2,
-.line-3,
-.line-4,
-.line-5 {
-  opacity: 0;
-}
-
-.line-1 {
-  animation: line-up 0.2s linear 1s forwards;
-}
-.line-2 {
-  animation: line-up 0.2s linear 1.2s forwards;
-}
-.line-3 {
-  animation: line-up 0.2s linear 1.4s forwards;
-}
-.line-4 {
-  animation: line-up 0.2s linear 1.6s forwards;
-}
-.line-5 {
-  animation: line-up 0.2s linear 1.8s forwards;
-}
-
-@keyframes line-up {
-  from {
-    transform: translate(0px, 15px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0px, 0px);
-    opacity: 1;
-  }
-} */
 
 /****************************************************************************/
 
 /* LAPTOPS AND BIG SCREENS */
 
 @media screen and (min-width: 1024px) {
+  .loader-animation > div {
+    animation: loader-animation 1s linear 2s forwards;
+  }
+  @keyframes loader-animation {
+    from {
+      height: 0px;
+      width: 0px;
+    }
+    to {
+      height: 500vw;
+      width: 500vw;
+    }
+  }
+
   .bg-open-dark {
     animation: bg-open-dark 0.5s linear 0s forwards;
   }
@@ -912,7 +902,7 @@ div {
     /* color: #06ae3e; */
     line-height: 1.2rem;
     font-weight: 700;
-    color: transparent;
+    color: transparent !important;
     background: radial-gradient(100% 100% at 50% 0%, #00ff55 0%, #00a437 100%);
     -webkit-background-clip: text;
   }
@@ -1006,6 +996,20 @@ div {
 /* MOBILES */
 
 @media screen and (max-width: 767px) {
+  .loader-animation > div {
+    animation: loader-animation 1s linear 2s forwards;
+  }
+  @keyframes loader-animation {
+    from {
+      height: 0px;
+      width: 0px;
+    }
+    to {
+      height: 500vh;
+      width: 500vh;
+    }
+  }
+
   .bg-open-dark {
     animation: bg-open-dark 1s linear 0s forwards;
   }
@@ -1151,7 +1155,7 @@ div {
   .side-card-display {
     width: 80px;
     height: 80px;
-    background: rgb(124, 124, 124);
+    background: rgb(0, 0, 0);
     border-radius: 0.8rem;
   }
 

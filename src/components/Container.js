@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextContainer from "./TextContainer";
 import CardsContainer from "./CardsContainer";
 import ClonesContainer from "./ClonesContainer";
@@ -9,9 +9,12 @@ import Footer from "./Footer";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
-const Container = () => {
+const Container = ({ isLoading }) => {
   const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
 
   return (
     <div
@@ -20,7 +23,7 @@ const Container = () => {
       }`}
     >
       <div className={`container mx-auto relative z-50`}>
-        <LandingPage />
+        <LandingPage isLoading={isLoading} />
         <CardsContainer />
         {/* <TextContainer text={"clones"} index={2} /> */}
         <ClonesContainer />
@@ -28,7 +31,9 @@ const Container = () => {
       </div>
       <Footer />
 
-      <div
+      <a
+        target="_blank"
+        href="mailto:shrutishri2208@gmail.com"
         className={`work-button ${
           theme === "light" ? "work-button-light" : "work-button-dark"
         } cursor-pointer flex items-center`}
@@ -54,7 +59,7 @@ const Container = () => {
           />
         </svg>
         <p>Open to work</p>
-      </div>
+      </a>
       <button
         className="theme-toggle-button rounded-full px-3 py-1 flex justify-center items-center"
         onClick={() => {
