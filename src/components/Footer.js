@@ -23,16 +23,12 @@ const Footer = () => {
   ];
 
   return (
-    <div
-      className={`${
-        theme === "light" ? "" : ""
-      } h-max w-screen relative z-50 mt-20 overflow-hidden`}
-    >
+    <div className={` h-max w-screen relative z-50 mt-20 overflow-hidden`}>
       <div
         className={`relative z-50  w-screen pb-6 ${
           theme === "light"
             ? "bg-black bg-opacity-5 text-black"
-            : "bg-white bg-opacity-10 text-white"
+            : "bg-white bg-opacity-5 text-white"
         } `}
       >
         {socials.map((item, index) => {

@@ -7,7 +7,7 @@ export const projects = [
     title: "Textplay",
     tag: "Extension",
     tagIcon: chrome,
-    desc: "TextPlay is a chrome extension that suggests YouTube videos related to the webpage you are currently browsing. ",
+    desc: "suggests YouTube videos related to the webpage you are currently browsing. ",
     tech: "HTML, CSS, JavaScript, YouTube Data API v3",
     githubLink: "https://github.com/shrutishri2208/page-play",
     viewLink: "http://page-play.shrutz.xyz/",
@@ -49,32 +49,23 @@ export const projects = [
 export const clones = [
   {
     id: 1,
-    title: "Netflux",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
-    tech: "React, Redux, Tailwind CSS, Rapid API, material UI, react-router",
-    githubLink: "https://github.com/shrutishri2208/netflix-clone",
-  },
-  {
-    id: 2,
     title: "Zwiggy",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
     tech: "React Native, Redux, NativeWind, Sanity CMS",
     githubLink: "https://github.com/shrutishri2208/food-delivery-app",
+  },
+  {
+    id: 2,
+    title: "Netflux",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. Nulla tristique, ex eget facilisis auctor, nisl dui.",
+    tech: "React, Redux, Tailwind CSS, Rapid API, material UI, react-router",
+    githubLink: "https://github.com/shrutishri2208/netflix-clone",
   },
 ];
 
 export const sides = [
   {
     id: 1,
-    title: "Word Wise",
-    tag: "Extension",
-    tagIcon: chrome,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
-    tech: "HTML, CSS, JavaScript",
-    githubLink: "https://github.com/shrutishri2208/word-wise",
-  },
-  {
-    id: 2,
     title: "Murk",
     tag: "Game",
     tagIcon: android,
@@ -82,6 +73,25 @@ export const sides = [
     tech: "C#, Unity",
     githubLink: "https://github.com/shrutishri2208/murk",
     viewLink: "https://play.google.com/store/apps/details?id=com.shrutz.murk",
+  },
+  {
+    id: 2,
+    title: "UI Experiments",
+    tag: "Web App",
+    tagIcon: web,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "React, Tailwind CSS, SVG animations",
+    githubLink: "https://github.com/shrutishri2208/UI-components",
+    viewLink: "https://ui-components-sandy.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Wave Portal",
+    tag: "Web App",
+    tagIcon: web,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum ac libero sit amet efficitur. ",
+    tech: "Hardhat, ether.js, React",
+    githubLink: "https://github.com/shrutishri2208/wave-portal",
   },
 
   // {

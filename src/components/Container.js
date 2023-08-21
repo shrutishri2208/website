@@ -65,7 +65,7 @@ const Container = ({ isLoading }) => {
         <p>Open to work</p>
       </a>
       <button
-        className={`theme-toggle-button rounded-full px-3 py-1 flex justify-center items-center opacity-0 ${
+        className={`theme-toggle-button  rounded-full px-3 py-1 flex justify-center items-center opacity-0 ${
           isLoading === false ? "theme-button-animation" : ""
         }`}
         onClick={() => {
@@ -77,9 +77,9 @@ const Container = ({ isLoading }) => {
         }}
       >
         {theme === "light" ? (
-          <DarkModeIcon className="text-yellow-400" />
+          <DarkModeIcon className="text-yellow-400 scale-125" />
         ) : (
-          <LightModeIcon className="text-yellow-400" />
+          <LightModeIcon className="text-yellow-400 scale-125" />
         )}
       </button>
       <div

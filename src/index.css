@@ -287,17 +287,19 @@ div {
 
 .card-header-dark h1,
 .clone-card-header-dark h1,
-.side-card-dark-light h1 {
+.side-card-header-dark h1 {
   color: white;
 }
 
 .card-header-light p,
-.clone-card-header-light p {
+.clone-card-header-light p,
+.side-card-header-light p {
   color: black;
 }
 
 .card-header-dark p,
-.clone-card-header-dark p {
+.clone-card-header-dark p,
+.side-card-header-dark p {
   color: white;
 }
 
@@ -961,11 +963,11 @@ div {
   }
 
   .button-1-border {
-    border: 2px solid #ee864b55;
+    border: 2px solid #dd8c5a99;
   }
 
   .button-2-border {
-    border: 2px solid #9eff5055;
+    border: 2px solid #73ff0099;
   }
   .button-1 {
     height: 2.5rem;
@@ -1068,8 +1070,8 @@ div {
   }
 
   .theme-toggle-button {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     position: fixed;
     top: 1.75rem;
     left: 0.5rem;
@@ -1137,20 +1139,20 @@ div {
     right: 1rem;
     z-index: 50;
     width: max-content;
-    padding: 0.6rem;
+    padding: 0.8rem;
     border-radius: 3rem;
     gap: 0.5rem;
     transition: box-shadow 0.5s;
   }
   .work-button-light p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 0.8rem; /* 133.333% */
     letter-spacing: -0.05rem;
   }
 
   .work-button-dark p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 0.8rem; /* 133.333% */
     letter-spacing: -0.05rem;
@@ -1309,11 +1311,11 @@ div {
   } */
 
   .button-1-border {
-    border: 2px solid #ee864b55;
+    border: 2px solid #dd8c5a99;
   }
 
   .button-2-border {
-    border: 2px solid #9eff5055;
+    border: 2px solid #73ff0099;
   }
   .button-1 {
     height: 2.5rem;
