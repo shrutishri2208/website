@@ -9,7 +9,9 @@ const TextContainer = ({ index, text }) => {
       <div className="text-heading">
         <h1
           className={`2xl:absolute xl:absolute  ${
-            theme === "light" ? "black-stroke" : "white-stroke "
+            theme === "light"
+              ? "text-black opacity-10"
+              : "text-white opacity-20 "
           } ${
             index === 1
               ? "left-24 top-10"

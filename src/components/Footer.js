@@ -18,12 +18,12 @@ const Footer = () => {
     {
       title: "email",
       color: "#FF9685",
-      link: "mailto:shrutishri2208@gmail.com?body=Hello%20there%20profile%20viewer%20:)",
+      link: "mailto:shrutishri2208@gmail.com?",
     },
   ];
 
   return (
-    <div className={` h-max w-screen relative z-50 mt-20 overflow-hidden`}>
+    <div className={` h-max w-screen relative z-50  overflow-hidden`}>
       <div
         className={`relative z-50  w-screen pb-6 ${
           theme === "light"

@@ -109,7 +109,7 @@ div {
   z-index: 50;
 }
 .theme-button-animation {
-  animation: theme-button-animation 0.2s linear 2s forwards;
+  animation: theme-button-animation 0.2s linear 2.5s forwards;
 }
 
 @keyframes theme-button-animation {
@@ -184,7 +184,7 @@ div {
 /* WORK-BUTTON */
 
 .work-button-animation {
-  animation: work-button-animation 0.2s linear 2s forwards;
+  animation: work-button-animation 0.2s linear 2.5s forwards;
 }
 
 @keyframes work-button-animation {
@@ -713,7 +713,6 @@ div {
 
   /* TEXT-CONTAINER */
   .text-heading h1 {
-    opacity: 15%;
     font-size: 6rem;
     font-weight: 700;
     line-height: 5rem;
@@ -1084,6 +1083,7 @@ div {
   }
 
   .theme-toggle-button {
+    background-color: black;
     height: 50px;
     width: 50px;
     position: fixed;
@@ -1288,23 +1288,6 @@ div {
   }
   .github-desktop {
     display: none;
-  }
-
-  .github-button {
-    background-color: rgb(35, 41, 99, 0.06);
-    padding: 6px 14px 6px 11px;
-    border-radius: 3rem;
-    transition: all 0.25s;
-  }
-
-  .github-button span {
-    position: relative;
-    top: 1px;
-    font-size: 1.2rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5rem; /* 133.333% */
-    letter-spacing: -0.03375rem;
   }
 
   /* KEYBOARD */

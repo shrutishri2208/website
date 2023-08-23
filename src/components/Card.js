@@ -97,13 +97,13 @@ const Card = ({
           </a>
         </div>
 
-        <div className="flex items-center gap-1">
+        <a className="flex items-center gap-1" href={viewLink} target="_blank">
           <img
             src={tagIcon}
             className="2xl:h-5 2xl:w-5 xl:h-5 xl:w-5 h-4 w-4"
           />
           <p style={{ position: "relative", top: "1.2px" }}>{tag}</p>
-        </div>
+        </a>
       </div>
       <div className="card-display">
         {title === "Textplay" && <Pageplay />}
@@ -123,9 +123,9 @@ const Card = ({
             className="shrink-0 github-mobile"
           >
             {theme === "light" ? (
-              <img src={githubBlack} className="h-6 w-6 relative right-1" />
+              <img src={githubBlack} className="h-8 w-8 relative right-1" />
             ) : (
-              <img src={githubWhite} className="h-6 w-6 relative right-1" />
+              <img src={githubWhite} className="h-8 w-8 relative right-1" />
             )}
           </a>
           <a

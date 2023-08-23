@@ -20,6 +20,15 @@ const SideProjectCard = ({
   const [headingHover, setHeadingHover] = useState(false);
 
   return (
+    // <div
+    //   className={`side-card ${
+    //     theme === "light" ? "side-card-light" : "side-card-dark"
+    //   } flex ${
+    //     id % 2 === 0
+    //       ? "2xl:relative 2xl:bottom-36 xl:relative xl:bottom-48"
+    //       : ""
+    //   } ${id === 3 ? "move-card" : ""} `}
+    // >
     <div
       className={`side-card ${
         theme === "light" ? "side-card-light" : "side-card-dark"
@@ -27,7 +36,7 @@ const SideProjectCard = ({
         id % 2 === 0
           ? "2xl:relative 2xl:bottom-36 xl:relative xl:bottom-48"
           : ""
-      } ${id === 3 ? "move-card" : ""} `}
+      }`}
     >
       <div
         className={`side-card-header ${
@@ -100,13 +109,13 @@ const SideProjectCard = ({
           )}
         </div>
 
-        <div className="flex items-center gap-1">
+        <a className="flex items-center gap-1" href={viewLink} target="_blank">
           <img
             src={tagIcon}
             className="2xl:h-5 2xl:w-5 xl:h-5 xl:w-5 h-4 w-4"
           />
           <p style={{ position: "relative", top: "1.2px" }}>{tag}</p>
-        </div>
+        </a>
       </div>
       <div
         className={`card-body ${
