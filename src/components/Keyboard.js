@@ -5,9 +5,13 @@ import scroll from "../assets/scroll.webp";
 const Keyboard = () => {
   const [theme, setTheme] = useState("writer");
   const [back, setBack] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [iframeWidth, setIframeWidth] = useState(0.435);
+  const [isVisible, setIsVisible] = useState(false);
+  const [first, setFirst] = useState(false);
 
   const iframe = useRef(null);
+  const keyboard = useRef(null);
 
   const getWidth = (e) => {
     let w = iframe.current.clientWidth;
@@ -23,12 +27,99 @@ const Keyboard = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // setFirst(false);
+    if (isVisible === true && first === false) {
+      setTimeout(() => {
+        setIsLoading(false);
+        setFirst(true);
+      }, 2000);
+    } else if (isVisible === true && first === true) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    } else {
+      setIsLoading(true);
+    }
+  }, [isVisible, first]);
+
+  const handleIntersection = (entries) => {
+    if (entries[0].isIntersecting) {
+      setIsVisible(true);
+      console.log("VISIBLE");
+    } else {
+      setIsVisible(false);
+      console.log("NOT VISIBLE");
+    }
+  };
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Change this threshold as needed
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (keyboard.current) {
+      observer.observe(keyboard.current);
+    }
+
+    return () => {
+      if (keyboard.current) {
+        observer.unobserve(keyboard.current);
+      }
+    };
+  }, []);
+
   return (
     <div
+      ref={keyboard}
       className={`${
         theme === "writer" ? "keyboard-writer" : "keyboard-modern"
       } h-full w-full rounded-xl relative flex flex-col items-center overflow-hidden `}
     >
+      {isLoading && (
+        <div className="h-full w-full bg-black absolute z-50 flex justify-center items-center">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            className="keyboard-loader flex justify-center items-center  relative"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="15"
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+              opacity="0.2"
+            />
+            <circle
+              cx="50"
+              cy="50"
+              r="15"
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+              opacity="1"
+              strokeDasharray="20 100"
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                dur="1s"
+                values="0 50 50; 180 50 50; 360 50 50"
+                repeatCount="indefinite"
+              />
+            </circle>
+          </svg>
+        </div>
+      )}
+
       <div className="iframe-container" ref={iframe}>
         <iframe
           src={`https://keyboard-chi.vercel.app/#${theme}`}
@@ -38,7 +129,7 @@ const Keyboard = () => {
           style={{ transform: `scale(${iframeWidth})` }}
         ></iframe>
       </div>
-      <div className="flex 2xl:gap-16 xl:gap-16 gap-8 items-end mb-8 absolute -bottom-3 z-50 ">
+      <div className="flex 2xl:gap-16 xl:gap-16 gap-8 items-end mb-8 absolute -bottom-3 z-40 ">
         <button
           className={`button-1 bg-black rounded-full flex justify-center items-center ${
             theme === "writer" ? "button-1-border" : ""

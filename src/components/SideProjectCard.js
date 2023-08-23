@@ -19,25 +19,15 @@ const SideProjectCard = ({
   const [githubHover, setGithubHover] = useState(false);
   const [headingHover, setHeadingHover] = useState(false);
 
-  const translationValue = `calc(100% + 64px)`;
-  const windowSize = window.innerWidth;
-  console.log(windowSize);
-
   return (
     <div
-      // style={id === 3 ? { transform: "translate(100%, 0px)" } : {}}
-      style={
-        id === 3 && windowSize > 767
-          ? { transform: `translate(${translationValue}, -64%)` }
-          : {}
-      }
       className={`side-card ${
         theme === "light" ? "side-card-light" : "side-card-dark"
       } flex ${
         id % 2 === 0
           ? "2xl:relative 2xl:bottom-36 xl:relative xl:bottom-48"
           : ""
-      } `}
+      } ${id === 3 ? "move-card" : ""} `}
     >
       <div
         className={`side-card-header ${

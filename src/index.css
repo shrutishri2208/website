@@ -376,7 +376,32 @@ div {
 }
 
 /* KEYBOARD */
+.keyboard-loader {
+  /* animation: keyboard-loader-rotate 10s linear 0s infinite forwards; */
+}
 
+@keyframes keyboard-loader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.keyboard-loader-circle {
+  stroke-dasharray: 0.5 0.2;
+  animation: fill-empty 4s ease-in-out infinite;
+}
+
+/* @keyframes fill-empty {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 6.29;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+} */
 .github-button-move > img {
   animation: image-move var(--animation-time) ease-in 0s forwards;
 }
@@ -791,6 +816,10 @@ div {
     gap: 0.5rem;
     transition: all 0.25s;
     position: relative;
+  }
+
+  .move-card {
+    transform: translate(calc(100% + 64px), -64%);
   }
 
   .card-light:hover,

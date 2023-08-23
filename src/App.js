@@ -18,14 +18,6 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    if (isLoading === true) document.body.style.overflow = "hidden";
-    else {
-      document.body.style.overflowX = "hidden";
-      document.body.style.overflowY = "scroll";
-    }
-  }, [isLoading]);
-
   return (
     <div
       className={`App relative ${
