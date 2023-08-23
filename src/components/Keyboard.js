@@ -33,11 +33,11 @@ const Keyboard = () => {
       setTimeout(() => {
         setIsLoading(false);
         setFirst(true);
-      }, 2000);
+      }, 1500);
     } else if (isVisible === true && first === true) {
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, 500);
     } else {
       setIsLoading(true);
     }
