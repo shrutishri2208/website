@@ -67,7 +67,7 @@ const Container = ({ isLoading }) => {
       <button
         className={`theme-toggle-button  rounded-full px-3 py-1 flex justify-center items-center opacity-0 ${
           isLoading === false ? "theme-button-animation" : ""
-        }`}
+        } ${theme === "light" ? "theme-bg-light" : "theme-bg-dark"}`}
         onClick={() => {
           if (theme === "light") {
             dispatch(setTheme("dark"));
@@ -77,9 +77,15 @@ const Container = ({ isLoading }) => {
         }}
       >
         {theme === "light" ? (
-          <DarkModeIcon className="text-yellow-400 scale-125" />
+          <DarkModeIcon
+            className="text-yellow-400 "
+            style={{ color: "#ffbf00" }}
+          />
         ) : (
-          <LightModeIcon className="text-yellow-400 scale-125" />
+          <LightModeIcon
+            className="text-yellow-400"
+            style={{ color: "#ffbf00" }}
+          />
         )}
       </button>
       <div
