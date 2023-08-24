@@ -107,11 +107,11 @@ div {
   top: 1.5rem;
   left: 1.5rem;
   z-index: 50;
-  box-shadow: 0px 0px 8px 0px rgb(0, 0, 0, 0.15);
+  /* box-shadow: 0px 0px 8px 0px rgb(0, 0, 0, 0.15); */
 }
 
 .theme-bg-light {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0, 0.05);
 }
 
 .theme-bg-dark {
@@ -747,12 +747,12 @@ div {
   }
 
   .heading {
-    /* font-size: 6rem; */
+    font-size: 6rem;
     font-family: "DM Sans", sans-serif;
-    font-size: 14vh;
+    /* font-size: 14vh; */
     font-weight: 700;
     /* line-height: 5.5rem; */
-    line-height: 12vh;
+    line-height: 5.5rem;
     letter-spacing: -0.1rem;
   }
 
@@ -819,8 +819,8 @@ div {
   .card-light:hover,
   .clone-card-light:hover,
   .side-card-light:hover {
+    border: 2px solid rgba(0, 0, 0, 0);
     box-shadow: 0px 8px 80px 0px rgba(0, 0, 0, 0.15);
-    /* background: radial-gradient(100% 100% at 50% 50%, #00ff5533, rgb(0, 0, 0, 0)); */
   }
   .card-dark:hover,
   .clone-card-dark:hover,
