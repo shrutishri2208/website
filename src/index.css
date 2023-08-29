@@ -47,6 +47,58 @@ div {
   -webkit-tap-highlight-color: transparent;
 }
 
+.gradient-cover {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(100px);
+}
+
+.gradient1 {
+  height: 75vw;
+  width: 75vw;
+  border-radius: 100%;
+  filter: blur(100px);
+  background: radial-gradient(
+    circle at 0% 0%,
+    #ffffff 0%,
+    #84ff00 50%,
+    #84ff00 100%
+  );
+  transform-origin: 30% 50%;
+  animation: gradient1 20s linear infinite 0s forwards;
+}
+
+.gradient2 {
+  right: -20rem;
+  top: 20rem;
+  height: 90vw;
+  width: 90vw;
+  border-radius: 100%;
+  filter: blur(100px);
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #00ffbb 100%);
+  transform-origin: 50% 40%;
+  animation: gradient1 15s linear infinite 0s forwards;
+}
+.gradient3 {
+  right: -20rem;
+  bottom: 50rem;
+  height: 80vw;
+  width: 80vw;
+  border-radius: 100%;
+  filter: blur(100px);
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #bbff00 100%);
+  transform-origin: 40% 50%;
+  animation: gradient1 20s linear infinite 0s forwards reverse;
+}
+
+@keyframes gradient1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* THEMES */
 
 .dark-light {
@@ -123,6 +175,7 @@ div {
   border-radius: 100%;
   transform-origin: center;
   transform: translate(-50%, -50%);
+  filter: blur(100px);
 }
 @keyframes bg-open-dark {
   from {
@@ -649,10 +702,10 @@ div {
   }
 
   .bg-open-dark {
-    animation: bg-open-dark 0.5s linear 0s forwards;
+    animation: bg-open-dark 0.3s linear 0s forwards;
   }
   .bg-open-light {
-    animation: bg-open-light 0.5s linear 0s forwards;
+    animation: bg-open-light 0.3s linear 0s forwards;
   }
 
   .build-emoji {

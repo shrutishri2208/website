@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className={` h-max w-screen relative z-50  overflow-hidden`}>
+    <div className={`h-max w-screen relative z-50 overflow-hidden`}>
       <div
         className={`relative z-50  w-screen pb-6 ${
           theme === "light"

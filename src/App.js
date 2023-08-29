@@ -42,7 +42,7 @@ function App() {
           <div className="bg-white h-0 w-0 absolute rounded-full"></div>
         </div>
       )}
-      {/* <Gradient /> */}
+      <Gradient />
       <Container isLoading={isLoading} />
     </div>
   );

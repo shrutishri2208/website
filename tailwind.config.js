@@ -12,6 +12,9 @@ module.exports = {
       borderRadius: {
         button: "4px",
       },
+      opacity: {
+        15: "15%",
+      },
     },
   },
   plugins: [],
