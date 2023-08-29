@@ -107,7 +107,7 @@ const Card = ({
       </div>
       <div className="card-display">
         {title === "Textplay" && <Pageplay />}
-        {title === "Keyboard" && <Keyboard />}
+        {/* {title === "Keyboard" && <Keyboard />} */}
       </div>
       <div
         className={`card-body ${

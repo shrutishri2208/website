@@ -3,19 +3,11 @@ import Card from "./Card";
 import { projects } from "../projects";
 
 const CardsContainer = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
   return (
-    <div className="cards-container 2xl:pb-32 xl:pb-32 pb-0  ">
-      <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">
-        {/* {projects.map((item) => {
-          return <Card {...item} key={item.id} />;
-        })} */}
+    <div className="cards-container 2xl:pb-32 xl:pb-32 pb-0 ">
+      <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col items-center 2xl:gap-16 xl:gap-16 gap-8">
         <Card {...projects[0]} />
         <Card {...projects[1]} />
-        {/* <div></div>
-        <Card {...projects[2]} /> */}
       </div>
     </div>
   );

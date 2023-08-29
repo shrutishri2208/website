@@ -705,24 +705,8 @@ div {
     max-width: 1280px;
     margin: auto;
   }
-  .footer-container {
-    padding: 0rem 4rem;
-
-    max-width: 1280px;
-    margin: auto;
-  }
-
   .landing-container {
     min-height: 100vh;
-  }
-
-  .landing-container,
-  .cards-container,
-  .clone-card-container,
-  .side-card-container {
-    border-color: var(--border-color);
-    border-style: solid;
-    border-width: 0px var(--border-width);
   }
 
   /* TEXT-CONTAINER */
@@ -753,9 +737,7 @@ div {
   .heading {
     font-size: 6rem;
     font-family: "DM Sans", sans-serif;
-    /* font-size: 14vh; */
     font-weight: 700;
-    /* line-height: 5.5rem; */
     line-height: 5.5rem;
     letter-spacing: -0.1rem;
   }
@@ -1031,7 +1013,7 @@ div {
 
   .netflix img {
     position: absolute;
-    min-width: 145vw;
+    min-width: 500%;
     transform: rotate(-5deg);
   }
 
@@ -1113,7 +1095,8 @@ div {
     font-weight: 700;
     line-height: 2.75rem;
     letter-spacing: 0rem;
-    padding: 4rem 0rem 1rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
   .black-stroke {
     color: white;
@@ -1154,10 +1137,11 @@ div {
 
   .heading {
     font-family: "DM Sans", sans-serif;
-    font-size: 5vh;
+    /* font-size: 5vh; */
+    font-size: 3rem;
     font-weight: 700;
-    line-height: 5vh;
-    letter-spacing: -0.1rem;
+    line-height: 3rem;
+    letter-spacing: -1.6px;
   }
 
   /* WORK-BUTTON */
@@ -1381,7 +1365,7 @@ div {
   /* NETFLIX */
   .netflix img {
     position: absolute;
-    min-width: 400vw;
+    min-width: 500%;
     transform: rotate(-5deg);
   }
   /* SWIGGY */
