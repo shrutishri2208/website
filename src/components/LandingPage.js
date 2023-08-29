@@ -10,7 +10,6 @@ const LandingPage = ({ isLoading }) => {
 
   useEffect(() => {
     setIsHeading(1);
-
     const secondTimeout = setTimeout(() => {
       setIsHeading(2);
     }, 4000);

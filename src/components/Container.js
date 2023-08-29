@@ -9,21 +9,18 @@ import Footer from "./Footer";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import SideProjectContainer from "./SideProjectContainer";
+import Gradient from "./Gradient";
 
 const Container = ({ isLoading }) => {
   const theme = useSelector((state) => state.theme.theme);
   const dispatch = useDispatch();
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, []);
-
   return (
     <div
       className={`screen h-full w-full  ${
         theme === "light" ? " black-white" : " white-black"
       }`}
     >
-      <div className={`container mx-auto relative z-50`}>
+      <div className={`container mx-auto relative z-40`}>
         <LandingPage isLoading={isLoading} />
         <CardsContainer />
         <TextContainer text={"clones"} index={2} />

@@ -102,8 +102,8 @@ export const sides = [
     tagIcon: web,
     desc: "A decentralised application, where users can connect their wallets and vote for a candidate once.",
     tech: "Hardhat, ether.js, React",
-    githubLink: "https://github.com/shrutishri2208/wave-portal",
-    viewLink: "https://github.com/shrutishri2208/wave-portal",
+    githubLink: "https://github.com/shrutishri2208/election-portal",
+    viewLink: "https://github.com/shrutishri2208/election-portal",
   },
 
   // {

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "./Card";
 import { projects } from "../projects";
 
 const CardsContainer = () => {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   return (
     <div className="cards-container 2xl:pb-32 xl:pb-32 pb-0  ">
       <div className="2xl:grid xl:grid 2xl:grid-cols-2 xl:grid-cols-2 flex flex-col 2xl:gap-16 xl:gap-16 gap-8">

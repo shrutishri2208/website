@@ -23,6 +23,10 @@
   --animation-time: 0.2s;
 }
 
+.App {
+  height: max-content;
+}
+
 body {
   margin: 0rem;
   -webkit-font-smoothing: antialiased;
@@ -104,7 +108,7 @@ div {
   height: 45px;
   width: 45px;
   position: fixed;
-  top: 1.5rem;
+  top: 1.8rem;
   left: 1.5rem;
   z-index: 50;
   /* box-shadow: 0px 0px 8px 0px rgb(0, 0, 0, 0.15); */
@@ -1059,7 +1063,7 @@ div {
 
 /* MOBILES */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .loader-animation > div {
     animation: loader-animation 1s linear 1s forwards;
   }
@@ -1187,7 +1191,7 @@ div {
     margin: auto;
     width: 92vw;
     height: max-content;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.5rem;
     border-radius: 1rem;
     flex-direction: column;
     align-items: flex-start;
