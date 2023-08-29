@@ -107,7 +107,7 @@ const Card = ({
       </div>
       <div className="card-display">
         {title === "Textplay" && <Pageplay />}
-        {/* {title === "Keyboard" && <Keyboard />} */}
+        {title === "Keyboard" && <Keyboard />}
       </div>
       <div
         className={`card-body ${
@@ -115,7 +115,7 @@ const Card = ({
         }`}
       >
         <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
-        <div className="flex justify-between items-center gap-16">
+        <div className="flex justify-between items-center gap-16 relative z-30">
           <p className=""> {tech}</p>
           <a
             href={githubLink}

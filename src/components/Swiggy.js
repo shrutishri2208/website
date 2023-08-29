@@ -8,7 +8,7 @@ const Swiggy = () => {
       <img src={mockup} className="mockup rounded-2xl" />
       <div className="swiggy-container absolute flex justify-center items-center overflow-hidden ">
         <div className=" absolute  video-container overflow-hidden">
-          <video src={video1} autoPlay loop muted className="relative"></video>
+          <video src={video1} autoPlay muted loop className="relative"></video>
         </div>
       </div>
     </div>

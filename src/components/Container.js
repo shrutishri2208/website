@@ -61,10 +61,11 @@ const Container = ({ isLoading }) => {
         </svg>
         <p>Open to work</p>
       </a>
-      <button
-        className={`theme-toggle-button  rounded-full px-3 py-1 flex justify-center items-center opacity-0 ${
+
+      <div
+        className={`theme-toggle-button rounded-full px-3 py-1 flex justify-center items-center opacity-0 cursor-pointer relative ${
           isLoading === false ? "theme-button-animation" : ""
-        } ${theme === "light" ? "theme-bg-light" : "theme-bg-dark"}`}
+        } ${theme === "light" ? "theme-bg-light" : "theme-bg-dark"} `}
         onClick={() => {
           if (theme === "light") {
             dispatch(setTheme("dark"));
@@ -80,15 +81,15 @@ const Container = ({ isLoading }) => {
           />
         ) : (
           <LightModeIcon
-            className="text-yellow-400"
+            className="text-yellow-400 "
             style={{ color: "#ffbf00" }}
           />
         )}
-      </button>
+      </div>
       <div
         className={`theme-bg ${
           theme === "light" ? "bg-open-light" : "bg-open-dark"
-        }`}
+        } `}
       ></div>
     </div>
   );

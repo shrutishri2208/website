@@ -10,6 +10,7 @@ const Keyboard = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [first, setFirst] = useState(false);
 
+  const [load, setLoad] = useState(false);
   const iframe = useRef(null);
   const keyboard = useRef(null);
 
@@ -56,7 +57,7 @@ const Keyboard = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // Change this threshold as needed
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(handleIntersection, options);
@@ -72,12 +73,16 @@ const Keyboard = () => {
     };
   }, []);
 
+  const handleLoad = () => {
+    setLoad(true);
+  };
+
   return (
     <div
       ref={keyboard}
       className={`${
         theme === "writer" ? "keyboard-writer" : "keyboard-modern"
-      } h-full w-full rounded-xl relative flex flex-col items-center overflow-hidden `}
+      } h-full w-full rounded-xl relative flex flex-col items-center overflow-hidden`}
     >
       {isLoading && (
         <div className="h-full w-full bg-black absolute z-50 flex justify-center items-center">
@@ -120,12 +125,13 @@ const Keyboard = () => {
         </div>
       )}
 
-      <div className="iframe-container" ref={iframe}>
+      <div className={`iframe-container `} ref={iframe}>
         <iframe
+          onLoad={handleLoad}
           src={`https://keyboard-chi.vercel.app/#${theme}`}
           height="960"
           width="1100"
-          className="absolute"
+          className={`absolute ${load ? "iframe-display" : "iframe-hidden"}`}
           style={{ transform: `scale(${iframeWidth})` }}
         ></iframe>
       </div>

@@ -118,8 +118,8 @@ const SideProjectCard = ({
         </a>
       </div>
       <div
-        className={`card-body ${
-          theme === "light" ? "card-body-light" : "card-body-dark"
+        className={`side-card-body ${
+          theme === "light" ? "side-card-body-light" : "side-card-body-dark"
         }`}
       >
         <h2 className="2xl:mb-8 xl:mb-8 mb-6">{desc}</h2>
