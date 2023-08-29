@@ -8,6 +8,8 @@ const Gradient = () => {
   const handleMouseMove = (e) => {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
+
+  console.log(cursorPosition);
   return (
     <div
       className=" h-full w-screen absolute z-30 opacity-100 overflow-x-hidden"
@@ -27,10 +29,6 @@ const Gradient = () => {
         className={`gradient3 absolute ${
           theme === "light" ? "opacity-20" : "opacity-15"
         }`}
-      ></div>
-      <div
-        className="cursor-circle"
-        style={{ left: cursorPosition.x, top: cursorPosition.y }}
       ></div>
     </div>
   );

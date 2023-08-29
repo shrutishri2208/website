@@ -48,8 +48,7 @@ div {
 }
 
 .gradient-cover {
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(100px);
+  background: rgba(0, 0, 0, 0.01);
 }
 
 .gradient1 {
@@ -175,7 +174,7 @@ div {
   border-radius: 100%;
   transform-origin: center;
   transform: translate(-50%, -50%);
-  filter: blur(100px);
+  /* filter: blur(100px); */
 }
 @keyframes bg-open-dark {
   from {
@@ -185,8 +184,8 @@ div {
   }
   to {
     background-color: var(--dark);
-    height: 500vh;
-    width: 500vh;
+    height: 250rem;
+    width: 250rem;
   }
 }
 @keyframes bg-open-light {
@@ -197,8 +196,8 @@ div {
   }
   to {
     background-color: rgb(255, 255, 255);
-    height: 500vh;
-    width: 500vh;
+    height: 250rem;
+    width: 250rem;
   }
 }
 
@@ -702,10 +701,10 @@ div {
   }
 
   .bg-open-dark {
-    animation: bg-open-dark 0.3s linear 0s forwards;
+    animation: bg-open-dark 0.5s ease-in-out 0s forwards;
   }
   .bg-open-light {
-    animation: bg-open-light 0.3s linear 0s forwards;
+    animation: bg-open-light 0.5s ease-in-out 0s forwards;
   }
 
   .build-emoji {
@@ -981,7 +980,7 @@ div {
   .software:hover {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
-    letter-spacing: -0.455rem;
+    letter-spacing: -0.445rem;
     /* color: #06ae3e; */
     line-height: 1.2rem;
     font-weight: 700;
@@ -1102,10 +1101,10 @@ div {
   }
 
   .bg-open-dark {
-    animation: bg-open-dark 0.5s ease-out 0s forwards;
+    animation: bg-open-dark 0.5s ease-in-out 0s forwards;
   }
   .bg-open-light {
-    animation: bg-open-light 0.5s ease-out 0s forwards;
+    animation: bg-open-light 0.5s ease-in-out 0s forwards;
   }
 
   .container {

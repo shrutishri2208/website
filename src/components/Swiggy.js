@@ -1,6 +1,6 @@
 import React from "react";
 import mockup from "../assets/mockup.webp";
-import video1 from "../assets/2.mp4";
+import video1 from "../assets/2.webm";
 
 const Swiggy = () => {
   return (
