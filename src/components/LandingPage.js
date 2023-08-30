@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import profile from "../assets/profile.webp";
 
 import { useDispatch, useSelector } from "react-redux";
-import { setTheme } from "../redux/theme/themeActions";
 
 const LandingPage = ({ isLoading }) => {
   const theme = useSelector((state) => state.theme.theme);
@@ -20,7 +19,7 @@ const LandingPage = ({ isLoading }) => {
   }, [isLoading]);
 
   return (
-    <div className="landing-container flex flex-col justify-center items-center  relative ">
+    <div className="landing-container flex flex-col justify-center items-center relative">
       <div className="flex flex-col justify-center items-center relative 2xl:bottom-0 xl:bottom-0 top-4">
         <img
           src={profile}

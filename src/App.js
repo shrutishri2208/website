@@ -22,7 +22,6 @@ function App() {
 
   useEffect(() => {
     if (appref.current) {
-      console.log("HEIGHT: ", appref.current.clientHeight);
     }
   });
 

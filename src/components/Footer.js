@@ -41,8 +41,8 @@ const Footer = () => {
               : "text-white opacity-10"
           }  text-center pt-6`}
         >
-          <span style={{ position: "relative", top: "1.5px" }}>©</span> shruti
-          shrivastava, 2023
+          <span style={{ position: "relative", top: "1px" }}>©</span> 2023
+          Shruti Shrivastava
         </p>
       </div>
     </div>

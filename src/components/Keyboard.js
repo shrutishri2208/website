@@ -53,10 +53,8 @@ const Keyboard = () => {
   const handleIntersection = (entries) => {
     if (entries[0].isIntersecting) {
       setIsVisible(true);
-      console.log("VISIBLE");
     } else {
       setIsVisible(false);
-      console.log("NOT VISIBLE");
     }
   };
   useEffect(() => {
