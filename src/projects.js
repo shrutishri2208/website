@@ -51,14 +51,14 @@ export const clones = [
   {
     id: 1,
     title: "Zwiggy",
-    desc: "A food delivery app clone with features like explore, search and cart to support end-to-end food ordering user journey.",
+    desc: "A food delivery app clone with features like explore, search and cart, to support end-to-end food ordering user journey.",
     tech: "React Native, Redux, NativeWind, Sanity CMS",
     githubLink: "https://github.com/shrutishri2208/food-delivery-app",
   },
   {
     id: 2,
     title: "Netflux",
-    desc: "A streaming platform clone with features like search, preview and watchlist to let easily users find the next thing to watch.",
+    desc: "A streaming platform clone with features like search, preview and watchlist, to let users easily find the next thing to watch.",
     tech: "React, Redux, Tailwind CSS, Rapid API, Material UI, react-router",
     githubLink: "https://github.com/shrutishri2208/netflix-clone",
   },

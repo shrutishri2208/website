@@ -12,7 +12,8 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
   const theme = useSelector((state) => state.theme.theme);
 
   return (
-    <div
+    <a
+      href={githubLink}
       className={`clone-card ${
         theme === "light" ? "clone-card-light" : "clone-card-dark "
       } flex flex-col`}
@@ -101,9 +102,9 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
             className="shrink-0 github-mobile"
           >
             {theme === "light" ? (
-              <img src={githubBlack} className="h-6 w-6 relative right-1" />
+              <img src={githubBlack} className="h-8 w-8 relative right-1" />
             ) : (
-              <img src={githubWhite} className="h-6 w-6 relative right-1" />
+              <img src={githubWhite} className="h-8 w-8 relative right-1" />
             )}
           </a>
           <a
@@ -148,7 +149,7 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
           </a>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -14,9 +14,15 @@ const Keyboard = () => {
   const iframe = useRef(null);
   const keyboard = useRef(null);
 
+  useEffect(() => {
+    let w = iframe.current.clientWidth;
+    let width = w / 1100 + 0.02;
+    setIframeWidth(width);
+  });
+
   const getWidth = (e) => {
     let w = iframe.current.clientWidth;
-    let width = w / 1100 + 0.03;
+    let width = w / 1100 + 0.1;
     setIframeWidth(width);
   };
 
@@ -38,7 +44,7 @@ const Keyboard = () => {
     } else if (isVisible === true && first === true) {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 700);
     } else {
       setIsLoading(true);
     }
@@ -82,7 +88,7 @@ const Keyboard = () => {
       ref={keyboard}
       className={`${
         theme === "writer" ? "keyboard-writer" : "keyboard-modern"
-      } h-full w-full rounded-xl relative flex flex-col items-center overflow-hidden`}
+      } h-full w-full rounded-2xl relative flex flex-col items-center overflow-hidden`}
     >
       {isLoading && (
         <div className="h-full w-full bg-black absolute z-50 flex justify-center items-center">
@@ -125,7 +131,19 @@ const Keyboard = () => {
         </div>
       )}
 
-      <div className={`iframe-container `} ref={iframe}>
+      {/* <div className={`iframe-container`} ref={iframe}>
+        <iframe
+          onLoad={handleLoad}
+          src={`https://keyboard-chi.vercel.app/#${theme}`}
+          height="960"
+          width="1100"
+          className={`absolute ${load ? "iframe-display" : "iframe-hidden"}`}
+          style={{ transform: `scale(${iframeWidth})` }}
+        ></iframe> */}
+      <div
+        className={`iframe-container bg-yellow-300 h-full w-full absolute`}
+        ref={iframe}
+      >
         <iframe
           onLoad={handleLoad}
           src={`https://keyboard-chi.vercel.app/#${theme}`}

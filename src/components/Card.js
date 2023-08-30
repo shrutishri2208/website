@@ -23,7 +23,8 @@ const Card = ({
   const [headingHover, setHeadingHover] = useState(false);
 
   return (
-    <div
+    <a
+      href={viewLink || githubLink}
       className={`card ${theme === "light" ? "card-light" : "card-dark"} flex ${
         id === 2 ? "2xl:relative 2xl:top-32 xl:relative xl:top-44" : ""
       }`}
@@ -170,7 +171,7 @@ const Card = ({
           </a>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

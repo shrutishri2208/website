@@ -145,7 +145,7 @@ div {
 }
 
 .theme-bg-light {
-  background-color: rgb(0, 0, 0, 0.05);
+  background-color: rgb(239, 244, 245);
 }
 
 .theme-bg-dark {
@@ -995,10 +995,9 @@ div {
   /* KEYBOARD */
   iframe {
     transform-origin: top left;
-    transform: scale(0.43);
     position: absolute;
     top: -36px;
-    left: -15px;
+    left: -11px;
   }
   .iframe-container {
     width: 100%;
@@ -1178,9 +1177,9 @@ div {
   .heading {
     font-family: "DM Sans", sans-serif;
     /* font-size: 5vh; */
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: 3rem;
+    line-height: 2.5rem;
     letter-spacing: -1.6px;
   }
 
@@ -1259,7 +1258,8 @@ div {
 
   .card-display {
     margin: auto;
-    width: 82vw;
+    width: 100%;
+    /* width: 82vw; */
     height: 58vw;
     /* height: 10; */
   }
@@ -1327,20 +1327,14 @@ div {
   /* KEYBOARD */
   iframe {
     transform-origin: top left;
-    top: -10vw;
-    left: -15px;
-    border-radius: 0.75rem;
+    top: -8vw;
+    left: -10px;
   }
 
   .iframe-container {
-    border-radius: 5rem;
-    width: 82vw;
-    height: 58vw;
+    border-radius: 1rem;
+    overflow: hidden;
   }
-
-  /* .iframe {
-    transform: scale(0.3);
-  } */
 
   .button-1-border {
     border: 2px solid #dd8c5a99;
@@ -1368,6 +1362,9 @@ div {
     top: 6px;
     transform: scale(0.8);
   }
+
+  /* FOOTER */
+
   .footer-item-bg {
     transition: all 0.4s;
   }

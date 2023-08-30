@@ -29,7 +29,8 @@ const SideProjectCard = ({
     //       : ""
     //   } ${id === 3 ? "move-card" : ""} `}
     // >
-    <div
+    <a
+      href={viewLink}
       className={`side-card ${
         theme === "light" ? "side-card-light" : "side-card-dark"
       } flex ${
@@ -131,9 +132,9 @@ const SideProjectCard = ({
             className="shrink-0 github-mobile"
           >
             {theme === "light" ? (
-              <img src={githubBlack} className="h-6 w-6 relative right-1" />
+              <img src={githubBlack} className="h-8 w-8 relative right-1" />
             ) : (
-              <img src={githubWhite} className="h-6 w-6 relative right-1" />
+              <img src={githubWhite} className="h-8 w-8 relative right-1" />
             )}
           </a>
           <a
@@ -178,7 +179,7 @@ const SideProjectCard = ({
           </a>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
