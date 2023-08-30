@@ -1048,7 +1048,7 @@ div {
     position: relative;
     left: 0;
     right: 0;
-    min-width: 448px;
+    min-width: 450px;
     height: 320px;
     top: 0;
     bottom: 0;
@@ -1393,7 +1393,7 @@ div {
   /* PAGEPLAY */
   .youtube-image {
     position: relative;
-    min-width: 82vw;
+    max-width: 80vw;
     height: 58vw;
     left: 0;
     right: 0;

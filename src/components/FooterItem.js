@@ -11,7 +11,11 @@ const FooterItem = ({ title, color, link }) => {
       href={link}
       target="_blank"
     >
-      <div className="flex justify-between items-center 2xl:px-32 xl:px-32 px-8 ">
+      <a
+        className="flex justify-between items-center 2xl:px-32 xl:px-32 px-8"
+        href={link}
+        target="_blank"
+      >
         <div
           className="footer-bg w-full"
           style={{ backgroundColor: `${color}` }}
@@ -45,7 +49,7 @@ const FooterItem = ({ title, color, link }) => {
             />
           </svg>
         </a>
-      </div>
+      </a>
     </a>
   );
 };
