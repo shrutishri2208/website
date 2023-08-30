@@ -29,9 +29,7 @@ const SideProjectCard = ({
     //       : ""
     //   } ${id === 3 ? "move-card" : ""} `}
     // >
-    <a
-      href={viewLink}
-      target="_blank"
+    <div
       className={`side-card ${
         theme === "light" ? "side-card-light" : "side-card-dark"
       } flex ${
@@ -180,7 +178,7 @@ const SideProjectCard = ({
           </a>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 
