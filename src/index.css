@@ -981,6 +981,7 @@ div {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
     letter-spacing: -0.445rem;
+    font-size: 6rem;
     /* color: #06ae3e; */
     line-height: 1.2rem;
     font-weight: 700;
@@ -1259,7 +1260,7 @@ div {
   .card-display {
     margin: auto;
     width: 100%;
-    /* width: 82vw; */
+    width: 80vw;
     height: 58vw;
     /* height: 10; */
   }

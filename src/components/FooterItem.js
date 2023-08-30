@@ -32,13 +32,13 @@ const FooterItem = ({ title, color, link }) => {
           </svg>
         </a>
       </div>
-      <div className="footer-item-bg " style={{ backgroundColor: `${color}` }}>
+      {/* <div className="footer-item-bg " style={{ backgroundColor: `${color}` }}>
         <div className="flex gap-8 flex-nowrap h-full moving-footer ">
           {myArray.map((item, index) => {
             return <MovingFooter title={title} link={link} key={index} />;
           })}
         </div>
-      </div>
+      </div> */}
     </a>
   );
 };

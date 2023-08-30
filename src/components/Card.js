@@ -25,6 +25,7 @@ const Card = ({
   return (
     <a
       href={viewLink || githubLink}
+      target="_blank"
       className={`card ${theme === "light" ? "card-light" : "card-dark"} flex ${
         id === 2 ? "2xl:relative 2xl:top-32 xl:relative xl:top-44" : ""
       }`}

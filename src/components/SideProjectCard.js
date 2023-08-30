@@ -31,6 +31,7 @@ const SideProjectCard = ({
     // >
     <a
       href={viewLink}
+      target="_blank"
       className={`side-card ${
         theme === "light" ? "side-card-light" : "side-card-dark"
       } flex ${

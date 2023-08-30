@@ -140,10 +140,7 @@ const Keyboard = () => {
           className={`absolute ${load ? "iframe-display" : "iframe-hidden"}`}
           style={{ transform: `scale(${iframeWidth})` }}
         ></iframe> */}
-      <div
-        className={`iframe-container bg-yellow-300 h-full w-full absolute`}
-        ref={iframe}
-      >
+      <div className={`iframe-container h-full w-full absolute`} ref={iframe}>
         <iframe
           onLoad={handleLoad}
           src={`https://keyboard-chi.vercel.app/#${theme}`}

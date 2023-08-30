@@ -14,6 +14,7 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
   return (
     <a
       href={githubLink}
+      target="_blank"
       className={`clone-card ${
         theme === "light" ? "clone-card-light" : "clone-card-dark "
       } flex flex-col`}

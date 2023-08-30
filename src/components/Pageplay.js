@@ -30,7 +30,11 @@ const Pageplay = () => {
       ref={divRef}
       className="relative h-full w-full rounded-2xl overflow-hidden "
     >
-      <img src={article} className="absolute w-full h-full" />
+      <img
+        src={article}
+        className="absolute w-full"
+        // style={{ minWidth: "80vw", height: "58vw" }}
+      />
       <div
         className="h-full w-full absolute overflow-hidden "
         style={{ width: `${lever}%` }}
