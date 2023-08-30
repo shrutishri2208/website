@@ -6,8 +6,11 @@ const FooterItem = ({ title, color, link }) => {
   const theme = useSelector((state) => state.theme.theme);
   const myArray = Array.from({ length: 100 }, (_, index) => index);
   return (
-    // <a className="footer-item relative cursor-pointer" href={link}>
-    <a className="footer-item relative cursor-pointer h-full w-full">
+    <a
+      className="footer-item relative cursor-pointer h-full w-full"
+      href={link}
+      target="_blank"
+    >
       <div className="flex justify-between items-center 2xl:px-32 xl:px-32 px-8 ">
         <div
           className="footer-bg w-full"
@@ -22,8 +25,7 @@ const FooterItem = ({ title, color, link }) => {
         <p className="py-10 text-2xl font-semibold border-b-white border-b-1">
           {title}
         </p>
-        {/* <a href={link} target="_blank"> */}
-        <a target="_blank">
+        <a href={link} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="60"
