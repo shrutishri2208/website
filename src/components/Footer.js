@@ -34,7 +34,7 @@ const Footer = () => {
         {socials.map((item, index) => {
           return <FooterItem {...item} key={index} />;
         })}
-        {/* <p
+        <p
           className={`${
             theme === "light"
               ? "text-black opacity-20"
@@ -43,7 +43,7 @@ const Footer = () => {
         >
           <span style={{ position: "relative", top: "1.5px" }}>©</span> shruti
           shrivastava, 2023
-        </p> */}
+        </p>
       </div>
     </div>
   );

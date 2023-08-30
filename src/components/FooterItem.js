@@ -6,12 +6,24 @@ const FooterItem = ({ title, color, link }) => {
   const theme = useSelector((state) => state.theme.theme);
   const myArray = Array.from({ length: 100 }, (_, index) => index);
   return (
-    <a className="footer-item relative cursor-pointer" href={link}>
-      <div className="flex justify-between items-center 2xl:px-32 xl:px-32 px-8">
+    // <a className="footer-item relative cursor-pointer" href={link}>
+    <a className="footer-item relative cursor-pointer h-full w-full">
+      <div className="flex justify-between items-center 2xl:px-32 xl:px-32 px-8 ">
+        <div
+          className="footer-bg w-full"
+          style={{ backgroundColor: `${color}` }}
+        >
+          <div className="flex gap-8 flex-nowrap h-full moving-footer ">
+            {myArray.map((item, index) => {
+              return <MovingFooter title={title} link={link} key={index} />;
+            })}
+          </div>
+        </div>
         <p className="py-10 text-2xl font-semibold border-b-white border-b-1">
           {title}
         </p>
-        <a href={link} target="_blank">
+        {/* <a href={link} target="_blank"> */}
+        <a target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="60"
@@ -32,13 +44,6 @@ const FooterItem = ({ title, color, link }) => {
           </svg>
         </a>
       </div>
-      {/* <div className="footer-item-bg " style={{ backgroundColor: `${color}` }}>
-        <div className="flex gap-8 flex-nowrap h-full moving-footer ">
-          {myArray.map((item, index) => {
-            return <MovingFooter title={title} link={link} key={index} />;
-          })}
-        </div>
-      </div> */}
     </a>
   );
 };
