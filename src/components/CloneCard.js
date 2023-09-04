@@ -27,6 +27,8 @@ const CloneCard = ({ id, title, desc, tech, githubLink }) => {
       >
         <h1>{title}</h1>
         <a
+          target="_blank"
+          href={githubLink}
           className={`h-10 w-10 flex justify-center items-center cursor-pointer visit-arrow ${
             theme === "light" ? "visit-arrow-light" : "visit-arrow-dark"
           }`}
