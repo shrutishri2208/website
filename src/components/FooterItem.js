@@ -7,7 +7,7 @@ const FooterItem = ({ title, color, link }) => {
   const myArray = Array.from({ length: 100 }, (_, index) => index);
   return (
     <a
-      className="footer-item relative cursor-pointer h-full w-full"
+      className="footer-item relative cursor-pointer h-full w-full "
       href={link}
       target="_blank"
     >
@@ -16,19 +16,19 @@ const FooterItem = ({ title, color, link }) => {
         href={link}
         target="_blank"
       >
+        <p className="py-10 text-2xl font-semibold ">{title}</p>
         <div
-          className="footer-bg w-full"
+          className="footer-bg w-full flex items-center 2xl:px-32 xl:px-32 px-8"
           style={{ backgroundColor: `${color}` }}
         >
-          <div className="flex gap-8 flex-nowrap h-full moving-footer ">
+          <p className="text-2xl font-semibold ">{title}</p>
+
+          {/* <div className="flex gap-8 flex-nowrap h-full moving-footer ">
             {myArray.map((item, index) => {
               return <MovingFooter title={title} link={link} key={index} />;
             })}
-          </div>
+          </div> */}
         </div>
-        <p className="py-10 text-2xl font-semibold border-b-white border-b-1">
-          {title}
-        </p>
         <a href={link} target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
