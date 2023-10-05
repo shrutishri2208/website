@@ -37,14 +37,14 @@ const LandingPage = ({ isLoading }) => {
               Hi! I am{" "}
               <span
                 className={`relative name ${
-                  theme === "dark"
-                    ? "heading-words-dark"
-                    : theme === "light" && isHeading === 0
-                    ? "heading-light"
-                    : theme === "light" && isHeading === 1
+                  theme === "light"
+                    ? "text-black"
+                    : theme === "dark" && isHeading === 0
+                    ? "heading-dark"
+                    : theme === "dark" && isHeading === 1
                     ? "word-1"
-                    : theme === "light" && isHeading === 2
-                    ? "heading-words-light"
+                    : theme === "dark" && isHeading === 2
+                    ? "text-white"
                     : ""
                 }`}
               >
@@ -59,14 +59,14 @@ const LandingPage = ({ isLoading }) => {
             <div>
               <span
                 className={`loves relative  ${
-                  theme === "dark"
-                    ? "heading-words-dark"
-                    : theme === "light" && isHeading === 0
-                    ? "heading-light"
-                    : theme === "light" && isHeading === 1
+                  theme === "light"
+                    ? "text-black"
+                    : theme === "dark" && isHeading === 0
+                    ? "heading-dark"
+                    : theme === "dark" && isHeading === 1
                     ? "word-2"
-                    : theme === "light" && isHeading === 2
-                    ? "heading-words-light"
+                    : theme === "dark" && isHeading === 2
+                    ? "text-white"
                     : ""
                 }`}
               >
@@ -81,14 +81,14 @@ const LandingPage = ({ isLoading }) => {
             <div>
               <div
                 className={`relative build inline  ${
-                  theme === "dark"
-                    ? "heading-words-dark"
-                    : theme === "light" && isHeading === 0
-                    ? "heading-light"
-                    : theme === "light" && isHeading === 1
+                  theme === "light"
+                    ? "text-black"
+                    : theme === "dark" && isHeading === 0
+                    ? "heading-dark"
+                    : theme === "dark" && isHeading === 1
                     ? "word-2"
-                    : theme === "light" && isHeading === 2
-                    ? "heading-words-light"
+                    : theme === "dark" && isHeading === 2
+                    ? "text-white"
                     : ""
                 }`}
               >
@@ -101,14 +101,14 @@ const LandingPage = ({ isLoading }) => {
               <div className="software-background inline relative">
                 <div
                   className={`software inline  ${
-                    theme === "dark"
-                      ? "heading-words-dark"
-                      : theme === "light" && isHeading === 0
-                      ? "heading-light"
-                      : theme === "light" && isHeading === 1
+                    theme === "light"
+                      ? "text-black"
+                      : theme === "dark" && isHeading === 0
+                      ? "heading-dark"
+                      : theme === "dark" && isHeading === 1
                       ? "word-3"
-                      : theme === "light" && isHeading === 2
-                      ? "heading-words-light"
+                      : theme === "dark" && isHeading === 2
+                      ? "text-white"
                       : ""
                   }`}
                 >

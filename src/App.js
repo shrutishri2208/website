@@ -34,11 +34,11 @@ function App() {
     >
       {isLoading && (
         <div
-          className={`bg-black h-screen w-screen absolute top-0 flex justify-center items-center text-white loader-animation
+          className={`bg-white h-screen w-screen absolute top-0 flex justify-center items-center text-white loader-animation
           }`}
           style={{ zIndex: "100" }}
         >
-          <div className="bg-white h-0 w-0 absolute rounded-full"></div>
+          <div className="bg-black h-0 w-0 absolute rounded-full"></div>
         </div>
       )}
       <Gradient />

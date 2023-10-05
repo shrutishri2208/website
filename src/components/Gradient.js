@@ -7,17 +7,17 @@ const Gradient = () => {
     <div className=" h-full w-screen absolute z-30 opacity-100 overflow-x-hidden">
       <div
         className={`gradient2 absolute ${
-          theme === "light" ? "opacity-20" : "opacity-10"
+          theme === "light" ? "opacity-20" : "opacity-15"
         } `}
       ></div>
       <div
         className={`gradient1 absolute ${
-          theme === "light" ? "opacity-20" : "opacity-10"
+          theme === "light" ? "opacity-20" : "opacity-15"
         }`}
       ></div>
       <div
         className={`gradient3 absolute ${
-          theme === "light" ? "opacity-20" : "opacity-10"
+          theme === "light" ? "opacity-20" : "opacity-15"
         }`}
       ></div>
     </div>

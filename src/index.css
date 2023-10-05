@@ -141,11 +141,11 @@ div {
 }
 
 .theme-bg-light {
-  background-color: rgb(239, 244, 245);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .theme-bg-dark {
-  background-color: rgb(43, 43, 43);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .theme-button-animation {
@@ -221,9 +221,6 @@ div {
   color: rgba(255, 255, 255, 0.2);
 }
 
-.heading-words-light {
-  color: rgba(0, 0, 0, 1);
-}
 .word-1 {
   animation: heading-words-light 0.1s linear 3s forwards;
 }
@@ -235,15 +232,11 @@ div {
 }
 @keyframes heading-words-light {
   from {
-    color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.1);
   }
   to {
-    color: rgba(0, 0, 0, 1);
+    color: rgb(255, 255, 255);
   }
-}
-
-.heading-words-dark {
-  color: rgba(255, 255, 255, 1);
 }
 
 /* WORK-BUTTON */
@@ -996,10 +989,10 @@ div {
   }
 
   .software:hover {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
     letter-spacing: -0.445rem;
-    font-size: 6rem;
+    font-size: 6rem; */
     /* color: #06ae3e; */
     line-height: 1.2rem;
     font-weight: 700;
