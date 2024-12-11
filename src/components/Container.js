@@ -59,7 +59,7 @@ const Container = ({ isLoading }) => {
             fill={`${theme === "light" ? "#22E765" : "#000"}`}
           />
         </svg>
-        <p>Contact me</p>
+        <p>Open to work</p>
       </a>
 
       <div
