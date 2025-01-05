@@ -3,7 +3,6 @@ import FooterItem from "./FooterItem";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const theme = useSelector((state) => state.theme.theme);
   const socials = [
     {
       title: "linkedin",
@@ -23,25 +22,13 @@ const Footer = () => {
   ];
 
   return (
-    <div className={`h-max w-screen relative z-50 overflow-hidden`}>
-      <div
-        className={`relative z-50  w-screen pb-6 ${
-          theme === "light"
-            ? "bg-black bg-opacity-5 text-black"
-            : "bg-white bg-opacity-5 text-white"
-        } `}
-      >
+    <div className={`h-max w-screen relative z-50 overflow-hidden bg-black`}>
+      <div className={`relative w-screen pb-6 text-white `}>
         {socials.map((item, index) => {
           return <FooterItem {...item} key={index} />;
         })}
-        <p
-          className={`${
-            theme === "light"
-              ? "text-black opacity-20"
-              : "text-white opacity-10"
-          }  text-center pt-6`}
-        >
-          <span style={{ position: "relative", top: "1px" }}>©</span> 2023
+        <p className={`text-white opacity-40 text-center pt-6`}>
+          <span style={{ position: "relative", top: "1px" }}>©</span> 2025
           Shruti Shrivastava
         </p>
       </div>

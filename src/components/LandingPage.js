@@ -4,7 +4,6 @@ import profile from "../assets/profile.webp";
 import { useDispatch, useSelector } from "react-redux";
 
 const LandingPage = ({ isLoading }) => {
-  const theme = useSelector((state) => state.theme.theme);
   const [isHeading, setIsHeading] = useState(0);
 
   useEffect(() => {
@@ -19,31 +18,23 @@ const LandingPage = ({ isLoading }) => {
   }, [isLoading]);
 
   return (
-    <div className="landing-container flex flex-col justify-center items-center relative">
-      <div className="flex flex-col justify-center items-center relative 2xl:bottom-0 xl:bottom-0 top-4">
-        <img
-          src={profile}
-          className={`${isLoading === false ? "profile-image" : ""} mb-12`}
-        />
+    <div className=" flex-col justify-center items-center  ">
+      <div className="flex flex-col mt-16 justify-center items-center ">
         <div className="text-center mx-auto">
           <div
             className={`heading ${
               isLoading === false ? "heading-animation" : ""
-            } opacity-0 ${
-              theme === "light" ? "heading-light" : "heading-dark"
-            }`}
+            } opacity-0 heading-dark`}
           >
             <div>
               Hi! I am{" "}
               <span
                 className={`relative name ${
-                  theme === "light"
-                    ? "text-black"
-                    : theme === "dark" && isHeading === 0
+                  isHeading === 0
                     ? "heading-dark"
-                    : theme === "dark" && isHeading === 1
+                    : isHeading === 1
                     ? "word-1"
-                    : theme === "dark" && isHeading === 2
+                    : isHeading === 2
                     ? "text-white"
                     : ""
                 }`}
@@ -58,14 +49,12 @@ const LandingPage = ({ isLoading }) => {
             <div>a developer who</div>
             <div>
               <span
-                className={`loves relative  ${
-                  theme === "light"
-                    ? "text-black"
-                    : theme === "dark" && isHeading === 0
+                className={`relative  ${
+                  isHeading === 0
                     ? "heading-dark"
-                    : theme === "dark" && isHeading === 1
+                    : isHeading === 1
                     ? "word-2"
-                    : theme === "dark" && isHeading === 2
+                    : isHeading === 2
                     ? "text-white"
                     : ""
                 }`}
@@ -80,14 +69,12 @@ const LandingPage = ({ isLoading }) => {
             </div>
             <div>
               <div
-                className={`relative build inline  ${
-                  theme === "light"
-                    ? "text-black"
-                    : theme === "dark" && isHeading === 0
+                className={`relative inline  ${
+                  isHeading === 0
                     ? "heading-dark"
-                    : theme === "dark" && isHeading === 1
+                    : isHeading === 1
                     ? "word-2"
-                    : theme === "dark" && isHeading === 2
+                    : isHeading === 2
                     ? "text-white"
                     : ""
                 }`}
@@ -98,16 +85,14 @@ const LandingPage = ({ isLoading }) => {
             </div>
             <div>
               beautiful{" "}
-              <div className="software-background inline relative">
+              <div className="inline relative">
                 <div
-                  className={`software inline  ${
-                    theme === "light"
-                      ? "text-black"
-                      : theme === "dark" && isHeading === 0
+                  className={` inline  ${
+                    isHeading === 0
                       ? "heading-dark"
-                      : theme === "dark" && isHeading === 1
+                      : isHeading === 1
                       ? "word-3"
-                      : theme === "dark" && isHeading === 2
+                      : isHeading === 2
                       ? "text-white"
                       : ""
                   }`}
@@ -129,7 +114,7 @@ const LandingPage = ({ isLoading }) => {
           >
             <path
               d="M36.9102 2.45703C30.2827 9.08445 26.567 12.8002 19.9396 19.4276L2.96903 2.45703"
-              stroke={`${theme === "light" ? "black" : "white"}`}
+              stroke={`white`}
               // stroke-opacity="0.1"
               strokeOpacity={1}
               strokeWidth={4}
