@@ -1,49 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
-import Container from "./components/Container";
-import { useSelector } from "react-redux";
-import Loading from "./components/Loading";
-import Gradient from "./components/Gradient";
+import React, { useEffect } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import News from "./pages/News";
+import Salaries from "./pages/Salaries";
+import DMs from "./pages/DMs";
+import Onboarding from "./pages/Onboarding";
 
 function App() {
-  const theme = useSelector((state) => state.theme.theme);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const appref = useRef(null);
-
-  useEffect(() => {
-    if (appref.current) {
-    }
-  });
-
   return (
-    <div
-      ref={appref}
-      className={`App relative ${
-        theme === "light" ? "dark-light" : "light-dark"
-      }`}
-    >
-      {isLoading && (
-        <div
-          className={`bg-white h-screen w-screen absolute top-0 flex justify-center items-center text-white loader-animation
-          }`}
-          style={{ zIndex: "100" }}
-        >
-          <div className="bg-black h-0 w-0 absolute rounded-full"></div>
-        </div>
-      )}
-      <Gradient />
-      <Container isLoading={isLoading} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/dms" element={<DMs />} />
+        <Route path="/salaries" element={<Salaries />} />
+        <Route path="/onboarding" element={<Onboarding />} />
+      </Routes>
+    </Router>
   );
 }
 
