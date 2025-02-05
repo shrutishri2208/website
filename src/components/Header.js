@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start mb-28 ">
+    <div className="flex flex-col md:flex-row justify-between items-start mb-14 sm:mb-28 ">
       <div>
         <h1 className="text-white text-4xl sm:text-6xl font-bold">
           Shruti Shrivastava
@@ -14,7 +14,7 @@ const Header = () => {
           Bangalore, IN
         </h2>
       </div>
-      <div className="self-end">
+      <div className="self-end mt-14 sm:mt-0">
         <a
           href="https://github.com/shrutishri2208"
           target="_blank"

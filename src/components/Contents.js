@@ -47,8 +47,8 @@ const Contents = () => {
         </h3>
         <div className="w-full bg-white h-[1px] opacity-40" />
       </div>
-      <div className="flex flex-col lg:flex-row gap-14">
-        <div className="flex-[1] mt-8 lg:mt-0">
+      <div className="flex flex-col lg:flex-row gap-4 sm:gap-14">
+        <div className="flex-[1] mt-8 lg:mt-0 ">
           <h4 className="text-white text-2xl sm:text-4xl font-semibold mb-0 sm:mb-3">
             Grapevine
           </h4>
@@ -59,7 +59,7 @@ const Contents = () => {
             Oct ‘23 - present
           </p>
         </div>
-        <div className="flex-[2]">
+        <div className="flex-[2] ">
           <p className="body_text">
             Grapevine is professional networking app with 450k users. Joining as
             the <span className="body_heading">founding engineer</span>,
