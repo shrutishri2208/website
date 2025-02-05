@@ -7,21 +7,19 @@ import BackArrow from "../components/BackArrow";
 
 const News = () => {
   return (
-    <div
-      className={
-        "bg-black h-full w-full flex flex-col min-h-screen pt-6 px-2 sm:px-14 overflow-y-hidden"
-      }
-    >
+    <div className={"page_container sm:px-14"}>
       <BackArrow />
-      <div className={"px-8 pb-4"}>
+      <div className={"px-8 pb-4 "}>
         <div className="justify-between gap-28 flex flex-col lg:flex-row ">
           {/* NEWS */}
-          <div className="flex-col items-center justify-items-center">
-            <h1 className="text-white text-4xl font-bold mb-8">News</h1>
+          <div className="flex-col flex items-center justify-items-center">
+            <h1 className="text-white text-4xl font-bold mb-8 text-center">
+              News
+            </h1>
             <VideoPlayer src={NewsVideo} />
           </div>
           {/* POPS */}
-          <div className="justify-items-center">
+          <div className="flex flex-col justify-items-center items-center">
             <h1 className="text-white text-4xl font-bold mb-8 text-center ">
               Pops
             </h1>

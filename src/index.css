@@ -20,6 +20,11 @@
   --animation-time: 0.2s;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+}
+
 body {
   margin: 0rem;
   -webkit-font-smoothing: antialiased;
@@ -32,6 +37,20 @@ body {
 
 a {
   cursor: pointer;
+}
+
+.page_container {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+  overflow-y: hidden;
 }
 
 @media screen and (min-width: 1024px) {

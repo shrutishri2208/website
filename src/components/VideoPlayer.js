@@ -8,6 +8,7 @@ const VideoPlayer = ({ src }) => {
         autoPlay
         loop
         muted
+        playsInline
         preload="auto"
       >
         <source src={src} type="video/mp4" />

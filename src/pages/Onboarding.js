@@ -5,11 +5,7 @@ import OnboardingVideo from "../assets/Onboarding.mp4";
 
 const Onboarding = () => {
   return (
-    <div
-      className={
-        "bg-black h-full w-full flex flex-col min-h-screen pt-6 px-2 sm:px-14"
-      }
-    >
+    <div className={"page_container sm:px-14"}>
       <BackArrow />
       <div className={"px-8 pb-4"}>
         <h1 className="text-white text-4xl font-bold mb-8 text-center">

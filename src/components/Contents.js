@@ -42,7 +42,7 @@ const Contents = () => {
   return (
     <div className="mb-24">
       <div className="flex justify-center items-center gap-6 mb-0 sm:mb-10">
-        <h3 className="text-white  text-2xl sm:text-4xl text-opacity-60">
+        <h3 className="text-white text-2xl sm:text-4xl text-opacity-60 mt-8 sm:mt-0">
           EXPERIENCE
         </h3>
         <div className="w-full bg-white h-[1px] opacity-40" />
