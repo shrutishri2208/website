@@ -1,7 +1,7 @@
 import React from "react";
 import NewsVideo from "../assets/News.mp4";
 import Pops from "../assets/Pops.mp4";
-import PopsCreate from "../assets/PopsCreate.MP4";
+import PopsCreate from "../assets/PopsCreate.mp4";
 import VideoPlayer from "../components/VideoPlayer";
 import BackArrow from "../components/BackArrow";
 
