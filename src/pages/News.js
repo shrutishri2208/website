@@ -1,7 +1,7 @@
 import React from "react";
 import NewsVideo from "../assets/News.mp4";
 import Pops from "../assets/Pops.mp4";
-import PopsCreate from "../assets/PopsCreate.mp4";
+import CreatePops from "../assets/CreatePops.mp4";
 import VideoPlayer from "../components/VideoPlayer";
 import BackArrow from "../components/BackArrow";
 
@@ -24,7 +24,7 @@ const News = () => {
           </div>
           <div className="flex justify-end gap-24">
             <VideoPlayer src={Pops} />
-            <VideoPlayer src={PopsCreate} />
+            <VideoPlayer src={CreatePops} />
           </div>
         </div>
       </div>
