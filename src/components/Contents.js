@@ -10,6 +10,7 @@ const Contents = () => {
         "Social share with image preview",
         "Support for user-created time-bound disappearing stories",
       ],
+      link: "/news",
     },
     {
       title: "Direct Messaging",
@@ -18,6 +19,7 @@ const Contents = () => {
         "Support for document sharing",
         "WhatsApp-like message reactions",
       ],
+      link: "/dms",
     },
     {
       title: "Salaries Platform",
@@ -25,6 +27,7 @@ const Contents = () => {
         "CRUD operations for salary details",
         "Sort and filters basis compensation, company and role",
       ],
+      link: "/salaries",
     },
     {
       title: "Mobile App Onboarding",
@@ -32,6 +35,7 @@ const Contents = () => {
         "Authentication with phone number and OTP",
         "Permissions for notifications, files and media",
       ],
+      link: "/onboarding",
     },
   ];
 
@@ -69,8 +73,8 @@ const Contents = () => {
                       </li>
                     );
                   })}
-                  <a href="https://www.google.com/" target="blank">
-                    <li className="body_text_link">Watch Video</li>
+                  <a href={item.link}>
+                    <li className="body_text_link mt-1">Watch Video</li>
                   </a>
                 </ul>
               </div>
