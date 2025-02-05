@@ -41,17 +41,21 @@ const Contents = () => {
 
   return (
     <div className="mb-24">
-      <div className="flex justify-center items-center gap-6 mb-10">
-        <h3 className="text-white text-4xl text-opacity-60">EXPERIENCE</h3>
+      <div className="flex justify-center items-center gap-6 mb-0 sm:mb-10">
+        <h3 className="text-white  text-2xl sm:text-4xl text-opacity-60">
+          EXPERIENCE
+        </h3>
         <div className="w-full bg-white h-[1px] opacity-40" />
       </div>
-      <div className="flex gap-14">
-        <div className="flex-[1]">
-          <h4 className="text-white text-4xl font-semibold mb-8">Grapevine</h4>
-          <p className="text-white text-3xl font-light text-opacity-80 mt-2">
+      <div className="flex flex-col lg:flex-row gap-14">
+        <div className="flex-[1] mt-8 lg:mt-0">
+          <h4 className="text-white text-2xl sm:text-4xl font-semibold mb-0 sm:mb-3">
+            Grapevine
+          </h4>
+          <p className="text-white text-xl sm:text-3xl font-light text-opacity-80">
             Frontend Engineer
           </p>
-          <p className="text-white text-3xl font-light text-opacity-40 mt-2">
+          <p className="text-white text-xl sm:text-3xl font-light text-opacity-40 mt-0 sm:mt-2">
             Oct ‘23 - present
           </p>
         </div>

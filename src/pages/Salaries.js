@@ -7,14 +7,12 @@ import BackArrow from "../components/BackArrow";
 const Salaries = () => {
   return (
     <div
-      className={
-        "bg-black h-full w-full flex flex-col min-h-screen pt-10 px-14"
-      }
+      className={"bg-black h-full w-full flex flex-col min-h-screen pt-6 px-14"}
     >
       <BackArrow />
-      <div className={"pt-7 px-14 pb-4"}>
-        <h1 className="text-white text-5xl font-bold mb-16">Salaries</h1>
-        <div className="justify-center gap-28  flex">
+      <div className={"px-14 pb-4"}>
+        <h1 className="text-white text-4xl font-bold mb-8">Salaries</h1>
+        <div className="justify-center gap-28 flex">
           <VideoPlayer src={SalaryCreation} />
           <VideoPlayer src={SalaryFilter} />
         </div>

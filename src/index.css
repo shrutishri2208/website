@@ -34,26 +34,106 @@ a {
   cursor: pointer;
 }
 
-.body_text {
-  color: #fff;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 200;
-  letter-spacing: 1px;
+@media screen and (min-width: 1024px) {
+  .body_text {
+    color: #fff;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  .body_heading {
+    color: #fff;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+  }
+
+  .body_text_link {
+    color: #2f64eb;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 400;
+  }
 }
 
-.body_heading {
-  color: #fff;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  letter-spacing: 0;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .body_text {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  .body_heading {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+  }
+
+  .body_text_link {
+    color: #2f64eb;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
 }
 
-.body_text_link {
-  color: #2f64eb;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 400;
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .body_text {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  .body_heading {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+  }
+
+  .body_text_link {
+    color: #2f64eb;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .body_text {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  .body_heading {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+  }
+
+  .body_text_link {
+    color: #2f64eb;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
 }

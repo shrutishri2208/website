@@ -8,6 +8,7 @@ const BackArrow = () => {
       onClick={() => {
         navigate("/");
       }}
+      className="self-start h-20 w-20"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
