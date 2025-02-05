@@ -1,30 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
-import Container from "./components/Container";
-import { useSelector } from "react-redux";
-import Gradient from "./components/Gradient";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import React, { useEffect } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import News from "./pages/News";
+import Salaries from "./pages/Salaries";
+import DMs from "./pages/DMs";
+import Onboarding from "./pages/Onboarding";
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 100);
-  }, []);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className={"bg-black h-full w-full px-12 py-8 "}>
-      {/* <Gradient /> */}
-      <Header />
-      <Container isLoading={isLoading} />
-      {/* <Footer /> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/dms" element={<DMs />} />
+        <Route path="/salaries" element={<Salaries />} />
+        <Route path="/onboarding" element={<Onboarding />} />
+      </Routes>
+    </Router>
   );
 }
 

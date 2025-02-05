@@ -1,94 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between  ">
-      <Title />
-      <Menu />
-    </div>
-  );
-};
-
-const Title = () => {
-  const [headingHover, setHeadingHover] = useState(false);
-
-  return (
-    <div className="flex justify-center items-center" style={{ gap: "8px" }}>
-      <a
-        rel="noreferrer"
-        href="https://github.com/shrutishri2208"
-        target="_blank"
-        className={`flex justify-center items-center `}
-        onMouseEnter={() => setHeadingHover(true)}
-        onMouseLeave={() => setHeadingHover(false)}
-        onMouseOver={() => setHeadingHover(true)}
-      >
-        <h1 className="text-white text-2xl"> github/shrutishri</h1>
-        <div className="relative overflow-hidden ml-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 40 40"
-            fill="none"
-            className={`${
-              headingHover === true ? "arrow-1-move" : "arrow-1-back"
-            } absolute -bottom-7 -left-7 `}
-          >
-            <path
-              d="M14 15C18.6863 15 21.3137 15 26 15V27"
-              stroke={"white"}
-              strokeWidth={2.5}
-            />
-            <path d="M26 15L14 27" stroke={"white"} strokeWidth={2.5} />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 40 40"
-            fill="none"
-            className={`${
-              headingHover === true ? "arrow-2-move" : "arrow-2-back"
-            } relative -bottom-7 -left-7`}
-          >
-            <path
-              d="M14 15C18.6863 15 21.3137 15 26 15V27"
-              stroke={"white"}
-              strokeWidth={2.5}
-            />
-            <path d="M26 15L14 27" stroke={"white"} strokeWidth={2.5} />
-          </svg>
-        </div>
-      </a>
-    </div>
-  );
-};
-
-const Menu = () => {
-  return (
-    <div className="flex gap-10">
-      <a
-        rel="noreferrer"
-        href="https://github.com/shrutishri2208"
-        target="_blank"
-      >
-        <h2 className="text-white text-xl">Home</h2>
-      </a>
-      <a
-        rel="noreferrer"
-        href="https://github.com/shrutishri2208"
-        target="_blank"
-      >
-        <h2 className="text-white text-xl">Projects</h2>
-      </a>
-      <a
-        rel="noreferrer"
-        href="https://github.com/shrutishri2208"
-        target="_blank"
-      >
-        <h2 className="text-white text-xl">Contact</h2>
-      </a>
+    <div className="flex justify-between items-start mb-28">
+      <div>
+        <h1 className="text-white text-6xl font-bold">Shruti Shrivastava</h1>
+        <h2 className="text-white text-4xl font-light text-opacity-80 mt-2">
+          Frontend Engineer
+        </h2>
+        <h2 className="text-white text-4xl font-light text-opacity-40 mt-2">
+          Bangalore, IN
+        </h2>
+      </div>
+      <div>
+        <a
+          href="https://github.com/shrutishri2208"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h6 className="text-blue-500 text-3xl font-normal mb-4 text-end">
+            GitHub
+          </h6>
+        </a>
+        <p className="body_text text-end">
+          <span className="text-opacity-40 text-white">+91 </span>6351053824
+        </p>
+        <a href="mailto:shrutishri2208@gmail.com">
+          <p className="body_text text-end">shrutishri2208@gmail.com</p>
+        </a>
+      </div>
     </div>
   );
 };
