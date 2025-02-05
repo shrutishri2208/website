@@ -10,20 +10,13 @@ const News = () => {
     <div className={"page_container sm:px-14"}>
       <BackArrow />
       <div className={"px-8 pb-4 "}>
-        <div className="justify-between gap-28 flex flex-col lg:flex-row ">
-          {/* NEWS */}
-          <div className="flex-col flex items-center justify-items-center">
+        <div>
+          <div className="flex-col flex items-center justify-items-center ">
             <h1 className="text-white text-4xl font-bold mb-8 text-center">
               News
             </h1>
-            <VideoPlayer src={NewsVideo} />
-          </div>
-          {/* POPS */}
-          <div className="flex flex-col justify-items-center items-center">
-            <h1 className="text-white text-4xl font-bold mb-8 text-center ">
-              Pops
-            </h1>
             <div className="flex flex-col md:flex-row gap-8 sm:gap-24 justify-items-center">
+              <VideoPlayer src={NewsVideo} />
               <VideoPlayer src={Pops} />
               <VideoPlayer src={CreatePops} />
             </div>
