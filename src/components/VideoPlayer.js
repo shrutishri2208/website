@@ -10,24 +10,8 @@ const VideoPlayer = ({ src }) => {
     }, 200);
   }, []);
 
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-    }
-  };
-
   return (
-    <div
-      className="h-screen justify-center items-center"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="h-screen justify-center items-center">
       <div className="h-[560px] w-64 bg-black rounded-lg absolute" />
 
       <video
