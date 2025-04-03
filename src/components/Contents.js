@@ -3,6 +3,15 @@ import React from "react";
 const Contents = () => {
   const data = [
     {
+      title: "AI Interviews",
+      points: [
+        "Real-time high-quality audio streaming using LiveKit",
+        "Interview transcripts with audio visualiser",
+        "Resume upload functionality",
+      ],
+      link: "/interviews",
+    },
+    {
       title: "News Platform",
       points: [
         "Swipe-able cards like Instagram reels",
@@ -61,7 +70,7 @@ const Contents = () => {
         </div>
         <div className="flex-[2] ">
           <p className="body_text">
-            Grapevine is professional networking app with 450k users. Joining as
+            Grapevine is professional networking app with 500k users. Joining as
             the <span className="body_heading">founding engineer</span>,
             developed end-to-end UX for key features:
           </p>
