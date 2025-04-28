@@ -7,6 +7,7 @@ import Onboarding from "./pages/Onboarding";
 import ReactGA from "react-ga4";
 import AnalyticsTracker from "./services/AnalyticsTracker";
 import Interviews from "./pages/Interviews";
+import News from "./pages//News";
 
 function App() {
   ReactGA.initialize("G-4B3EP79PND");
@@ -21,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/interviews" element={<Interviews />} />
-        <Route path="/news" element={<Interviews />} />
+        <Route path="/news" element={<News />} />
         <Route path="/dms" element={<DMs />} />
         <Route path="/salaries" element={<Salaries />} />
         <Route path="/onboarding" element={<Onboarding />} />
